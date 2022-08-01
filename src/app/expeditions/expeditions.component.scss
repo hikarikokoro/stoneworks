@@ -1,0 +1,73 @@
+section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    article {
+        padding: 50px 0;
+        max-width: 1000px;
+        margin: auto;
+        text-align: center;
+
+        h1,
+        h2 {
+            font-size: 50px;
+            margin: 500px auto 50px auto;
+            line-height: 1.8em;
+            letter-spacing: 0.3em;
+        }
+
+        h2 {
+            margin: 10px auto 50px auto;
+        }
+
+        img {
+            max-width: 350px;
+            margin-bottom: 30px;
+        }
+
+        .underline {
+            height: 3px;
+            width: 250px;
+            background-color: #d67a02;
+            margin: 30px auto;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.8em;
+        }
+
+
+        a.button {
+            display: inline-block;
+            padding: 30px 60px;
+            background-color: #333;
+            color: #d67a02;
+            margin: 100px 0 150px 0;
+            font-size: 25px;
+            letter-spacing: 0.3em;
+            text-decoration: none;
+            font-family: "Libre Baskerville", serif;
+        }
+    }
+
+    &#header {
+        background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+        margin-bottom: 100px;
+    }
+
+    &#cards {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: wrap;
+
+        article {
+            max-width: 37%;
+            padding: 4%;
+            box-shadow: 0px 3px 5px #888888;
+            margin: 2%;
+        }
+    }
+}

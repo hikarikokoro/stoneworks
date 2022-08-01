@@ -1,0 +1,137 @@
+section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    article {
+        padding: 150px 0;
+        max-width: 1000px;
+        margin: auto;
+        text-align: center;
+
+        h1 {
+            font-size: 35px;
+            margin-bottom: 300px;
+            line-height: 1.8em;
+        }
+
+        h2 {
+            font-size: 45px;
+            line-height: 1.8em;
+            letter-spacing: 0.3em;
+        }
+
+        img {
+            max-width: 350px;
+            margin-bottom: 30px;
+        }
+
+        .underline {
+            height: 3px;
+            width: 250px;
+            background-color: #d67a02;
+            margin: 30px auto;
+        }
+
+        p {
+            font-size: 23px;
+            line-height: 1.8em;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 30px 60px;
+            background-color: #333;
+            color: #d67a02;
+            margin: 100px 0 150px 0;
+            font-size: 25px;
+            letter-spacing: 0.3em;
+            text-decoration: none;
+            font-family: "Libre Baskerville", serif;
+        }
+
+
+    }
+
+    &#first {
+        background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+
+        h1 {
+            color: black;
+        }
+
+        p {
+            color: white;
+        }
+    }
+
+    &#second {
+        background-image: url('../../assets/Stnwrk_Section1-Image_1A.png');
+
+        h2 {
+            color: black;
+        }
+
+        p {
+            color: black;
+        }
+    }
+
+    &#third {
+        background-image: url('../../assets/Stnwrk_Section2-Image_1A.png');
+
+        h2 {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+
+        a.button {
+            background-color: #d67a02;
+            color: white;
+        }
+    }
+
+    &#fourth {
+        background-image: url('../../assets/Stnwrk_Section3-Image_1A.png');
+
+        h2 {
+            color: black;
+        }
+
+        p {
+            color: black;
+        }
+    }
+
+    &#fith {
+        background-image: url('../../assets/Stnwrk_Section4-Image_1A.png');
+
+        h2 {
+            color: white;
+            margin-bottom: 150px;
+        }
+
+        p {
+            color: white;
+        }
+
+        a.button {
+            background-color: white;
+            color: black;
+        }
+    }
+
+    &#parners {
+        h2 {
+            color: black;
+            margin-bottom: 100px;
+        }
+
+        p {
+            color: black;
+        }
+    }
+}

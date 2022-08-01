@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'natureExpedition';
+  opened = false;
+
+  public toggleMenu(): void {
+    this.opened = !this.opened;
+  }
 }

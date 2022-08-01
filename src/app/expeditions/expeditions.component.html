@@ -1,0 +1,14 @@
+<section id="header" *ngIf="expedition">
+	<article>
+		<img src="../../assets/Stoneworks_LogoDark.svg">
+		<h1>{{expedition.title}}</h1>
+		<p>{{expedition.description}}</p>
+	</article>
+</section>
+<section id="cards" *ngIf="expedition">
+	<article *ngFor="let card of expedition.cards">
+		<h2>{{card.name | uppercase}}</h2>
+		<div class="cardDescription" [innerHTML]="card.description"></div>
+		<a class="button" routerLink="/expeditions/card.cost">CHOOSE THIS PROGRAM</a>
+	</article>
+</section>
