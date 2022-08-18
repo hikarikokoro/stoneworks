@@ -9,6 +9,8 @@ import { ErrorComponent } from './error/error.component';
 import { ExpeditionsComponent } from './expeditions/expeditions.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PaymentComponent } from './payment/payment.component';
+import { RegisterComponent } from './register/register.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { PaymentComponent } from './payment/payment.component';
     ExpeditionsComponent,
     CartComponent,
     PaymentComponent,
-    ErrorComponent
+    ErrorComponent,
+    RegisterComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,

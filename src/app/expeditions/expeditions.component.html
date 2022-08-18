@@ -1,14 +1,34 @@
-<section id="header" *ngIf="expedition">
+<section id="header" *ngIf="expedition" [ngClass]="expedition.cards[0].type">
 	<article>
-		<img src="../../assets/Stoneworks_LogoDark.svg">
+		<a routerLink="/"><img src="../../assets/Stoneworks_LogoDark.svg"></a>
 		<h1>{{expedition.title}}</h1>
 		<p>{{expedition.description}}</p>
+		<h2>{{expedition.subtitle}}</h2>
 	</article>
 </section>
 <section id="cards" *ngIf="expedition">
-	<article *ngFor="let card of expedition.cards">
+	<article *ngFor="let card of expedition.cards; index as i">
 		<h2>{{card.name | uppercase}}</h2>
-		<div class="cardDescription" [innerHTML]="card.description"></div>
-		<a class="button" routerLink="/expeditions/card.cost">CHOOSE THIS PROGRAM</a>
+		<div [innerHTML]="card.description" class="cardDescription encapsulatedContent"></div>
+		<a class="button" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'coldWeather'">ENQUIRE</a>
+		<a class="button" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'outdoors'">CHOOSE THIS
+			PROGRAM</a>
+	</article>
+</section>
+<section id="extra" *ngIf="expedition.cards[0].type === 'coldWeather'">
+	<article>
+		<h2>EQUIPMENT AND COURSE SYLLABUS</h2>
+
+		<div id="content">
+			<div>
+				<h3>EQUIPMENT</h3>
+				<p [innerHTML]="expedition.extra.equipment" class="encapsulatedContent"></p>
+			</div>
+
+			<div>
+				<h3>SYLLABUS</h3>
+				<p [innerHTML]="expedition.extra.syllabus" class="encapsulatedContent"></p>
+			</div>
+		</div>
 	</article>
 </section>

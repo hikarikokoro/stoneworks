@@ -1,30 +1,35 @@
 import {
   Component,
-  OnInit
+  OnInit,
+  ViewEncapsulation
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ExpeditionsService } from '../services/expeditions.service';
 
 enum IExpeditionTypes {
-  'northern' = 'northern',
+  'coldWeather' = 'coldWeather',
   'outdoors' = 'outdoors'
 }
 interface IExpedition {
   title: string,
+  subtitle: string,
   description: string,
+  extra: any,
   cards: IExpeditionCard[]
 }
 
 interface IExpeditionCard {
   cost: number,
   name: string,
+  type: string,
   time: number,
   description: string
 }
 @Component({
   selector: 'app-expeditions',
   templateUrl: './expeditions.component.html',
-  styleUrls: ['./expeditions.component.scss']
+  styleUrls: ['./expeditions.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ExpeditionsComponent implements OnInit {
 
@@ -45,8 +50,8 @@ export class ExpeditionsComponent implements OnInit {
     let expeditionType: IExpeditionTypes = IExpeditionTypes['outdoors'];
     if (type === 'outdoor-experience-programs') {
       expeditionType = IExpeditionTypes['outdoors'];
-    } else if (type === 'northern-preparedness-training') {
-      expeditionType = IExpeditionTypes['northern']
+    } else if (type === 'cold-weather-preparedness-training') {
+      expeditionType = IExpeditionTypes['coldWeather']
     }
     this.expedition = await this._expeditionService.list(expeditionType);
   }

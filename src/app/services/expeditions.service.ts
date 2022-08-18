@@ -26,19 +26,22 @@ const database = getDatabase(app);
 const dbRef = ref(getDatabase(app));
 
 enum IExpeditionTypes {
-  northern,
+  coldWeather,
   outdoors
 }
 
 interface IExpedition {
   title: string,
+  subtitle: string,
   description: string,
+  extra: any,
   cards: IExpeditionCard[]
 }
 
 interface IExpeditionCard {
   cost: number,
   name: string,
+  type: string,
   time: number,
   description: string
 }
@@ -60,63 +63,18 @@ export class ExpeditionsService {
     }
   }
 
-  /* public async create(expedition: IExpedition): Promise<IExpedition> {
-    if (expedition === null || expedition === undefined) {
-      throw new Error("VOTRE EXPEDITION EST INVALIDE");
-    }
-
-    const id: string = this.generateId();
-    set(ref(database, 'expeditions/' + id), {
-      id: id,
-      name: expedition.name,
-      cost: expedition.cost,
-      time: expedition.time
-    });
-
-    return expedition;
-  } */
-
   public async get(type: IExpeditionTypes, expeditionNumber: number): Promise<IExpeditionCard> {
     if (expeditionNumber === null || expeditionNumber === undefined) {
       throw new Error("VOTRE EXPEDITION ID EST INVALIDE");
     }
-    const snapshot = await get(child(dbRef, `expeditions/${type}/cards/` + expeditionNumber));
+    const snapshot = await get(child(dbRef, `expeditions/${IExpeditionTypes[type]}/cards/` + expeditionNumber));
     if (snapshot.exists()) {
       return snapshot.val();
     } else {
       throw new Error('AN ERROR HAS OCCURED');
     }
   }
-  /* 
-    public async update(contact: IExpedition): Promise<void> {
-      if (contact === null || contact === undefined) {
-        console.error("VOTRE CONTACT EST INVALIDE");
-        return;
-      }
-      // Get a key for a new Post.
-      const id: string | null = push(child(ref(db), 'posts')).key;
-	
-      // Write the new post's data simultaneously in the posts list and the user's post list.
-      const updates: any = {};
-      updates['contacts/' + id] = contact;
-      return update(ref(db), updates);
-    }
-	
-    public async delete(contactId: string): Promise<void> {
-      if (contactId === null || contactId === undefined) {
-        console.error("VOTRE CONTACT ID EST INVALIDE");
-        return;
-      }
-	
-      const contacts: IExpedition[] = [];
-      const contactListCollection = collection(db, 'appContactList');
-      const contactListSnapshot = await getDocs(contactListCollection);
-      const contactList = contactListSnapshot.docs.map(doc => doc.data());
-      console.log(contactList);
-      return contacts;
-    }
-	
-   */
+
   public generateId(): string {
     return push(child(ref(database), 'expeditions')).key as string;
   }

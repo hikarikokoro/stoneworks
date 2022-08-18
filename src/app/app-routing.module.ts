@@ -9,10 +9,14 @@ import { ErrorComponent } from './error/error.component';
 import { ExpeditionsComponent } from './expeditions/expeditions.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PaymentComponent } from './payment/payment.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'expeditions/:type', component: ExpeditionsComponent },
+  { path: 'register/:type/:expeditionNumber', component: RegisterComponent },
+  { path: 'registration-form/:type/:expeditionNumber', component: RegisterFormComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'payment', component: PaymentComponent },
   { path: 'cart', component: CartComponent },

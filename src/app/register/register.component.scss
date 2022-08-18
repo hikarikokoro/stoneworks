@@ -1,0 +1,59 @@
+form div {
+    margin: 20px 30px;
+}
+
+label {
+    display: block;
+}
+
+section {
+    &#header {
+        background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+    }
+
+    &#registration-information {
+        //background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+
+        h2 {
+            margin: 30px auto 50px auto;
+        }
+
+        ul {
+            display: block;
+            margin: 50px 0;
+            padding-bottom: 50px;
+            border-bottom: 2px #333 solid;
+
+            li {
+                display: inline-block;
+                margin: 10px;
+                padding: 20px;
+                border: 2px #222 solid;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #999;
+                }
+            }
+        }
+
+        article {
+
+            div {
+                text-align: left;
+                min-height: 300px;
+            }
+        }
+    }
+
+    &#content {
+        //background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+		margin-top:0;
+
+        a.button {
+            background-color: #333;
+            color: #d67a02;
+        }
+    }
+
+}

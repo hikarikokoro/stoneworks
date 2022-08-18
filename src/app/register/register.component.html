@@ -1,0 +1,22 @@
+<section id="header">
+	<article>
+		<a routerLink="/"><img src="../../assets/Stoneworks_LogoDark.svg"></a>
+		<h1>Register</h1>
+	</article>
+</section>
+<section id="registration-information" *ngIf="registrationInformations[0]">
+	<article>
+		<ul>
+			<li *ngFor="let registrationInformation of registrationInformations; index as i;" (click)="selectedTab = i">
+				<p>{{registrationInformation.name}}</p>
+			</li>
+		</ul>
+		<h2>{{registrationInformations[selectedTab].name}}</h2>
+		<div [innerHTML]="registrationInformations[selectedTab].description" class="encapsulatedContent"></div>
+	</article>
+</section>
+<section id="content">
+	<article>
+		<a class="button" routerLink="/registration-form/{{type}}/{{expeditionNumber}}">NEXT</a>
+	</article>
+</section>

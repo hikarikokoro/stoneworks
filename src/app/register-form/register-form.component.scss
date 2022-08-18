@@ -1,0 +1,37 @@
+form div {
+    margin: 20px 30px;
+}
+
+
+section {
+    &#header {
+        background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+    }
+
+    &#content {
+        //background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+
+
+        form {
+			text-align: left;
+            label {
+                display: inline-block;
+				font-size:25px;
+            }
+
+			div{
+				input{
+					margin: 10px 20px 10px 15px;
+					font-size:25px;
+				}
+
+				small{
+					display:block;
+				}
+			}
+        }
+
+        margin-top:0;
+    }
+
+}

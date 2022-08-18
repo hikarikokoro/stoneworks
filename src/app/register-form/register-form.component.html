@@ -1,0 +1,108 @@
+<section id="header">
+	<article>
+		<a routerLink="/"><img src="../../assets/Stoneworks_LogoDark.svg"></a>
+		<h1>Register</h1>
+	</article>
+</section>
+<section id="general-information" *ngIf="expedition">
+	<article>
+		<h2>Expedition Information</h2>
+		<p>Name: {{expedition.name}}</p>
+		<p>Cost: {{expedition.cost}}</p>
+		<p>Duration: {{expedition.time}} days</p>
+	</article>
+</section>
+<section id="content">
+	<article>
+		<form>
+			<div id="name">
+				<label for="firstName">First Name</label>
+				<input type="text" id="firstName" name="firstName" [(ngModel)]="firstName">
+				<span [innerText]="errorFirstName"></span>
+
+				<label for="lastName">Last Name</label>
+				<input type="text" id="lastName" name="lastName" [(ngModel)]="lastName">
+				<span [innerText]="errorLastName"></span>
+			</div>
+
+			<div>
+				<label for="phoneNumber">Phone Number</label>
+				<input type="phone" id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber">
+				<span [innerText]="errorPhoneNumber"></span>
+			</div>
+			<div>
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" [(ngModel)]="email">
+				<span [innerText]="errorEmail"></span>
+			</div>
+
+			<div id="gender">
+				<label>Gender</label>
+
+				<input type="radio" id="genderFemale" name="gender" [(ngModel)]="gender">
+				<label for="genderFemale">Female</label>
+				<input type="radio" id="genderMale" name="gender" [(ngModel)]="gender">
+				<label for="genderMale">Male</label>
+				<input type="radio" id="genderOther" name="gender" [(ngModel)]="gender">
+				<label for="genderOther">Other</label>
+				<span [innerText]="errorGender"></span>
+			</div>
+
+			<div>
+				<label for="age">Age</label>
+				<input type="email" id="age" name="age" [(ngModel)]="age">
+				<span [innerText]="errorAge"></span>
+			</div>
+
+
+			<div id="measurements">
+				<label for="height">Height (in CM)</label>
+				<input type="number" id="height" name="height" [(ngModel)]="height">
+				<span [innerText]="errorHeight"></span>
+
+				<label for="weight">Weight (in KG)</label>
+				<input type="number" id="weight" name="weight" [(ngModel)]="weight">
+				<span [innerText]="errorWeight"></span>
+			</div>
+
+			<div>
+				<label for="passportInformation">Passport information (International only)</label>
+				<input type="text" id="passportInformation" name="passportInformation"
+					[(ngModel)]="passportInformation">
+				<span [innerText]="errorPassportInformation"></span>
+			</div>
+
+
+			<div>
+				<label>Emergency contact info</label>
+
+				<label for="emergencyContactName">Name</label>
+				<input type="text" id="emergencyContactName" name="emergencyContactName"
+					[(ngModel)]="emergencyContactName">
+				<span [innerText]="errorEmergencyContactName"></span>
+
+				<label for="emergencyContactPhoneNumber">Phone Number</label>
+				<input type="phone" id="emergencyContactPhoneNumber" name="emergencyContactPhoneNumber"
+					[(ngModel)]="emergencyContactPhoneNumber">
+				<span [innerText]="errorEmergencyContactPhoneNumber"></span>
+			</div>
+
+			<div>
+				<label for="medicalInfo">Medical Info Tab</label>
+				<small>(please list medical or dietary concerns)</small>
+				<input type="text" id="medicalInfo" name="medicalInfo" [(ngModel)]="medicalInfo">
+				<span [innerText]="errorMedicalInfo"></span>
+			</div>
+
+			<div>
+				<label for="provincialMedicalCoverage">Provincial medical coverage</label>
+				<input type="checkbox" id="provincialMedicalCoverage" name="provincialMedicalCoverage"
+					[(ngModel)]="provincialMedicalCoverage">
+				<span [innerText]="errorProvincialMedicalCoverage"></span>
+			</div>
+
+			<span [innerText]="error"></span>
+			<a class="button" (click)="onSubmitClick()">SUBMIT</a>
+		</form>
+	</article>
+</section>

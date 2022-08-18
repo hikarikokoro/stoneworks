@@ -142,16 +142,27 @@ h6 {
     letter-spacing: 4px;
 }
 
-.cardDescription {
-    font-size: 20px;
-    line-height: 1.8em;
-    text-align: left;
+a.button {
+    display: inline-block;
+    padding: 20px 35px;
+    background-color: #4b4a4d;
+    color: #ff972a;
+    margin: 40px 0 50px 0;
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    font-family: "Libre Baskerville", serif;
 
-    ul {
-        list-style: circle;
+    &.orange {
+        background-color: #ff972a;
+        color: white;
+    }
+
+    &.white {
+        background-color: white;
+        color: #4b4a4d;
     }
 }
-
 
 section {
     background-repeat: no-repeat;
@@ -173,8 +184,24 @@ section {
         }
 
         img {
-            max-width: 350px;
+            max-width: 280px;
             margin-bottom: 30px;
+        }
+
+        .encapsulatedContent {
+            p{
+                margin-bottom: 15px;
+            }
+
+            ul {
+                list-style: circle;
+                margin-left: 20px;
+                margin-bottom: 15px;
+
+                li::marker {
+                    color: #ff972a;
+                }
+            }
         }
     }
 }
