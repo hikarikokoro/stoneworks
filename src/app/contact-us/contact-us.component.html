@@ -1,32 +1,9 @@
 <section id="header">
 	<article>
-		<a routerLink="/"><img src="../../assets/Stoneworks_LogoDark.svg"></a>
+		<a routerLink="/"><img src="../../assets/Stoneworks_LogoLight.svg" class="logo"></a>
 		<h1>Contact Us</h1>
 	</article>
-</section>
-<section id="content">
-	<article>
-		<form>
-			<div>
-				<label for="title">Title</label>
-				<input type="text" id="title" name="title" [(ngModel)]="title">
-				<span [innerText]="errorTitle"></span>
-			</div>
-
-			<div>
-				<label for="email">Email</label>
-				<input type="email" id="email" name="email" [(ngModel)]="email">
-				<span [innerText]="errorEmail"></span>
-			</div>
-
-			<div>
-				<label for="content">Content</label>
-				<textarea id="content" name="content" [(ngModel)]="content"></textarea>
-				<span [innerText]="errorContent"></span>
-			</div>
-
-			<span [innerText]="error"></span>
-			<button (click)="onSubmitClick()">SUBMIT</button>
-		</form>
+	<article class="form">
+		<app-base-form></app-base-form>
 	</article>
 </section>

@@ -142,6 +142,27 @@ h6 {
     letter-spacing: 4px;
 }
 
+button.button {
+    display: inline-block;
+    padding: 20px 35px;
+    background-color: #4b4a4d;
+    color: #ff972a;
+    margin: 40px 0 50px 0;
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    font-family: "Libre Baskerville", serif;
+
+    &.orange {
+        background-color: #ff972a;
+        color: white;
+    }
+
+    &.white {
+        background-color: white;
+        color: #4b4a4d;
+    }
+}
 a.button {
     display: inline-block;
     padding: 20px 35px;
@@ -177,13 +198,13 @@ section {
 
         h1,
         h2 {
-            font-size: 50px;
+            font-size: 26px;
             margin: 300px auto 50px auto;
             line-height: 1.8em;
             letter-spacing: 0.3em;
         }
 
-        img {
+        img.logo {
             max-width: 280px;
             margin-bottom: 30px;
         }

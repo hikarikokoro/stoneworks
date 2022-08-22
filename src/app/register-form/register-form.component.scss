@@ -1,37 +1,147 @@
-form div {
-    margin: 20px 30px;
-}
-
-
 section {
-    &#header {
-        background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    article {
+        padding: 50px;
+        max-width: 1000px;
+        margin: auto;
+        text-align: center;
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 100px;
+            line-height: 1.8em;
+        }
+
+        h2 {
+            font-size: 26px;
+            line-height: 1.8em;
+            letter-spacing: 0.3em;
+            margin: 50px auto 10px auto;
+        }
+
+        .underline {
+            height: 3px;
+            width: 250px;
+            background-color: #ff972a;
+            margin: 30px auto;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8em;
+        }
     }
 
     &#content {
-        //background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+        background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+        padding: 0 0 150px 0;
 
-
-        form {
-			text-align: left;
-            label {
-                display: inline-block;
-				font-size:25px;
+        .logo {
+            img {
+                max-width: 200px;
             }
-
-			div{
-				input{
-					margin: 10px 20px 10px 15px;
-					font-size:25px;
-				}
-
-				small{
-					display:block;
-				}
-			}
         }
 
-        margin-top:0;
-    }
+        article {
+            background-color: white;
 
+            form {
+                text-align: left;
+                display: grid;
+                grid-template-columns: 50% 50%;
+
+                label {
+                    display: block;
+                    font-size: 16px;
+                }
+
+                button:disabled {
+                    opacity: 80%;
+                }
+
+                p.error {
+                    color: red;
+                    font-size: 25px;
+                    margin-bottom: -40px;
+                }
+
+                div {
+                    margin: 10px 0;
+                    width: 100%;
+
+                    input {
+                        margin: 5px 0;
+                        padding: 5px;
+                        font-size: 16px;
+                        width: 90%;
+                    }
+
+                    label.title {
+                        font-weight: bold;
+                    }
+
+                    textarea {
+                        margin: 10px 0;
+                        padding: 5px;
+                        font-size: 25px;
+                        width: 100%;
+                        height: 200px;
+                        resize: none;
+                    }
+
+                    small {
+                        display: block;
+                    }
+
+                    &.inline-label {
+                        input {
+                            margin: 5px 10px 5px 0;
+                            padding: 5px;
+                            font-size: 16px;
+                            width: auto;
+                        }
+
+                        label {
+                            display: inline-block;
+                            font-size: 16px;
+                            width: 90%;
+                            vertical-align: text-top;
+                        }
+                    }
+
+                    &#gender {
+                        label.title {
+                            margin-bottom: 15px;
+                        }
+
+                        label:not(.title) {
+                            display: inline-block;
+                            vertical-align: text-top;
+                        }
+
+                        input {
+                            display: inline;
+                            width: auto;
+                            margin: 5px 10px 5px 0;
+                            width: auto;
+                        }
+                    }
+
+                }
+            }
+
+            &.info {
+                div {
+                    //border: 1px solid #ff972a;
+                    background-color: #4b4a4d;
+                    padding: 1px 0 40px 0;
+
+                    color: white;
+                }
+            }
+        }
+    }
 }

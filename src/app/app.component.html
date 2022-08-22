@@ -1,6 +1,6 @@
 <header [ngClass]="{'opened': opened, 'closed': !opened}">
   <menu>
-    <li><button>EN</button> | <button>FR</button></li>
+    <li><button>EN</button><button>FR</button></li>
     <li *ngIf="!opened" (click)="toggleMenu()"><i class="fa-solid fa-bars"></i></li>
     <li *ngIf="opened" (click)="toggleMenu()"><i class="fa-solid fa-close"></i></li>
   </menu>
@@ -10,13 +10,13 @@
       <ul>
         <li><a routerLink="/expeditions/outdoor-experience-programs">Outdoor Experience Programs</a></li>
         <li><a routerLink="/expeditions/cold-weather-preparedness-training">Cold Weather Preparedness Training</a></li>
-        <li><a routerLink="/expeditions/cold-weather-preparedness-training">Nordic Backcountry Skiing</a></li>
+        <li><a routerLink="/expeditions/outdoor-experience-programs">Nordic Backcountry Skiing</a></li>
       </ul>
     </article>
     <article>
       <ul>
-        <li><a routerLink="/contact-us">Professional Services</a></li>
-        <li><a routerLink="/">About Us</a></li>
+        <li><a routerLink="/professional-services">Professional Services</a></li>
+        <li><a routerLink="/about-us">About Us</a></li>
         <li><a routerLink="/">Our Partners</a></li>
       </ul>
     </article>
@@ -46,9 +46,11 @@
     <article>
       <h2>OUR PARTNERS</h2>
       <ul>
-        <li><img src="../../assets/Logo.png"></li>
-        <li id="cold-skills"><img src="../../assets/Header01.17.221.jpg"></li>
-        <li><img src="../../assets/MorningStar_Logo.png"></li>
+        <li><a href="https://acapulka.com/en/" target="_blank"><img src="../../assets/Logo.png"></a></li>
+        <li id="cold-skills"><a href="https://www.coldskills.com/" target="_blank"><img
+              src="../../assets/Header01.17.221.jpg"></a></li>
+        <li><a href="https://www.morningstarss.com/gear" target="_blank"><img
+              src="../../assets/MorningStar_Logo.png"></a></li>
       </ul>
 
       <img src="../../assets/Stoneworks_Lettermark.png" id="site_logo_footer">

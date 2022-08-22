@@ -23,6 +23,19 @@ header {
             i {
                 font-size: 30px;
             }
+
+            button {
+                background-color: white;
+                color: black;
+                padding: 5px 10px;
+                border: none;
+
+                &:first-child {
+                    border-right: solid #4b4a4d 2px;
+                    background-color: #ff972a;
+                    color: white;
+                }
+            }
         }
     }
 

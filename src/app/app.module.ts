@@ -11,6 +11,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PaymentComponent } from './payment/payment.component';
 import { RegisterComponent } from './register/register.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ProfessionalServicesComponent } from './professional-services/professional-services.component';
+import { BaseFormComponent } from './base-form/base-form.component';
 
 
 @NgModule({
@@ -23,7 +26,10 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     PaymentComponent,
     ErrorComponent,
     RegisterComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    AboutUsComponent,
+    ProfessionalServicesComponent,
+    BaseFormComponent
   ],
   imports: [
     BrowserModule,

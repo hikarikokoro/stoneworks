@@ -1,25 +1,22 @@
-<section id="header">
-	<article>
-		<a routerLink="/"><img src="../../assets/Stoneworks_LogoDark.svg"></a>
-		<h1>Register</h1>
-	</article>
-</section>
-<section id="general-information" *ngIf="expedition">
-	<article>
-		<h2>Expedition Information</h2>
-		<p>Name: {{expedition.name}}</p>
-		<p>Cost: {{expedition.cost}}</p>
-		<p>Duration: {{expedition.time}} days</p>
-	</article>
-</section>
 <section id="content">
+	<article class="info">
+		<a routerLink="/" class="logo"><img src="../../assets/Stoneworks_LogoDark.svg" class="logo"></a>
+		<div>
+			<h2>Information and registration</h2>
+			<p>Name: {{expedition.name}}</p>
+			<p>Cost: {{expedition.cost}}</p>
+			<p>Duration: {{expedition.time}} days</p>
+		</div>
+	</article>
 	<article>
 		<form>
-			<div id="name">
+			<div>
 				<label for="firstName">First Name</label>
 				<input type="text" id="firstName" name="firstName" [(ngModel)]="firstName">
 				<span [innerText]="errorFirstName"></span>
+			</div>
 
+			<div>
 				<label for="lastName">Last Name</label>
 				<input type="text" id="lastName" name="lastName" [(ngModel)]="lastName">
 				<span [innerText]="errorLastName"></span>
@@ -37,14 +34,14 @@
 			</div>
 
 			<div id="gender">
-				<label>Gender</label>
+				<label class="title">Gender</label>
 
-				<input type="radio" id="genderFemale" name="gender" [(ngModel)]="gender">
-				<label for="genderFemale">Female</label>
-				<input type="radio" id="genderMale" name="gender" [(ngModel)]="gender">
-				<label for="genderMale">Male</label>
-				<input type="radio" id="genderOther" name="gender" [(ngModel)]="gender">
-				<label for="genderOther">Other</label>
+				<input type="radio" id="female" name="female" [(ngModel)]="gender">
+				<label for="female">Female</label><br>
+				<input type="radio" id="male" name="male" [(ngModel)]="gender">
+				<label for="male">Male</label><br>
+				<input type="radio" id="other" name="other" [(ngModel)]="gender">
+				<label for="other">Other</label><br>
 				<span [innerText]="errorGender"></span>
 			</div>
 
@@ -59,7 +56,8 @@
 				<label for="height">Height (in CM)</label>
 				<input type="number" id="height" name="height" [(ngModel)]="height">
 				<span [innerText]="errorHeight"></span>
-
+			</div>
+			<div id="measurements">
 				<label for="weight">Weight (in KG)</label>
 				<input type="number" id="weight" name="weight" [(ngModel)]="weight">
 				<span [innerText]="errorWeight"></span>
@@ -74,13 +72,14 @@
 
 
 			<div>
-				<label>Emergency contact info</label>
+				<label class="title">Emergency contact info</label>
 
 				<label for="emergencyContactName">Name</label>
 				<input type="text" id="emergencyContactName" name="emergencyContactName"
 					[(ngModel)]="emergencyContactName">
 				<span [innerText]="errorEmergencyContactName"></span>
 
+				<br>
 				<label for="emergencyContactPhoneNumber">Phone Number</label>
 				<input type="phone" id="emergencyContactPhoneNumber" name="emergencyContactPhoneNumber"
 					[(ngModel)]="emergencyContactPhoneNumber">
@@ -94,15 +93,24 @@
 				<span [innerText]="errorMedicalInfo"></span>
 			</div>
 
-			<div>
-				<label for="provincialMedicalCoverage">Provincial medical coverage</label>
+			<div></div>
+			<div class="inline-label">
 				<input type="checkbox" id="provincialMedicalCoverage" name="provincialMedicalCoverage"
 					[(ngModel)]="provincialMedicalCoverage">
+				<label for="provincialMedicalCoverage">Provincial medical coverage</label>
 				<span [innerText]="errorProvincialMedicalCoverage"></span>
-			</div>
 
-			<span [innerText]="error"></span>
-			<a class="button" (click)="onSubmitClick()">SUBMIT</a>
+				<br>
+				<br>
+				<input type="checkbox" id="provincialMedicalCoverage" name="provincialMedicalCoverage"
+					[(ngModel)]="provincialMedicalCoverage">
+				<label for="provincialMedicalCoverage">I have read, understand, and consent to the risks and legal
+					wavers contained in the liability <a style="color:blue" href="/">PDF</a></label>
+				<span [innerText]="errorProvincialMedicalCoverage"></span>
+
+				<p [innerText]="error"></p>
+				<a class="button" (click)="onSubmitClick()">SUBMIT</a>
+			</div>
 		</form>
 	</article>
 </section>

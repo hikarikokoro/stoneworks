@@ -13,6 +13,7 @@ section {
         h1 {
             font-size: 26px;
             line-height: 1.8em;
+            color:black;
         }
 
         h2 {
@@ -20,6 +21,12 @@ section {
             line-height: 1.8em;
             letter-spacing: 0.3em;
             margin: 50px auto 10px auto;
+            color:black;
+        }
+
+        .selfie{
+            width:100%;
+            margin-top: 50px;
         }
 
         .underline {
@@ -32,15 +39,12 @@ section {
         p {
             font-size: 16px;
             line-height: 1.8em;
+            color:black;
         }
-
-
     }
 
     &#header {
-        background-image: url('../../assets/P1010340_BW1_LR.jpg');
-
-
+        background-image: url('../../assets/outdoors_background.png');
         article {
             padding: 50px 0;
             max-width: 737px;
@@ -53,13 +57,13 @@ section {
         }
 
         h1 {
-            color: white;
             margin-top: 13px;
             text-transform: uppercase;
+            color:black;
         }
 
         p {
-            color: white;
+            color:black;
         }
     }
 

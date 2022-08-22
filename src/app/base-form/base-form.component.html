@@ -1,0 +1,22 @@
+<form>
+	<!-- <div>
+		<label for="title">Title</label>
+		<input type="text" id="title" name="title" [(ngModel)]="title">
+		<span [innerText]="errorTitle"></span>
+	</div>
+ -->
+	<div>
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email" [(ngModel)]="email">
+		<span [innerText]="errorEmail"></span>
+	</div>
+
+	<div>
+		<label for="content">Message</label>
+		<textarea id="content" name="content" [(ngModel)]="content"></textarea>
+		<span [innerText]="errorContent"></span>
+	</div>
+
+	<p class="error" [innerText]="error"></p>
+	<button class="button" (click)="onSubmitClick()" [disabled]="error !== ''">ENQUIRE</button>
+</form>

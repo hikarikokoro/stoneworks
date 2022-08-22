@@ -1,14 +1,9 @@
-form div {
-    margin: 20px 30px;
-}
-
-label {
-    display: block;
-}
-
 section {
     &#header {
         background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+        h1 {
+            margin: 30px auto 50px auto;
+        }
     }
 
     &#registration-information {
@@ -26,13 +21,20 @@ section {
 
             li {
                 display: inline-block;
-                margin: 10px;
                 padding: 20px;
-                border: 2px #222 solid;
+                border-right: 2px #222 solid;
                 cursor: pointer;
 
                 &:hover {
                     background-color: #999;
+                }
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                &.selected {
+                    background-color: #d67a02;
                 }
             }
         }
@@ -48,7 +50,7 @@ section {
 
     &#content {
         //background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
-		margin-top:0;
+        margin-top: 0;
 
         a.button {
             background-color: #333;
