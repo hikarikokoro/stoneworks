@@ -31,11 +31,15 @@ export class RegisterFormComponent implements OnInit {
   public age: string = '';
   public height: number = 0;
   public weight: number = 0;
-  public passportInformation: string = '';
+  public passportCountry: string = '';
+  public passportNumber: string = '';
+  public passportExpirationDate: string = '';
   public emergencyContactName: string = '';
   public emergencyContactPhoneNumber: string = '';
   public medicalInfo: string = '';
+  public allergies: string = '';
   public provincialMedicalCoverage: boolean = false;
+  public medicalMedicalCoverage: boolean = false;
 
   public expedition: IExpeditionCard = {} as IExpeditionCard;
   public errorFirstName: string = '';
@@ -46,11 +50,15 @@ export class RegisterFormComponent implements OnInit {
   public errorAge: string = '';
   public errorHeight: string = '';
   public errorWeight: string = '';
-  public errorPassportInformation: string = '';
+  public errorPassportCountry: string = '';
+  public errorPassportNumber: string = '';
+  public errorPassportExpirationDate: string = '';
   public errorEmergencyContactName: string = '';
   public errorEmergencyContactPhoneNumber: string = '';
   public errorMedicalInfo: string = '';
+  public errorAllergies: string = '';
   public errorProvincialMedicalCoverage: string = '';
+  public errorMedicalMedicalCoverage: string = '';
   public error: string = '';
 
   constructor(
@@ -69,15 +77,6 @@ export class RegisterFormComponent implements OnInit {
   }
 
   private async load(type: string, expeditionNumber: number): Promise<void> {
-    let expeditionType: IExpeditionTypes = IExpeditionTypes.coldWeather;
-    switch (type) {
-      case "coldWeather":
-        expeditionType = IExpeditionTypes.coldWeather;
-        break;
-      case "outdoors":
-        expeditionType = IExpeditionTypes.outdoors;
-        break;
-    }
-    this.expedition = await this._expeditionService.get(expeditionType, expeditionNumber);
+    this.expedition = await this._expeditionService.get(type, expeditionNumber);
   }
 }

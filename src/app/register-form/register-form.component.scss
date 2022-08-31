@@ -77,6 +77,10 @@ section {
                         padding: 5px;
                         font-size: 16px;
                         width: 90%;
+
+                        @media only screen and (max-width: 600px) {
+                            width: 98%;
+                        }
                     }
 
                     label.title {
@@ -84,10 +88,9 @@ section {
                     }
 
                     textarea {
-                        margin: 10px 0;
                         padding: 5px;
                         font-size: 25px;
-                        width: 100%;
+                        width: 90%;
                         height: 200px;
                         resize: none;
                     }
@@ -97,6 +100,8 @@ section {
                     }
 
                     &.inline-label {
+                        width: 200%;
+
                         input {
                             margin: 5px 10px 5px 0;
                             padding: 5px;
@@ -131,14 +136,16 @@ section {
                     }
 
                 }
+
+                @media only screen and (max-width: 600px) {
+                    grid-template-columns: 100%;
+                }
             }
 
             &.info {
                 div {
-                    //border: 1px solid #ff972a;
                     background-color: #4b4a4d;
-                    padding: 1px 0 40px 0;
-
+                    padding: 1px 20px 40px 20px;
                     color: white;
                 }
             }

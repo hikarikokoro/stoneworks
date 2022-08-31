@@ -15,10 +15,27 @@ form {
         }
     }
 
-    p.error {
+    .error {
+        display: block;
         color: red;
         font-size: 16px;
-        margin-bottom: -40px;
+        background-color: #ffd1d1;
+        padding: 5px 20px;
+        margin-bottom: 20px;
+    }
+
+    p.error {
+        margin-bottom: -30px;
+    }
+
+    p.allGood {
+        display: block;
+        color: green;
+        font-size: 16px;
+        background-color: #d3ffd5;
+        padding: 5px 20px;
+        margin-bottom: 20px;
+        margin-bottom: -30px;
     }
 
     div {
@@ -29,13 +46,17 @@ form {
             padding: 5px;
             font-size: 16px;
             width: 50%;
+
+            @media only screen and (max-width: 768px) {
+                width: 98%;
+            }
         }
 
         textarea {
             margin: 10px 0;
             padding: 5px;
             font-size: 16px;
-            width: 100%;
+            width: 98%;
             height: 200px;
             resize: none;
         }
@@ -43,5 +64,6 @@ form {
         small {
             display: block;
         }
+
     }
 }

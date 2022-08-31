@@ -27,7 +27,8 @@ const dbRef = ref(getDatabase(app));
 
 interface IRegistrationInformation {
   name: string,
-  description: string
+  description: string,
+  onlyOutdoors: boolean
 }
 
 @Injectable({

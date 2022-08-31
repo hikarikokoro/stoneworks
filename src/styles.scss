@@ -207,11 +207,20 @@ section {
         img.logo {
             max-width: 280px;
             margin-bottom: 30px;
+            cursor: pointer;
         }
 
         .encapsulatedContent {
             p{
                 margin-bottom: 15px;
+                font-size: 16px;
+                line-height: 1.8em;
+            }
+            small{
+                display: block;
+                margin: -20px 0 20px 20px;
+                font-size: 14px;
+                font-style: italic;
             }
 
             ul {

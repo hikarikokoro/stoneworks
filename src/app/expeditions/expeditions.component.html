@@ -6,18 +6,21 @@
 		<h2>{{expedition.subtitle}}</h2>
 	</article>
 </section>
-<section id="cards" *ngIf="expedition">
-	<article *ngFor="let card of expedition.cards; index as i">
+<section id="cards" *ngIf="expedition && expedition.cards">
+	<article id="{{card.id}}" *ngFor="let card of expedition.cards; index as i">
 		<h2>{{card.name | uppercase}}</h2>
 		<div [innerHTML]="card.description" class="cardDescription encapsulatedContent"></div>
-		<a class="button" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'coldWeather'">ENQUIRE</a>
-		<a class="button" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'outdoors'">CHOOSE THIS
+		<a class="button coldWeather" routerLink="/register/{{card.type}}/{{i}}"
+			*ngIf="card.type === 'coldWeather'">MORE INFORMATION</a>
+		<a class="button outdoors" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'outdoors'">CHOOSE
+			THIS
 			PROGRAM</a>
 	</article>
 </section>
-<section id="extra" *ngIf="expedition.cards[0].type === 'coldWeather'">
+
+<!-- <section id="extra" *ngIf="expedition && expedition.cards[0].type === 'coldWeather'">
 	<article>
-		<h2>EQUIPMENT AND COURSE SYLLABUS</h2>
+		<h2 [innerHTML]="expedition.extra.title"></h2>
 
 		<div id="content">
 			<div>
@@ -28,6 +31,19 @@
 			<div>
 				<h3>SYLLABUS</h3>
 				<p [innerHTML]="expedition.extra.syllabus" class="encapsulatedContent"></p>
+			</div>
+		</div>
+	</article>
+</section> -->
+
+
+<section id="extra" *ngIf="expedition && expedition.cards[0].type === 'outdoors'">
+	<article>
+		<h2 [innerHTML]="expedition.extra.title"></h2>
+
+		<div id="content">
+			<div>
+				<p [innerHTML]="expedition.extra.testimonials" class="encapsulatedContent"></p>
 			</div>
 		</div>
 	</article>

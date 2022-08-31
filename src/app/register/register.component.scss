@@ -1,8 +1,10 @@
 section {
     &#header {
         background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+
         h1 {
             margin: 30px auto 50px auto;
+            text-transform: uppercase;
         }
     }
 
@@ -17,12 +19,13 @@ section {
             display: block;
             margin: 50px 0;
             padding-bottom: 50px;
-            border-bottom: 2px #333 solid;
+            border-bottom: 1px #898989 solid;
 
             li {
                 display: inline-block;
-                padding: 20px;
-                border-right: 2px #222 solid;
+                padding: 10px 20px;
+                font-size: 14px;
+                border-right: 1px #898989 solid;
                 cursor: pointer;
 
                 &:hover {
@@ -36,10 +39,16 @@ section {
                 &.selected {
                     background-color: #d67a02;
                 }
+
+                @media only screen and (max-width: 768px) {
+                    display: block;
+                    border-right: none;
+                }
             }
         }
 
         article {
+            padding: 50px 20px;
 
             div {
                 text-align: left;

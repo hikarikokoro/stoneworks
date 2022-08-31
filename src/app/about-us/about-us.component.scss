@@ -13,7 +13,7 @@ section {
         h1 {
             font-size: 26px;
             line-height: 1.8em;
-            color:black;
+            color: black;
         }
 
         h2 {
@@ -21,11 +21,11 @@ section {
             line-height: 1.8em;
             letter-spacing: 0.3em;
             margin: 50px auto 10px auto;
-            color:black;
+            color: black;
         }
 
-        .selfie{
-            width:100%;
+        .selfie {
+            width: 100%;
             margin-top: 50px;
         }
 
@@ -39,32 +39,36 @@ section {
         p {
             font-size: 16px;
             line-height: 1.8em;
-            color:black;
+            color: black;
         }
     }
 
     &#header {
         background-image: url('../../assets/outdoors_background.png');
+
         article {
-            padding: 50px 0;
+            padding: 50px 20px;
             max-width: 737px;
 
             &.form {
                 background-color: white;
                 max-width: 700px;
                 padding: 50px;
+
+                @media only screen and (max-width: 768px) {
+                    padding: 20px;
+                }
             }
         }
 
         h1 {
             margin-top: 13px;
             text-transform: uppercase;
-            color:black;
+            color: black;
         }
 
         p {
-            color:black;
+            color: black;
         }
     }
-
 }

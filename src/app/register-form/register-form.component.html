@@ -64,10 +64,21 @@
 			</div>
 
 			<div>
-				<label for="passportInformation">Passport information (International only)</label>
-				<input type="text" id="passportInformation" name="passportInformation"
-					[(ngModel)]="passportInformation">
-				<span [innerText]="errorPassportInformation"></span>
+				<label class="title">Passport information (International only)</label>
+
+				<label for="countryOfIssue">Country of Issue</label>
+				<input type="text" id="countryOfIssue" name="countryOfIssue" [(ngModel)]="passportCountry">
+				<span [innerText]="errorPassportCountry"></span>
+
+				<br>
+				<label for="passNumber">Passport Number</label>
+				<input type="phone" id="passNumber" name="passNumber" [(ngModel)]="passportNumber">
+				<span [innerText]="errorPassportNumber"></span>
+
+				<br>
+				<label for="dateOfExpiry">Date of Expiry</label>
+				<input type="phone" id="dateOfExpiry" name="dateOfExpiry" [(ngModel)]="passportExpirationDate">
+				<span [innerText]="errorPassportExpirationDate"></span>
 			</div>
 
 
@@ -87,14 +98,23 @@
 			</div>
 
 			<div>
-				<label for="medicalInfo">Medical Info Tab</label>
-				<small>(please list medical or dietary concerns)</small>
-				<input type="text" id="medicalInfo" name="medicalInfo" [(ngModel)]="medicalInfo">
+				<label class="title">Medical Information</label>
+
+				<label for="medicalInfo">List Medical Conditions or Diagnosis</label>
+				<textarea id="medicalInfo" name="medicalInfo" [(ngModel)]="medicalInfo"></textarea>
 				<span [innerText]="errorMedicalInfo"></span>
 			</div>
 
-			<div></div>
+			<div>
+				<label class="title">&nbsp;</label>
+				<label for="medicalInfoAllergies">List Food allergies or Dietary Concerns</label>
+				<textarea id="medicalInfoAllergies" name="medicalInfoAllergies" [(ngModel)]="allergies"></textarea>
+				<span [innerText]="errorAllergies"></span>
+			</div>
+
 			<div class="inline-label">
+				<p><b>EACH PARTICIPANT IS RESPONSIBLE FOR ALL MEDICAL EXPENSES, INCLUDING MEDICAL EVACUATION IN THE
+						PROVINCE OF ONTARIO, AND MUST BE COVERED BY THEIR OWN MEDICAL AND ACCIDENT INSURANCE</b></p><br>
 				<input type="checkbox" id="provincialMedicalCoverage" name="provincialMedicalCoverage"
 					[(ngModel)]="provincialMedicalCoverage">
 				<label for="provincialMedicalCoverage">Provincial medical coverage</label>
@@ -102,10 +122,21 @@
 
 				<br>
 				<br>
+
+				<input type="checkbox" id="medicalMedicalCoverage" name="medicalMedicalCoverage"
+					[(ngModel)]="medicalMedicalCoverage">
+				<label for="provincialMedicalCoverage">Medical Evac Coverage</label>
+				<span [innerText]="errorMedicalMedicalCoverage"></span>
+
+				<br>
+				<br>
+
 				<input type="checkbox" id="provincialMedicalCoverage" name="provincialMedicalCoverage"
 					[(ngModel)]="provincialMedicalCoverage">
 				<label for="provincialMedicalCoverage">I have read, understand, and consent to the risks and legal
-					wavers contained in the liability <a style="color:blue" href="/">PDF</a></label>
+					wavers contained in the liability <a style="color:blue"
+						href="../../assets/STONEWORKS EXPERIENCE WAIVER[1564].pdf"
+						download="STONEWORKS EXPERIENCE WAIVER[1564]">PDF</a></label>
 				<span [innerText]="errorProvincialMedicalCoverage"></span>
 
 				<p [innerText]="error"></p>

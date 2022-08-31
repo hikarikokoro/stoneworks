@@ -1,3 +1,4 @@
+
 import {
   Component,
   OnInit,
@@ -23,7 +24,8 @@ interface IExpeditionCard {
   name: string,
   type: string,
   time: number,
-  description: string
+  description: string,
+  id: string
 }
 @Component({
   selector: 'app-expeditions',
@@ -47,13 +49,7 @@ export class ExpeditionsComponent implements OnInit {
   }
 
   private async loadExpeditions(type: string): Promise<void> {
-    let expeditionType: IExpeditionTypes = IExpeditionTypes['outdoors'];
-    if (type === 'outdoor-experience-programs') {
-      expeditionType = IExpeditionTypes['outdoors'];
-    } else if (type === 'cold-weather-preparedness-training') {
-      expeditionType = IExpeditionTypes['coldWeather']
-    }
-    this.expedition = await this._expeditionService.list(expeditionType);
+    this.expedition = await this._expeditionService.list(type);
   }
 
 }
