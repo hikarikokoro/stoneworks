@@ -5,7 +5,7 @@
 		<h1 *ngIf="type === 'coldWeather'">Cold Weather Preparedness Training</h1>
 	</article>
 </section>
-<section id="registration-information" *ngIf="registrationInformations[0]">
+<section class="registration-information" *ngIf="registrationInformations[0]">
 	<article>
 		<ul>
 			<li *ngFor="let registrationInformation of registrationInformations; index as i;" (click)="selectedTab = i"
@@ -20,7 +20,7 @@
 <section id="content">
 	<article>
 		<a class="button" *ngIf="type === 'outdoors'"
-			routerLink="/registration-form/{{type}}/{{expeditionNumber}}">REGISTRATION</a>
+			routerLink="/registration-form/{{type}}/{{expeditionNumber}}">REGISTRATION</a><br>
 		<button class="button" (click)="enquire = true" *ngIf="!enquire">ENQUIRE</button>
 	</article>
 </section>

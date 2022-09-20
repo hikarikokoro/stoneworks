@@ -3,7 +3,9 @@ import {
   OnInit
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import * as _ from 'lodash';
 import { ExpeditionsService } from '../services/expeditions.service';
+import RegisterFormViewModel from './register-form.view-model';
 
 enum IExpeditionTypes {
   coldWeather,
@@ -23,23 +25,11 @@ interface IExpeditionCard {
 })
 export class RegisterFormComponent implements OnInit {
 
-  public firstName: string = '';
-  public lastName: string = '';
-  public email: string = '';
-  public phoneNumber: string = '';
-  public gender: string = '';
-  public age: string = '';
-  public height: number = 0;
-  public weight: number = 0;
-  public passportCountry: string = '';
-  public passportNumber: string = '';
-  public passportExpirationDate: string = '';
-  public emergencyContactName: string = '';
-  public emergencyContactPhoneNumber: string = '';
-  public medicalInfo: string = '';
-  public allergies: string = '';
   public provincialMedicalCoverage: boolean = false;
   public medicalMedicalCoverage: boolean = false;
+  public additionnalInfo: boolean = false;
+  public invoiceConf: boolean = false;
+  public terms: boolean = false;
 
   public expedition: IExpeditionCard = {} as IExpeditionCard;
   public errorFirstName: string = '';
@@ -59,7 +49,13 @@ export class RegisterFormComponent implements OnInit {
   public errorAllergies: string = '';
   public errorProvincialMedicalCoverage: string = '';
   public errorMedicalMedicalCoverage: string = '';
+  public errorAdditionnalInfo: string = '';
+  public errorInvoiceConf: string = '';
+  public errorTerms: string = '';
   public error: string = '';
+
+  public participants: RegisterFormViewModel[] = [];
+  public activeParticipant?: RegisterFormViewModel;
 
   constructor(
     private _activatedRoute: ActivatedRoute,
@@ -70,10 +66,36 @@ export class RegisterFormComponent implements OnInit {
     this._activatedRoute.params.subscribe(routeParams => {
       this.load(routeParams['type'], routeParams['expeditionNumber']);
     });
+
+    const id = 0;
+    const participant: RegisterFormViewModel = new RegisterFormViewModel(id, '', '', '', '', '', 20, 170, 54, '', '', '', '', '', '', '');
+    this.participants.push(participant);
+    this.activeParticipant = participant;
   }
 
   public onSubmitClick(): void {
+    this.error = '<i class="fa-solid fa-triangle-exclamation"></i> There has been an error... try again in a few minutes';
+  }
 
+  public addParticipant(): void {
+    const last = _.last(this.participants);
+    const id = last!.id + 1;
+    const participant: RegisterFormViewModel = new RegisterFormViewModel(id, '', '', '', '', '', 20, 170, 54, '', '', '', '', '', '', '');
+    this.participants.push(participant);
+  }
+
+  public changeActiveParticipant(v: number): void {
+    const participant = _.find(this.participants, (p) => p.id === v);
+    this.activeParticipant = participant
+  }
+
+  public removeParticipant(v: number): void {
+    const index = _.findIndex(this.participants, (p) => p.id === v);
+    this.participants.splice(index, 1);
+
+    if (this.activeParticipant!.id === v) {
+      this.activeParticipant = this.participants[0];
+    }
   }
 
   private async load(type: string, expeditionNumber: number): Promise<void> {

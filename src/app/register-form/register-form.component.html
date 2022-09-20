@@ -7,109 +7,144 @@
 			<p>Cost: {{expedition.cost}}</p>
 			<p>Duration: {{expedition.time}} days</p>
 		</div>
+		<img src="../../assets/StoneworksCalendar_1[1580].svg" class="calendar">
 	</article>
-	<article>
+	<article class="participants">
+		<button *ngFor="let participant of participants; let i = index"
+			(click)="changeActiveParticipant(participant.id)"
+			[ngClass]="{'selected': participant.id === activeParticipant!.id}">
+			<span *ngIf="participant.firstName != '' && participant.firstName != undefined">{{participant.firstName}}
+				{{participant.lastName}}</span>
+			<span *ngIf="participant.firstName == '' || participant.firstName == undefined">Participant {{i + 1}}</span>
+			<span class="remove" (click)="removeParticipant(participant.id)"> <i
+					class="fa-sharp fa-solid fa-circle-xmark"></i></span>
+		</button>
+		<button class="add" (click)="addParticipant()"><i class="fa-solid fa-plus"></i> Add New Participant</button>
+	</article>
+	<article *ngIf="activeParticipant">
+		<p class="instruction"><i>*</i> Fields must be filled.</p>
 		<form>
 			<div>
-				<label for="firstName">First Name</label>
-				<input type="text" id="firstName" name="firstName" [(ngModel)]="firstName">
-				<span [innerText]="errorFirstName"></span>
+				<label for="firstName"><i>*</i> First Name</label>
+				<input type="text" id="firstName" name="firstName" [(ngModel)]="activeParticipant.firstName">
+				<span class="error" *ngIf="errorFirstName != ''" [innerText]="errorFirstName"></span>
 			</div>
 
 			<div>
-				<label for="lastName">Last Name</label>
-				<input type="text" id="lastName" name="lastName" [(ngModel)]="lastName">
-				<span [innerText]="errorLastName"></span>
+				<label for="lastName"><i>*</i> Last Name</label>
+				<input type="text" id="lastName" name="lastName" [(ngModel)]="activeParticipant.lastName">
+				<span class="error" *ngIf="errorLastName != ''" [innerText]="errorLastName"></span>
 			</div>
 
 			<div>
-				<label for="phoneNumber">Phone Number</label>
-				<input type="phone" id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber">
-				<span [innerText]="errorPhoneNumber"></span>
+				<label for="phoneNumber"><i>*</i> Phone Number</label>
+				<input type="phone" id="phoneNumber" name="phoneNumber" [(ngModel)]="activeParticipant.phoneNumber">
+				<span class="error" *ngIf="errorPhoneNumber != ''" [innerText]="errorPhoneNumber"></span>
 			</div>
 			<div>
-				<label for="email">Email</label>
-				<input type="email" id="email" name="email" [(ngModel)]="email">
-				<span [innerText]="errorEmail"></span>
+				<label for="email"><i>*</i> Email</label>
+				<input type="email" id="email" name="email" [(ngModel)]="activeParticipant.email">
+				<span class="error" *ngIf="errorEmail != ''" [innerText]="errorEmail"></span>
 			</div>
 
 			<div id="gender">
 				<label class="title">Gender</label>
 
-				<input type="radio" id="female" name="female" [(ngModel)]="gender">
+				<input type="radio" id="female" name="female" value="female" [(ngModel)]="activeParticipant.gender">
 				<label for="female">Female</label><br>
-				<input type="radio" id="male" name="male" [(ngModel)]="gender">
+				<input type="radio" id="male" name="male" value="male" [(ngModel)]="activeParticipant.gender">
 				<label for="male">Male</label><br>
-				<input type="radio" id="other" name="other" [(ngModel)]="gender">
+				<input type="radio" id="other" name="other" value="other" [(ngModel)]="activeParticipant.gender">
 				<label for="other">Other</label><br>
-				<span [innerText]="errorGender"></span>
+				<span class="error" *ngIf="errorGender != ''" [innerText]="errorGender"></span>
 			</div>
 
 			<div>
-				<label for="age">Age</label>
-				<input type="email" id="age" name="age" [(ngModel)]="age">
-				<span [innerText]="errorAge"></span>
+				<label for="age"><i>*</i> Age</label>
+				<input type="email" id="age" name="age" [(ngModel)]="activeParticipant.age">
+				<span class="error" *ngIf="errorAge != ''" [innerText]="errorAge"></span>
 			</div>
 
 
 			<div id="measurements">
 				<label for="height">Height (in CM)</label>
-				<input type="number" id="height" name="height" [(ngModel)]="height">
-				<span [innerText]="errorHeight"></span>
+				<input type="number" id="height" name="height" [(ngModel)]="activeParticipant.height">
+				<span class="error" *ngIf="errorHeight != ''" [innerText]="errorHeight"></span>
 			</div>
 			<div id="measurements">
 				<label for="weight">Weight (in KG)</label>
-				<input type="number" id="weight" name="weight" [(ngModel)]="weight">
-				<span [innerText]="errorWeight"></span>
+				<input type="number" id="weight" name="weight" [(ngModel)]="activeParticipant.weight">
+				<span class="error" *ngIf="errorWeight != ''" [innerText]="errorWeight"></span>
 			</div>
 
 			<div>
 				<label class="title">Passport information (International only)</label>
 
-				<label for="countryOfIssue">Country of Issue</label>
-				<input type="text" id="countryOfIssue" name="countryOfIssue" [(ngModel)]="passportCountry">
-				<span [innerText]="errorPassportCountry"></span>
+				<label for="countryOfIssue"><i>*</i> Country of Issue</label>
+				<input type="text" id="countryOfIssue" name="countryOfIssue"
+					[(ngModel)]="activeParticipant.passportCountry">
+				<span class="error" *ngIf="errorPassportCountry != ''" [innerText]="errorPassportCountry"></span>
 
 				<br>
-				<label for="passNumber">Passport Number</label>
-				<input type="phone" id="passNumber" name="passNumber" [(ngModel)]="passportNumber">
-				<span [innerText]="errorPassportNumber"></span>
+				<label for="passNumber"><i>*</i> Passport Number</label>
+				<input type="phone" id="passNumber" name="passNumber" [(ngModel)]="activeParticipant.passportNumber">
+				<span class="error" *ngIf="errorPassportNumber != ''" [innerText]="errorPassportNumber"></span>
 
 				<br>
-				<label for="dateOfExpiry">Date of Expiry</label>
-				<input type="phone" id="dateOfExpiry" name="dateOfExpiry" [(ngModel)]="passportExpirationDate">
-				<span [innerText]="errorPassportExpirationDate"></span>
+				<label for="dateOfExpiry"><i>*</i> Date of Expiry</label>
+				<input type="phone" id="dateOfExpiry" name="dateOfExpiry"
+					[(ngModel)]="activeParticipant.passportExpirationDate">
+				<span class="error" *ngIf="errorPassportExpirationDate != ''"
+					[innerText]="errorPassportExpirationDate"></span>
 			</div>
 
 
 			<div>
 				<label class="title">Emergency contact info</label>
 
-				<label for="emergencyContactName">Name</label>
+				<label for="emergencyContactName"><i>*</i> Name</label>
 				<input type="text" id="emergencyContactName" name="emergencyContactName"
-					[(ngModel)]="emergencyContactName">
-				<span [innerText]="errorEmergencyContactName"></span>
+					[(ngModel)]="activeParticipant.emergencyContactName">
+				<span class="error" *ngIf="errorEmergencyContactName != ''"
+					[innerText]="errorEmergencyContactName"></span>
 
 				<br>
-				<label for="emergencyContactPhoneNumber">Phone Number</label>
+				<label for="emergencyContactPhoneNumber"><i>*</i> Phone Number</label>
 				<input type="phone" id="emergencyContactPhoneNumber" name="emergencyContactPhoneNumber"
-					[(ngModel)]="emergencyContactPhoneNumber">
-				<span [innerText]="errorEmergencyContactPhoneNumber"></span>
+					[(ngModel)]="activeParticipant.emergencyContactPhoneNumber">
+				<span class="error" *ngIf="errorEmergencyContactPhoneNumber != ''"
+					[innerText]="errorEmergencyContactPhoneNumber"></span>
 			</div>
 
 			<div>
 				<label class="title">Medical Information</label>
 
 				<label for="medicalInfo">List Medical Conditions or Diagnosis</label>
-				<textarea id="medicalInfo" name="medicalInfo" [(ngModel)]="medicalInfo"></textarea>
-				<span [innerText]="errorMedicalInfo"></span>
+				<textarea id="medicalInfo" name="medicalInfo" [(ngModel)]="activeParticipant.medicalInfo"></textarea>
+				<span class="error" *ngIf="errorMedicalInfo != ''" [innerText]="errorMedicalInfo"></span>
 			</div>
 
 			<div>
 				<label class="title">&nbsp;</label>
 				<label for="medicalInfoAllergies">List Food allergies or Dietary Concerns</label>
-				<textarea id="medicalInfoAllergies" name="medicalInfoAllergies" [(ngModel)]="allergies"></textarea>
-				<span [innerText]="errorAllergies"></span>
+				<textarea id="medicalInfoAllergies" name="medicalInfoAllergies"
+					[(ngModel)]="activeParticipant.allergies"></textarea>
+				<span class="error" *ngIf="errorAllergies != ''" [innerText]="errorAllergies"></span>
+			</div>
+			<div>
+				<label class="title">Outdoor Experience</label>
+
+				<label for="medicalInfo">Please describe your outdoor experience</label>
+				<textarea id="medicalInfo" name="medicalInfo" [(ngModel)]="activeParticipant.medicalInfo"></textarea>
+				<span class="error" *ngIf="errorMedicalInfo != ''" [innerText]="errorMedicalInfo"></span>
+			</div>
+
+			<div>
+				<label class="title">Physical Fitness Level</label>
+				<label for="medicalInfoAllergies">Please describe your physical Fitness Level</label>
+				<textarea id="medicalInfoAllergies" name="medicalInfoAllergies"
+					[(ngModel)]="activeParticipant.allergies"></textarea>
+				<span class="error" *ngIf="errorAllergies != ''" [innerText]="errorAllergies"></span>
 			</div>
 
 			<div class="inline-label">
@@ -118,28 +153,47 @@
 				<input type="checkbox" id="provincialMedicalCoverage" name="provincialMedicalCoverage"
 					[(ngModel)]="provincialMedicalCoverage">
 				<label for="provincialMedicalCoverage">Provincial medical coverage</label>
-				<span [innerText]="errorProvincialMedicalCoverage"></span>
+				<span class="error" *ngIf="errorProvincialMedicalCoverage != ''"
+					[innerText]="errorProvincialMedicalCoverage"></span>
 
 				<br>
 				<br>
 
 				<input type="checkbox" id="medicalMedicalCoverage" name="medicalMedicalCoverage"
 					[(ngModel)]="medicalMedicalCoverage">
-				<label for="provincialMedicalCoverage">Medical Evac Coverage</label>
-				<span [innerText]="errorMedicalMedicalCoverage"></span>
+				<label for="medicalMedicalCoverage">Medical Evac Coverage</label>
+				<span class="error" *ngIf="errorMedicalMedicalCoverage != ''"
+					[innerText]="errorMedicalMedicalCoverage"></span>
 
 				<br>
 				<br>
 
-				<input type="checkbox" id="provincialMedicalCoverage" name="provincialMedicalCoverage"
-					[(ngModel)]="provincialMedicalCoverage">
-				<label for="provincialMedicalCoverage">I have read, understand, and consent to the risks and legal
+				<input type="checkbox" id="additionnalInfoSupp" name="additionnalInfoSupp"
+					[(ngModel)]="additionnalInfo">
+				<label for="additionnalInfoSupp">Are you interested to receive additional information on supplementary
+					and rental equipment.</label>
+				<span class="error" *ngIf="errorAdditionnalInfo != ''" [innerText]="errorAdditionnalInfo"></span>
+
+				<br>
+				<br>
+
+				<input type="checkbox" id="invoiceConfirmation" name="invoiceConfirmation" [(ngModel)]="invoiceConf">
+				<label for="invoiceConfirmation">You will be sent an invoice by email after you submit this form, to pay
+					a deposit of $300.00 in order to take part in the live Stoneworks Experience Preparation. Payment
+					must be received within 48hrs of the Experience Preparation date.</label>
+				<span class="error" *ngIf="errorInvoiceConf != ''" [innerText]="errorInvoiceConf"></span>
+
+				<br>
+				<br>
+
+				<input type="checkbox" id="termsOfAgreement" name="termsOfAgreement" [(ngModel)]="terms">
+				<label for="termsOfAgreement">I have read, understand, and consent to the risks and legal
 					wavers contained in the liability <a style="color:blue"
 						href="../../assets/STONEWORKS EXPERIENCE WAIVER[1564].pdf"
 						download="STONEWORKS EXPERIENCE WAIVER[1564]">PDF</a></label>
-				<span [innerText]="errorProvincialMedicalCoverage"></span>
+				<span class="error" *ngIf="errorTerms != ''" [innerText]="errorTerms"></span>
 
-				<p [innerText]="error"></p>
+				<p class="error" *ngIf="error != ''" [innerHTML]="error"></p>
 				<a class="button" (click)="onSubmitClick()">SUBMIT</a>
 			</div>
 		</form>

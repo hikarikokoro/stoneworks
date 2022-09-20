@@ -142,6 +142,18 @@ h6 {
     letter-spacing: 4px;
 }
 
+.error {
+    display: block;
+    color: #9f3a38;
+    font-size: 16px;
+    background-color: #fff6f6;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border: 1px solid #e0b4b4;
+    border-radius: 5px;
+}
+
 button.button {
     display: inline-block;
     padding: 20px 35px;
@@ -163,6 +175,7 @@ button.button {
         color: #4b4a4d;
     }
 }
+
 a.button {
     display: inline-block;
     padding: 20px 35px;
@@ -211,12 +224,13 @@ section {
         }
 
         .encapsulatedContent {
-            p{
+            p {
                 margin-bottom: 15px;
                 font-size: 16px;
                 line-height: 1.8em;
             }
-            small{
+
+            small {
                 display: block;
                 margin: -20px 0 20px 20px;
                 font-size: 14px;

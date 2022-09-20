@@ -8,8 +8,9 @@ section {
         }
     }
 
-    &#registration-information {
+    &.registration-information {
         //background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
+        padding: 0px 20px;
 
         h2 {
             margin: 30px auto 50px auto;
@@ -17,16 +18,21 @@ section {
 
         ul {
             display: block;
-            margin: 50px 0;
+            margin: 0 0 50px 0;
             padding-bottom: 50px;
             border-bottom: 1px #898989 solid;
 
             li {
                 display: inline-block;
-                padding: 10px 20px;
-                font-size: 14px;
+                padding: 0 20px;
+                font-size: 13px;
                 border-right: 1px #898989 solid;
                 cursor: pointer;
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.8em;
+                }
 
                 &:hover {
                     background-color: #999;
@@ -51,20 +57,46 @@ section {
             padding: 50px 20px;
 
             div {
-                text-align: left;
+                text-align: center;
                 min-height: 300px;
+                max-width: 750px;
+                margin: auto;
             }
         }
     }
 
     &#content {
         //background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
-        margin-top: 0;
+        margin: 0;
 
-        a.button {
-            background-color: #333;
-            color: #d67a02;
+        article {
+            margin: 0 auto;
+            padding: 0;
+
+            a.button {
+                background-color: #333;
+                color: #d67a02;
+            }
+
+            button.button {
+                background-color: #d67a02;
+                color: #333;
+                display: inline-block;
+                padding: 20px 35px;
+                border: none;
+                margin: 40px 0 50px 0;
+                font-size: 18px;
+                letter-spacing: 0.3em;
+                text-decoration: none;
+                font-family: "Libre Baskerville", serif;
+            }
+
+            a.button,
+            button.button {
+                margin: 0 0 20px 0;
+            }
         }
+
     }
 
 }

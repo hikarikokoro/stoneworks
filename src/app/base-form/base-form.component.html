@@ -11,7 +11,7 @@
 		<span class="error" [innerText]="errorContent" *ngIf="errorContent"></span>
 	</div>
 
-	<p class="error" *ngIf="error"><i class="fa-solid fa-thumbs-down"></i> {{error}}</p>
+	<p class="error" *ngIf="error"><i class="fa-solid fa-triangle-exclamation"></i> {{error}}</p>
 	<p class="allGood" *ngIf="allGood"><i class="fa-solid fa-thumbs-up"></i> The email has been successfully sent.</p>
 	<button class="button" (click)="onSubmitClick()">ENQUIRE</button>
 </form>

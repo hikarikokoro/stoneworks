@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  API_BASE_PATH: 'http://127.0.0.1:8080'
+  API_BASE_PATH: 'http://127.0.0.1:8080',
+  SENDGRID_API_KEY: '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'
 };
 
 /*
