@@ -24,6 +24,7 @@ interface IExpeditionCard {
   styleUrls: ['./register-form.component.scss']
 })
 export class RegisterFormComponent implements OnInit {
+  private _selectedDates: string[] = [];
 
   public provincialMedicalCoverage: boolean = false;
   public medicalMedicalCoverage: boolean = false;
@@ -73,6 +74,13 @@ export class RegisterFormComponent implements OnInit {
     this.activeParticipant = participant;
   }
 
+  public get selectedDates(): string[] {
+    return this._selectedDates;
+  }
+  public changeSelectedDates(dates: string[]) {
+    this._selectedDates = dates;
+  }
+
   public onSubmitClick(): void {
     this.error = '<i class="fa-solid fa-triangle-exclamation"></i> There has been an error... try again in a few minutes';
   }
@@ -85,12 +93,12 @@ export class RegisterFormComponent implements OnInit {
   }
 
   public changeActiveParticipant(v: number): void {
-    const participant = _.find(this.participants, (p) => p.id === v);
+    const participant = _.find(this.participants, (p: RegisterFormViewModel) => p.id === v);
     this.activeParticipant = participant
   }
 
   public removeParticipant(v: number): void {
-    const index = _.findIndex(this.participants, (p) => p.id === v);
+    const index = _.findIndex(this.participants, (p: RegisterFormViewModel) => p.id === v);
     this.participants.splice(index, 1);
 
     if (this.activeParticipant!.id === v) {

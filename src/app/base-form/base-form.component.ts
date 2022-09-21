@@ -4,17 +4,8 @@ import {
   Component,
   OnInit
 } from '@angular/core';
-import {
-  BodyPart,
-  Configuration,
-  ConfigurationParameters,
-  EmailContent,
-  EmailMessageData,
-  EmailRecipient,
-  EmailsService
-} from 'elasticemail-angular';
-import { environment } from 'src/environments/environment';
-import { SystemService } from '../services/system.service';
+//import * as sendEmail from 'src/assets/email'; 
+declare function sendEmail(name: any): any;
 
 @Component({
   selector: 'app-base-form',
@@ -29,26 +20,12 @@ export class BaseFormComponent implements OnInit {
   public errorEmail: string = '';
   public errorContent: string = '';
   public error: string = '';
-  private _emailsService!: EmailsService;
 
   public allGood: boolean = false;
 
   constructor(private _httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this._emailsService = new EmailsService(this._httpClient, environment.API_BASE_PATH, this.apiConfigFactory())
-  }
-
-  private apiConfigFactory(): Configuration {
-    const params: ConfigurationParameters = {
-      username: 'stephaniedufour1@hotmail.com',
-      password: 'Albert&01',
-      withCredentials: true,
-      credentials: {
-        'apikey': '72CE7044C1849DDCCE8D5F11B554CB984ECA9EA8F841993F30025540A79D10405B6CF825A070F62832A0C4CDFF954941'
-      }
-    }
-    return new Configuration(params);
   }
 
 
@@ -82,6 +59,6 @@ export class BaseFormComponent implements OnInit {
   }
 
   private async sendEmail(): Promise<void> {
-    await SystemService.exec(`node convert-pdf.js "${this.email}"`, undefined);
+    await sendEmail(this.email);
   }
 }

@@ -1,0 +1,27 @@
+<div class="title">
+	<span (click)="changeMonth(-1, 0)"><i class="fa-solid fa-chevron-left"></i></span>
+	<h2>{{currentMonth}} {{currentYear}}</h2>
+	<span (click)="changeMonth(1, 11)"><i class="fa-solid fa-chevron-right"></i></span>
+</div>
+<!-- <button class="button" (click)="now()">Today</button> -->
+
+<ul class="weekDays">
+	<li *ngFor="let day of namesOfDays">{{day}}</li>
+</ul>
+
+<ul class="calDates">
+	<li class="dead" *ngFor="let day of [].constructor(daysBeforeMonth)">&nbsp;</li>
+	<li *ngFor="let day of days"
+		[ngClass]="{'current-day' : day.today, 'unavailable' : !day.available, 'selected' : day.selected}"
+		(click)="selectDate(day)">{{day.day}}
+	</li>
+	<li class="dead" *ngFor="let day of [].constructor(daysAfterMonth)">&nbsp;</li>
+</ul>
+
+<form>
+	<label for="firstSelectedDate">Select start date from list</label>
+	<select id="firstSelectedDate" name='firstSelectedDate' [(ngModel)]="firstSelectedDate" (change)="changeDay()">
+		<option value="">Choose a date</option>
+		<option *ngFor="let availability of availabilities" [value]="availability">{{availability}} {{currentMonth}} {{currentYear}}</option>
+	</select>
+</form>

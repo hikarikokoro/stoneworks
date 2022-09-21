@@ -1,0 +1,92 @@
+.title {
+    display: grid;
+    grid-template-columns: auto 60% auto;
+    padding: 50px 0;
+
+    span {
+        display: inline-block;
+        padding: 15px;
+        cursor: pointer;
+
+        &:hover {
+            color: #9e9e9e;
+        }
+    }
+
+    h2 {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.weekDays {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    border-bottom: 1px solid #4b4a4d;
+    margin-bottom: 15px;
+
+    li {
+        min-height: 30px;
+        padding: 20px;
+    }
+}
+
+.calDates {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+
+    li {
+        min-height: 30px;
+        padding: 20px;
+        border: 1px solid #5a5a5a;
+
+        &.unavailable {
+            background-color: #9e9e9e;
+            color: #3f3f3f;
+
+            &:hover {
+                background-color: #9e9e9e;
+                cursor: initial;
+            }
+        }
+
+        &.current-day {
+            background-color: #ffefdd;
+            color: #ff972a;
+        }
+
+        &.selected {
+            background-color: #ff972a;
+            color: #ffefdd;
+
+            &:hover {
+                background-color: #ff972a;
+                cursor: initial;
+            }
+        }
+
+        &:hover {
+            background-color: #ffefdd;
+            cursor: pointer;
+        }
+
+        &.dead {
+            background-color: #4b4a4d;
+        }
+    }
+}
+
+form {
+    display: block;
+    text-align: left;
+    padding-top: 50px;
+
+    label {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    select {
+        padding: 5px 10px;
+    }
+}

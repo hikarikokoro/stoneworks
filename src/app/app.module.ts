@@ -16,6 +16,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { ProfessionalServicesComponent } from './professional-services/professional-services.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { RegisterComponent } from './register/register.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { RegisterComponent } from './register/register.component';
     RegisterFormComponent,
     AboutUsComponent,
     ProfessionalServicesComponent,
-    BaseFormComponent
+    BaseFormComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,

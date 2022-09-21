@@ -7,7 +7,9 @@
 			<p>Cost: {{expedition.cost}}</p>
 			<p>Duration: {{expedition.time}} days</p>
 		</div>
-		<img src="../../assets/StoneworksCalendar_1[1580].svg" class="calendar">
+		<!-- <img src="../../assets/StoneworksCalendar_1[1580].svg" class="calendar"> -->
+
+		<app-calendar [numberOfDays]="expedition.time" (changeSelectedDates)="changeSelectedDates($event)"></app-calendar>
 	</article>
 	<article class="participants">
 		<button *ngFor="let participant of participants; let i = index"
