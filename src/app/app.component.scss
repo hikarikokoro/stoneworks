@@ -97,6 +97,18 @@ header {
                         font-size: 13px;
                         margin-left: 15px;
                     }
+
+                    &.contactLink {
+                        a {
+                            color: #ff972a;
+                            font-size: 13px;
+
+                            &::before {
+                                content: '';
+                                margin-right: 0;
+                            }
+                        }
+                    }
                 }
             }
         }

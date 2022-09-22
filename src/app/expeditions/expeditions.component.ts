@@ -6,27 +6,8 @@ import {
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ExpeditionsService } from '../services/expeditions.service';
+import { IExpedition } from './expedition-interfaces';
 
-enum IExpeditionTypes {
-  'coldWeather' = 'coldWeather',
-  'outdoors' = 'outdoors'
-}
-interface IExpedition {
-  title: string,
-  subtitle: string,
-  description: string,
-  extra: any,
-  cards: IExpeditionCard[]
-}
-
-interface IExpeditionCard {
-  cost: number,
-  name: string,
-  type: string,
-  time: number,
-  description: string,
-  id: string
-}
 @Component({
   selector: 'app-expeditions',
   templateUrl: './expeditions.component.html',

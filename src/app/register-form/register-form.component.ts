@@ -26,11 +26,13 @@ interface IExpeditionCard {
 export class RegisterFormComponent implements OnInit {
   private _selectedDates: string[] = [];
 
-  public provincialMedicalCoverage: boolean = false;
-  public medicalMedicalCoverage: boolean = false;
-  public additionnalInfo: boolean = false;
-  public invoiceConf: boolean = false;
-  public terms: boolean = false;
+  public checkbox_1: boolean = false;
+  public checkbox_2: boolean = false;
+  public checkbox_3: boolean = false;
+  public checkbox_4: boolean = false;
+  public checkbox_5: boolean = false;
+  public checkbox_6: boolean = false;
+  public isInternationalPassport: boolean = false;
 
   public expedition: IExpeditionCard = {} as IExpeditionCard;
   public errorFirstName: string = '';
@@ -48,11 +50,12 @@ export class RegisterFormComponent implements OnInit {
   public errorEmergencyContactPhoneNumber: string = '';
   public errorMedicalInfo: string = '';
   public errorAllergies: string = '';
-  public errorProvincialMedicalCoverage: string = '';
-  public errorMedicalMedicalCoverage: string = '';
-  public errorAdditionnalInfo: string = '';
-  public errorInvoiceConf: string = '';
-  public errorTerms: string = '';
+  public errorCheckbox_1: string = '';
+  public errorCheckbox_2: string = '';
+  public errorCheckbox_3: string = '';
+  public errorCheckbox_4: string = '';
+  public errorCheckbox_5: string = '';
+  public errorCheckbox_6: string = '';
   public error: string = '';
 
   public participants: RegisterFormViewModel[] = [];

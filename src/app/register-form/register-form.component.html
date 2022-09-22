@@ -4,12 +4,13 @@
 		<div>
 			<h2>Information and registration</h2>
 			<p>Name: {{expedition.name}}</p>
-			<p>Cost: {{expedition.cost}}</p>
+			<p>Cost: ${{expedition.cost}}.00</p>
 			<p>Duration: {{expedition.time}} days</p>
 		</div>
 		<!-- <img src="../../assets/StoneworksCalendar_1[1580].svg" class="calendar"> -->
 
-		<app-calendar [numberOfDays]="expedition.time" (changeSelectedDates)="changeSelectedDates($event)"></app-calendar>
+		<app-calendar [numberOfDays]="expedition.time" (changeSelectedDates)="changeSelectedDates($event)">
+		</app-calendar>
 	</article>
 	<article class="participants">
 		<button *ngFor="let participant of participants; let i = index"
@@ -80,28 +81,37 @@
 			</div>
 
 			<div>
-				<label class="title">Passport information (International only)</label>
+				<label class="title">Passport information (International applicants only)</label>
 
-				<label for="countryOfIssue"><i>*</i> Country of Issue</label>
-				<input type="text" id="countryOfIssue" name="countryOfIssue"
-					[(ngModel)]="activeParticipant.passportCountry">
-				<span class="error" *ngIf="errorPassportCountry != ''" [innerText]="errorPassportCountry"></span>
+				<div class="passport">
+					<input type="checkbox" id="isInternationalPassport" name="isInternationalPassport"
+						[(ngModel)]="isInternationalPassport">
+					<label for="isInternationalPassport">I identify as an international applicant.</label>
+				</div>
 
-				<br>
-				<label for="passNumber"><i>*</i> Passport Number</label>
-				<input type="phone" id="passNumber" name="passNumber" [(ngModel)]="activeParticipant.passportNumber">
-				<span class="error" *ngIf="errorPassportNumber != ''" [innerText]="errorPassportNumber"></span>
+				<div *ngIf="isInternationalPassport">
+					<label for="countryOfIssue"><i>*</i> Country of Issue</label>
+					<input type="text" id="countryOfIssue" name="countryOfIssue"
+						[(ngModel)]="activeParticipant.passportCountry">
+					<span class="error" *ngIf="errorPassportCountry != ''" [innerText]="errorPassportCountry"></span>
 
-				<br>
-				<label for="dateOfExpiry"><i>*</i> Date of Expiry</label>
-				<input type="phone" id="dateOfExpiry" name="dateOfExpiry"
-					[(ngModel)]="activeParticipant.passportExpirationDate">
-				<span class="error" *ngIf="errorPassportExpirationDate != ''"
-					[innerText]="errorPassportExpirationDate"></span>
+					<br>
+					<label for="passNumber"><i>*</i> Passport Number</label>
+					<input type="phone" id="passNumber" name="passNumber"
+						[(ngModel)]="activeParticipant.passportNumber">
+					<span class="error" *ngIf="errorPassportNumber != ''" [innerText]="errorPassportNumber"></span>
+
+					<br>
+					<label for="dateOfExpiry"><i>*</i> Date of Expiry</label>
+					<input type="phone" id="dateOfExpiry" name="dateOfExpiry"
+						[(ngModel)]="activeParticipant.passportExpirationDate">
+					<span class="error" *ngIf="errorPassportExpirationDate != ''"
+						[innerText]="errorPassportExpirationDate"></span>
+				</div>
 			</div>
 
 
-			<div>
+			<!-- <div>
 				<label class="title">Emergency contact info</label>
 
 				<label for="emergencyContactName"><i>*</i> Name</label>
@@ -116,9 +126,9 @@
 					[(ngModel)]="activeParticipant.emergencyContactPhoneNumber">
 				<span class="error" *ngIf="errorEmergencyContactPhoneNumber != ''"
 					[innerText]="errorEmergencyContactPhoneNumber"></span>
-			</div>
+			</div> -->
 
-			<div>
+			<!-- <div>
 				<label class="title">Medical Information</label>
 
 				<label for="medicalInfo">List Medical Conditions or Diagnosis</label>
@@ -147,53 +157,62 @@
 				<textarea id="medicalInfoAllergies" name="medicalInfoAllergies"
 					[(ngModel)]="activeParticipant.allergies"></textarea>
 				<span class="error" *ngIf="errorAllergies != ''" [innerText]="errorAllergies"></span>
-			</div>
-
+			</div> -->
+			<div></div>
 			<div class="inline-label">
-				<p><b>EACH PARTICIPANT IS RESPONSIBLE FOR ALL MEDICAL EXPENSES, INCLUDING MEDICAL EVACUATION IN THE
-						PROVINCE OF ONTARIO, AND MUST BE COVERED BY THEIR OWN MEDICAL AND ACCIDENT INSURANCE</b></p><br>
-				<input type="checkbox" id="provincialMedicalCoverage" name="provincialMedicalCoverage"
-					[(ngModel)]="provincialMedicalCoverage">
-				<label for="provincialMedicalCoverage">Provincial medical coverage</label>
-				<span class="error" *ngIf="errorProvincialMedicalCoverage != ''"
-					[innerText]="errorProvincialMedicalCoverage"></span>
+				<input type="checkbox" id="firstCheckbox" name="firstCheckbox" [(ngModel)]="checkbox_1">
+				<label for="firstCheckbox">You acknowledge your requirement to pay a security deposit of 35% of the
+					program cost. An invoice will be emailed to you after confirmation of your registration. Payment
+					must be received to be offered an invite to the virtual preparation meetings.</label>
+				<span class="error" *ngIf="errorCheckbox_1 != ''" [innerText]="errorCheckbox_1"></span>
 
 				<br>
 				<br>
 
-				<input type="checkbox" id="medicalMedicalCoverage" name="medicalMedicalCoverage"
-					[(ngModel)]="medicalMedicalCoverage">
-				<label for="medicalMedicalCoverage">Medical Evac Coverage</label>
-				<span class="error" *ngIf="errorMedicalMedicalCoverage != ''"
-					[innerText]="errorMedicalMedicalCoverage"></span>
+				<input type="checkbox" id="secondCheckbox" name="secondCheckbox" [(ngModel)]="checkbox_2">
+				<label for="secondCheckbox">You acknowledge your requirement to pay a refundable damage deposit of
+					$500.00.</label>
+				<span class="error" *ngIf="errorCheckbox_2 != ''" [innerText]="errorCheckbox_2"></span>
 
 				<br>
 				<br>
 
-				<input type="checkbox" id="additionnalInfoSupp" name="additionnalInfoSupp"
-					[(ngModel)]="additionnalInfo">
-				<label for="additionnalInfoSupp">Are you interested to receive additional information on supplementary
-					and rental equipment.</label>
-				<span class="error" *ngIf="errorAdditionnalInfo != ''" [innerText]="errorAdditionnalInfo"></span>
+				<input type="checkbox" id="thirdCheckbox" name="thirdCheckbox" [(ngModel)]="checkbox_3">
+				<label for="additionnalInfoSupp">You have read and understood the program <a
+						routerLink="/register/outdoors/0/cost">Cancellation and Refund Policy</a></label>
+				<span class="error" *ngIf="errorCheckbox_3 != ''" [innerText]="errorCheckbox_3"></span>
 
 				<br>
 				<br>
 
-				<input type="checkbox" id="invoiceConfirmation" name="invoiceConfirmation" [(ngModel)]="invoiceConf">
-				<label for="invoiceConfirmation">You will be sent an invoice by email after you submit this form, to pay
-					a deposit of $300.00 in order to take part in the live Stoneworks Experience Preparation. Payment
-					must be received within 48hrs of the Experience Preparation date.</label>
-				<span class="error" *ngIf="errorInvoiceConf != ''" [innerText]="errorInvoiceConf"></span>
-
-				<br>
-				<br>
-
-				<input type="checkbox" id="termsOfAgreement" name="termsOfAgreement" [(ngModel)]="terms">
-				<label for="termsOfAgreement">I have read, understand, and consent to the risks and legal
-					wavers contained in the liability <a style="color:blue"
+				<input type="checkbox" id="fithCheckbox" name="fithCheckbox" [(ngModel)]="checkbox_4">
+				<label for="fithCheckbox">You acknowledge your requirement to sign the Stoneworks Release of Liability
+					and Release of Claims prior to commencing the program. The Please review the <a style="color:blue"
 						href="../../assets/STONEWORKS EXPERIENCE WAIVER[1564].pdf"
-						download="STONEWORKS EXPERIENCE WAIVER[1564]">PDF</a></label>
-				<span class="error" *ngIf="errorTerms != ''" [innerText]="errorTerms"></span>
+						download="STONEWORKS EXPERIENCE WAIVER[1564]">sample waiver</a> prior to booking and call us
+					with any questions.</label>
+				<span class="error" *ngIf="errorCheckbox_4 != ''" [innerText]="errorCheckbox_4"></span>
+
+				<br>
+				<br>
+
+				<input type="checkbox" id="sixthCheckbox" name="sixthCheckbox" [(ngModel)]="checkbox_5">
+				<label for="sixthCheckbox"><b>YOU ACKNOWLEDGE YOU ARE RESPONSIBLE FOR ALL MEDICAL EXPENSES, INCLUDING
+						MEDICAL EVACUATION IN THE
+						PROVINCE OF ONTARIO, AND MUST BE COVERED BY YOUR OWN MEDICAL AND ACCIDENT INSURANCE</b></label>
+				<span class="error" *ngIf="errorCheckbox_5 != ''" [innerText]="errorCheckbox_5"></span>
+
+				<br>
+				<br>
+
+
+				<input type="checkbox" id="fourthCheckbox" name="fourthCheckbox" [(ngModel)]="checkbox_6">
+				<label for="fourthCheckbox">I am interested in receiving additional information on supplementary and
+					rental equipment.</label>
+				<span class="error" *ngIf="errorCheckbox_6 != ''" [innerText]="errorCheckbox_6"></span>
+
+				<br>
+				<br>
 
 				<p class="error" *ngIf="error != ''" [innerHTML]="error"></p>
 				<a class="button" (click)="onSubmitClick()">SUBMIT</a>

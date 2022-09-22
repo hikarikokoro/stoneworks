@@ -70,8 +70,38 @@ section {
             text-transform: uppercase;
         }
 
-        p {
+        p,
+        ul {
             color: white;
+        }
+
+        div {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: left;
+
+            p {
+                margin-bottom: 5px;
+                margin-top: 15px;
+            }
+
+            ul {
+                margin-bottom: 10pxpx;
+
+                li {
+                    margin-bottom: 5px;
+
+                    &::before {
+                        content: '•';
+                        margin-right: 15px;
+                    }
+                }
+            }
+
+            button {
+                margin: 20px auto;
+                display: block;
+            }
         }
     }
 

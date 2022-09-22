@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'expeditions/:type', component: ExpeditionsComponent },
   { path: 'register/:type/:expeditionNumber', component: RegisterComponent },
+  { path: 'register/:type/:expeditionNumber/:tab', component: RegisterComponent },
   { path: 'registration-form/:type/:expeditionNumber', component: RegisterFormComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'about-us', component: AboutUsComponent },

@@ -117,6 +117,8 @@ section {
                     }
 
                     &.inline-label {
+                        border-top: 1px solid #333;
+                        padding-top:20px;
                         width: 200%;
 
                         input {
@@ -144,6 +146,20 @@ section {
                             vertical-align: text-top;
                         }
 
+                        input {
+                            display: inline;
+                            width: auto;
+                            margin: 5px 10px 5px 0;
+                            width: auto;
+                        }
+                    }
+
+                    &.passport{
+                        label {
+                            display: inline-block;
+                            vertical-align: text-top;
+                        }
+                        
                         input {
                             display: inline;
                             width: auto;

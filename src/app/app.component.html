@@ -1,6 +1,6 @@
 <header [ngClass]="{'opened': opened, 'closed': !opened}">
   <menu>
-    <li><button>EN</button><button>FR</button></li>
+    <!-- <li><button>EN</button><button>FR</button></li> -->
     <li *ngIf="!opened" (click)="toggleMenu()"><i class="fa-solid fa-bars"></i></li>
     <li *ngIf="opened" (click)="toggleMenu()"><i class="fa-solid fa-close"></i></li>
   </menu>
@@ -22,16 +22,16 @@
     </article>
     <article>
       <ul>
-        <li><a routerLink="/">Equipment lists</a></li>
-        <li><a routerLink="/">Food Lists</a></li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
         <li><a routerLink="/">Privacy</a></li>
       </ul>
     </article>
     <article>
       <ul>
         <li><a routerLink="/contact-us">Contact us</a></li>
-        <li><span>1 (514) 123 4567</span></li>
-        <li><span>contacto@stoneworks-solutions.com</span></li>
+        <li class="contactLink"><a href="tel:16138668030">1 (613) 866 – 8030</a></li>
+        <li class="contactLink"><a href="mailto:info@stoneworkss.ca">info@stoneworkss.ca</a></li>
       </ul>
     </article>
   </section>
@@ -44,7 +44,7 @@
 <footer>
   <section>
     <article>
-      <h2>OUR PARTNERS</h2>
+      <h2>Our Affiliates</h2>
       <ul>
         <li><a href="https://acapulka.com/en/" target="_blank"><img src="../../assets/Logo.png"></a></li>
         <li id="cold-skills"><a href="https://www.coldskills.com/" target="_blank"><img
@@ -62,7 +62,8 @@
       </ul>
 
       <div>
-        <p><b>Copyrights 2022 - stoneworks solutions </b>&nbsp;<a routerLink="/">legal statement</a>&nbsp;<a routerLink="/">Privacy</a></p>
+        <p><b>Copyrights 2022 - stoneworks solutions </b>&nbsp;<a routerLink="/">legal statement</a>&nbsp;<a
+            routerLink="/">Privacy</a></p>
       </div>
     </article>
   </section>

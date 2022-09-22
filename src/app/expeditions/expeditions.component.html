@@ -2,7 +2,7 @@
 	<article>
 		<a routerLink="/"><img src="../../assets/Stoneworks_LogoDark.svg" class="logo"></a>
 		<h1>{{expedition.title}}</h1>
-		<p>{{expedition.description}}</p>
+		<div [innerHTML]="expedition.description"></div>
 		<h2>{{expedition.subtitle}}</h2>
 	</article>
 </section>
@@ -12,9 +12,7 @@
 		<div [innerHTML]="card.description" class="cardDescription encapsulatedContent"></div>
 		<a class="button coldWeather" routerLink="/register/{{card.type}}/{{i}}"
 			*ngIf="card.type === 'coldWeather'">MORE INFORMATION</a>
-		<a class="button outdoors" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'outdoors'">CHOOSE
-			THIS
-			PROGRAM</a>
+		<a class="button outdoors" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'outdoors'">Program Details</a>
 	</article>
 </section>
 

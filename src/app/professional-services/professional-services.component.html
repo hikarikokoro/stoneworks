@@ -2,13 +2,32 @@
 	<article>
 		<a routerLink="/"><img src="../../assets/Stoneworks_LogoLight.svg" class="logo"></a>
 		<h1>Professional Services</h1>
-		<p>Do you have products that need to be tested in the cold and employees that work in it? Services
-			for the private sector, corporations and Government such as; professional advice on product
-			development and in-field evaluations; Cold weather Subject Matter Expert consultation to define
-			requirements and develop procedures, and; equipment acquisitions.</p>
+		<div>
+			<p>Do you have products that need to be tested in the cold and employees that work in it?</p>
+			<p>We provide professional services for the individual and organizations such as;</p>
+
+			<p>Professional advice on product development and in-field evaluations.</p>
+			<ul>
+				<li>We can work with your design team or team leaders to help build products meant for a specific group
+					or you simply wish to report on your products cold weather limitations.</li>
+			</ul>
+
+			<p>Cold weather Subject Matter Expert consultation</p>
+			<ul>
+				<li>We can advise your organization to build better support for your employees and make recommendations
+					to
+					properly define your products cold weather requirements.</li>
+				<li>We can make recommendations to enhance your current clothing and equipment supplies and we can
+					acquire
+					it for you. We won’t just drop it off at your door step, we will ensure you are proficient with it.
+				</li>
+			</ul>
+			<p>Don’t hesitate to contact us to see how we can serve you</p>
+		<button class="button" (click)="activatedForm = true" *ngIf="!activatedForm">ENQUIRE</button>
+		</div>
 
 	</article>
-	<article class="form">
+	<article class="form" *ngIf="activatedForm">
 		<app-base-form></app-base-form>
 	</article>
 </section>

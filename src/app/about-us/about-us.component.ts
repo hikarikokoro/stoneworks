@@ -9,7 +9,7 @@ import {
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent implements OnInit {
-
+  public activatedForm: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

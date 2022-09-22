@@ -7,9 +7,10 @@
 			have partnered with industry experts to provide you exceptional experiences and products. We
 			pride ourselves on professionalism, teamwork, integrity and quality of service.</p>
 
-			<img src="../../assets/selfie.png" class="selfie">
+		<img src="../../assets/selfie.png" class="selfie">
+	<button class="button" (click)="activatedForm = true" *ngIf="!activatedForm">ENQUIRE</button>
 	</article>
-	<article class="form">
+	<article class="form" *ngIf="activatedForm">
 		<app-base-form></app-base-form>
 	</article>
 </section>
