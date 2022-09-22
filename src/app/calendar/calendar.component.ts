@@ -27,6 +27,7 @@ export class CalendarComponent implements OnInit {
   public daysBeforeMonth: number = 0;
   public daysAfterMonth: number = 0;
   public availabilities: number[] = [];
+  public firstDateList: number[] = [];
   public firstSelectedDate: string = '';
   public days: CalendarDateViewModel[] = [];
 
@@ -77,6 +78,9 @@ export class CalendarComponent implements OnInit {
   }
 
   public selectDate(date: CalendarDateViewModel): void {
+    if (!date.available) {
+      return;
+    }
     for (const day of this.days) {
       day.selected = false;
     }
@@ -87,6 +91,15 @@ export class CalendarComponent implements OnInit {
     for (let i = Number(date.day); i < this._numberOfDays + Number(date.day); i++) {
       const selectedDate = this.days.find((d: CalendarDateViewModel) => Number(d.day) === i);
       if (selectedDate !== undefined) {
+
+        if (!selectedDate.available) {
+          for (const day of this.days) {
+            day.selected = false;
+            this.firstSelectedDate = '';
+          }
+          return;
+        }
+
         selectedDate.selected = true;
         this._selectedDates.push(selectedDate.date.format('YYYY-MM-DD'));
       }
@@ -106,6 +119,25 @@ export class CalendarComponent implements OnInit {
     const availabilitiesStr: string = await this._availabilitiesService.get(this.currentYear, month + 1);
     const availabilitiesArr = availabilitiesStr.split(',', 31);
     this.availabilities = availabilitiesArr.map(Number);
+
+    const newAvailabilities = JSON.parse(JSON.stringify(this.availabilities));
+    for (const availability of this.availabilities) {
+      let canBeSelected: boolean = true;
+
+      for (let i = 0; i < this._numberOfDays; i++) {
+        if (!newAvailabilities.includes(availability + i)) {
+          canBeSelected = false;
+        }
+      }
+
+      if (!canBeSelected) {
+        const index: number = _.findIndex(newAvailabilities, (na: number) => na === availability);
+        if (index !== -1) {
+          newAvailabilities.splice(index, 1);
+        }
+      }
+    }
+    this.firstDateList = JSON.parse(JSON.stringify(newAvailabilities));
 
     this.days = [];
     for (let i = 1; i < this.daysInMonth + 1; i++) {

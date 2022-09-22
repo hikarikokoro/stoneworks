@@ -18,10 +18,23 @@
 	<li class="dead" *ngFor="let day of [].constructor(daysAfterMonth)">&nbsp;</li>
 </ul>
 
-<form>
-	<label for="firstSelectedDate">Select start date from list</label>
-	<select id="firstSelectedDate" name='firstSelectedDate' [(ngModel)]="firstSelectedDate" (change)="changeDay()">
-		<option value="">Choose a date</option>
-		<option *ngFor="let availability of availabilities" [value]="availability">{{availability}} {{currentMonth}} {{currentYear}}</option>
-	</select>
-</form>
+<section>
+	<article>
+		<form>
+			<label for="firstSelectedDate">Select start date from list</label>
+			<select id="firstSelectedDate" name='firstSelectedDate' [(ngModel)]="firstSelectedDate" (change)="changeDay()">
+				<option value="">Choose a date</option>
+				<option *ngFor="let availability of firstDateList" [value]="availability">{{availability}} {{currentMonth}} {{currentYear}}</option>
+			</select>
+		</form>
+	</article>
+	
+	<article class="legend">
+		<ul>
+			<li class="available">Available</li>
+			<li class="unavailable">Unavailable</li>
+			<li class="today">Today</li>
+			<li class="selected">Selected dates</li>
+		</ul>
+	</article>
+</section>
