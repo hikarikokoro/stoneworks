@@ -11,6 +11,7 @@ section {
     &.registration-information {
         //background-image: url('../../assets/Stnwrk_LandingImage_1A_LR.png');
         padding: 0px 20px;
+        text-align: left;
 
         h2 {
             margin: 30px auto 50px auto;
@@ -57,7 +58,7 @@ section {
             padding: 50px 20px;
 
             div {
-                text-align: center;
+                //text-align: center;
                 min-height: 300px;
                 max-width: 750px;
                 margin: auto;
