@@ -9,6 +9,7 @@ import {
   set,
   update
 } from 'firebase/database';
+import { IExpeditionTypes } from '../expeditions/expedition-interfaces';
 const firebaseConfig = {
   apiKey: "AIzaSyD4wDjbM5bbLcUyCIMTXl6f9ga5imuDGHw",
   authDomain: "nature-9789e.firebaseapp.com",
@@ -33,8 +34,9 @@ export class AvailabilitiesService {
 
   constructor() { }
 
-  public async list(year: string): Promise<string[]> {
-    const snapshot = await get(child(dbRef, `availabilities/${year}`));
+  public async list(type: string, expeditionNumber: number, year: string): Promise<string[]> {
+    const expeditionType = this.getType(type);
+    const snapshot = await get(child(dbRef, `expeditions/${expeditionType}/cards/${expeditionNumber}/availabilities/${year}`));
     if (snapshot.exists()) {
       return snapshot.val();
     } else {
@@ -43,13 +45,36 @@ export class AvailabilitiesService {
     }
   }
 
-  public async get(year: number, month: number): Promise<string> {
-    const snapshot = await get(child(dbRef, `availabilities/${year.toString()}/${month.toString()}`));
+  public async get(type: string, expeditionNumber: number, year: number, month: number): Promise<string> {
+    const expeditionType = this.getType(type);
+    const snapshot = await get(child(dbRef, `expeditions/${expeditionType}/cards/${expeditionNumber}/availabilities/${year.toString()}/${month.toString()}`));
     if (snapshot.exists()) {
       return snapshot.val();
     } else {
       console.error('AN ERROR HAS OCCURED');
       return '';
     }
+  }
+
+
+  private getType(type: string): IExpeditionTypes {
+    let expeditionType: IExpeditionTypes = IExpeditionTypes['outdoors'];
+
+    switch (type) {
+      case 'outdoor-experience-programs':
+        expeditionType = IExpeditionTypes['outdoors'];
+        break;
+      case 'cold-weather-preparedness-training':
+        expeditionType = IExpeditionTypes['coldWeather'];
+        break;
+      case 'outdoors':
+        expeditionType = IExpeditionTypes['outdoors'];
+        break;
+      case 'coldWeather':
+        expeditionType = IExpeditionTypes['coldWeather'];
+        break;
+    }
+
+    return expeditionType;
   }
 }

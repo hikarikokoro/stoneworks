@@ -20,6 +20,8 @@ export class CalendarComponent implements OnInit {
 
   private _selectedDates: string[] = [];
   private _numberOfDays: number = 0;
+  private _expeditionType: string = '';
+  private _expeditionNumber: string = '';
   public namesOfDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   public currentMonth: string = '';
   public currentYear: number = 0;
@@ -41,6 +43,14 @@ export class CalendarComponent implements OnInit {
 
   @Input() public set numberOfDays(v: number) {
     this._numberOfDays = v;
+  }
+
+  @Input() public set expeditionType(v: string) {
+    this._expeditionType = v;
+  }
+
+  @Input() public set expeditionNumber(v: string) {
+    this._expeditionNumber = v;
   }
 
   public async now(): Promise<void> {
@@ -116,7 +126,7 @@ export class CalendarComponent implements OnInit {
     this.daysAfterMonth = 7 - (n + 1);
 
     const month: number = moment().year(this.currentYear).month(this.currentMonth).month();
-    const availabilitiesStr: string = await this._availabilitiesService.get(this.currentYear, month + 1);
+    const availabilitiesStr: string = await this._availabilitiesService.get(this._expeditionType, Number(this._expeditionNumber), this.currentYear, month + 1);
     const availabilitiesArr = availabilitiesStr.split(',', 31);
     this.availabilities = availabilitiesArr.map(Number);
 

@@ -9,7 +9,7 @@
 		</div>
 		<!-- <img src="../../assets/StoneworksCalendar_1[1580].svg" class="calendar"> -->
 
-		<app-calendar [numberOfDays]="expedition.time" (changeSelectedDates)="changeSelectedDates($event)">
+		<app-calendar [expeditionType]="expeditionType" [expeditionNumber]="expeditionNumber" [numberOfDays]="expedition.time" (changeSelectedDates)="changeSelectedDates($event)">
 		</app-calendar>
 	</article>
 	<article class="participants">

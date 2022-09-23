@@ -118,7 +118,7 @@ section {
 
                     &.inline-label {
                         border-top: 1px solid #333;
-                        padding-top:20px;
+                        padding-top: 20px;
                         width: 200%;
 
                         input {
@@ -154,12 +154,12 @@ section {
                         }
                     }
 
-                    &.passport{
+                    &.passport {
                         label {
                             display: inline-block;
                             vertical-align: text-top;
                         }
-                        
+
                         input {
                             display: inline;
                             width: auto;
@@ -220,6 +220,8 @@ section {
             &.info {
                 div {
                     background-image: url('../../assets/123.png');
+                    background-size: cover;
+                    background-position: center;
                     padding: 1px 20px 40px 20px;
                     color: white;
                 }

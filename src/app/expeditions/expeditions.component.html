@@ -12,7 +12,7 @@
 		<div [innerHTML]="card.description" class="cardDescription encapsulatedContent"></div>
 		<a class="button coldWeather" routerLink="/register/{{card.type}}/{{i}}"
 			*ngIf="card.type === 'coldWeather'">MORE INFORMATION</a>
-		<a class="button outdoors" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'outdoors'">Program Details</a>
+		<a class="button outdoors" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'outdoors'">PROGRAM DETAILS</a>
 	</article>
 </section>
 

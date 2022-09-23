@@ -5,32 +5,35 @@
 </div>
 <!-- <button class="button" (click)="now()">Today</button> -->
 
-<ul class="weekDays">
-	<li *ngFor="let day of namesOfDays">{{day}}</li>
-</ul>
 
-<ul class="calDates">
-	<li class="dead" *ngFor="let day of [].constructor(daysBeforeMonth)">&nbsp;</li>
-	<li *ngFor="let day of days"
-		[ngClass]="{'current-day' : day.today, 'unavailable' : !day.available, 'selected' : day.selected}"
-		(click)="selectDate(day)">{{day.day}}
-	</li>
-	<li class="dead" *ngFor="let day of [].constructor(daysAfterMonth)">&nbsp;</li>
-</ul>
 
 <section>
-	<article>
+	<article class="cal">
+		<ul class="weekDays">
+			<li *ngFor="let day of namesOfDays">{{day}}</li>
+		</ul>
+
+		<ul class="calDates">
+			<li class="dead" *ngFor="let day of [].constructor(daysBeforeMonth)">&nbsp;</li>
+			<li *ngFor="let day of days"
+				[ngClass]="{'current-day' : day.today, 'unavailable' : !day.available, 'selected' : day.selected}"
+				(click)="selectDate(day)">{{day.day}}
+			</li>
+			<li class="dead" *ngFor="let day of [].constructor(daysAfterMonth)">&nbsp;</li>
+		</ul>
+	</article>
+	<article class="side">
 		<form>
 			<label for="firstSelectedDate">Select start date from list</label>
-			<select id="firstSelectedDate" name='firstSelectedDate' [(ngModel)]="firstSelectedDate" (change)="changeDay()">
+			<select id="firstSelectedDate" name='firstSelectedDate' [(ngModel)]="firstSelectedDate"
+				(change)="changeDay()">
 				<option value="">Choose a date</option>
-				<option *ngFor="let availability of firstDateList" [value]="availability">{{availability}} {{currentMonth}} {{currentYear}}</option>
+				<option *ngFor="let availability of firstDateList" [value]="availability">{{availability}}
+					{{currentMonth}} {{currentYear}}</option>
 			</select>
 		</form>
-	</article>
-	
-	<article class="legend">
-		<ul>
+
+		<ul class="legend">
 			<li class="available">Available</li>
 			<li class="unavailable">Unavailable</li>
 			<li class="today">Today</li>

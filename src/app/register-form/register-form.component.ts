@@ -60,6 +60,8 @@ export class RegisterFormComponent implements OnInit {
 
   public participants: RegisterFormViewModel[] = [];
   public activeParticipant?: RegisterFormViewModel;
+  public expeditionType: string = '';
+  public expeditionNumber: string = '';
 
   constructor(
     private _activatedRoute: ActivatedRoute,
@@ -68,6 +70,8 @@ export class RegisterFormComponent implements OnInit {
 
   ngOnInit(): void {
     this._activatedRoute.params.subscribe(routeParams => {
+      this.expeditionType = routeParams['type'];
+      this.expeditionNumber = routeParams['expeditionNumber'];
       this.load(routeParams['type'], routeParams['expeditionNumber']);
     });
 
