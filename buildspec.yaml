@@ -3,11 +3,15 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - echo installing dependencies...
+      - echo Installing source NPM dependencies...
       - npm install
+      - npm install -g @angular/cli
   build:
     commands:
-      - ng build
+      - echo Build started on `date`
+      - ng build --prod
 artifacts:
   files:
     - "**/*"
+  base-directory: 'dist*'
+  discard-paths: yes
