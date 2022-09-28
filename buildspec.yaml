@@ -1,0 +1,16 @@
+version: 0.1
+
+phases:
+  pre_build:
+    commands:
+      - echo installing dependencies...
+      - npm i -g @angular/cli
+      - npm install
+  build:
+    commands:
+      - ng build --prod
+artifacts:
+  files:
+    - "**/*"
+  discard-paths: no
+  base-directory: dist
