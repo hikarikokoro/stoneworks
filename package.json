@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "deploy": "concurrently --kill-others \"npm run start\" \"node index.js\"",
+    "deploy": "concurrently --kill-others \"npm link @angular/cli\" \"npm run start\" \"node index.js\"",
     "test": "ng test"
   },
   "private": true,
