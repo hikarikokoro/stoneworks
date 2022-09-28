@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.post('/api/email/order-confirmation', async (req, res, next) => {
   try {
-    res.json(await email.sendOrderConfirmation(req.body));
+    res.json(await email.sendEmail(req.body));
   } catch (err) {
     next(err);
   }

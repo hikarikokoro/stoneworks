@@ -27,6 +27,6 @@ async function sendEmail(to, message) {
 }
 
 (async () => {
-	console.log('Sending test email');
-	await sendEmail();
+	//console.log('Sending test email');
+	//await sendEmail();
 })();
