@@ -9,6 +9,10 @@
     "deploy": "concurrently --kill-others \"npm run start\" \"node index.js\"",
     "test": "ng test"
   },
+  "engines": {
+    "npm": ">=8.0.0 <9.0.0",
+    "node": ">=16.0.0 <17.0.0"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.3.0",
