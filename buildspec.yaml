@@ -13,5 +13,3 @@ phases:
 artifacts:
   files:
     - "**/*"
-  base-directory: 'dist/nature-expedition'
-  discard-paths: yes
