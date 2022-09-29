@@ -3,23 +3,15 @@ const email = require('./email');
 
 const app = express();
 const port = 3000 || process.env.PORT;
-const _app_folder = 'dist/nature-expedition';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// ---- SERVE STATIC FILES ---- //
-app.server.get('*.*', express.static(_app_folder, {maxAge: '1y'}));
-
-// ---- SERVE APLICATION PATHS ---- //
-app.all('*', function (req, res) {
-    res.status(200).sendFile(`/`, {root: _app_folder});
-});
-
-app.get('/', (req, res) => {
-  res.json({message: 'alive'});
-  //res.sendFile('src/index.html');
-})
+// Create link to Angular build directory
+// The `ng build` command will save the result
+// under the `dist` folder.
+var distDir = __dirname + "/dist/nature-expedition";
+app.use(express.static(distDir));
 
 app.post('/api/email/order-confirmation', async (req, res, next) => {
   try {
