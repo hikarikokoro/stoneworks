@@ -13,6 +13,11 @@ app.use(express.urlencoded({ extended: false }));
 var distDir = __dirname + "/dist/nature-expedition";
 app.use(express.static(distDir));
 
+app.get('/', (req, res) => {
+  res.json({message: 'alive'});
+  //res.sendFile('src/index.html');
+})
+
 app.post('/api/email/order-confirmation', async (req, res, next) => {
   try {
     res.json(await email.sendEmail(req.body));
