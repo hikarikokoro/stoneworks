@@ -6,6 +6,7 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install --location=global @angular/cli
+      - npm install --location=global bootstrap
   build:
     commands:
       - echo Build started
