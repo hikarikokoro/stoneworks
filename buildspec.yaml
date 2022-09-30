@@ -4,11 +4,11 @@ phases:
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - npm install --location=global
+      - npm install
       - npm install --location=global @angular/cli
   build:
     commands:
-      - echo Build started on `date`
+      - echo Build started
       - ng build --prod
 artifacts:
   files:
