@@ -1,12 +1,14 @@
 version: 0.2
 
 phases:
+  install:
+    runtime-versions:
+      nodejs: 16
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install --location=global @angular/cli
-      - npm install --location=global bootstrap
   build:
     commands:
       - echo Build started
@@ -17,3 +19,4 @@ phases:
 artifacts:
   files:
     - "**/*"
+  base-directory: 'dist'
