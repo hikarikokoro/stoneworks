@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "deploy": "npm install && npm run build && npm run start && node index.js",
+    "deploy": "npm run start && node index.js",
     "test": "ng test"
   },
   "engines": {
