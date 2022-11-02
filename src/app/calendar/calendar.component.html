@@ -26,10 +26,10 @@
 		<form>
 			<label for="firstSelectedDate">Select start date from list</label>
 			<select id="firstSelectedDate" name='firstSelectedDate' [(ngModel)]="firstSelectedDate"
-				(change)="changeDay()">
-				<option value="">Choose a date</option>
-				<option *ngFor="let availability of firstDateList" [value]="availability">{{availability}}
-					{{currentMonth}} {{currentYear}}</option>
+				(change)="changeDate()">
+				<option [value]="undefined">Choose a date</option>
+				<option *ngFor="let availability of allDatesList" [ngValue]="availability">{{availability.day}}
+					{{availability.monthString}} {{availability.year}}</option>
 			</select>
 		</form>
 

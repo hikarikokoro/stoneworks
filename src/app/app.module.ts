@@ -7,6 +7,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BaseFormComponent } from './base-form/base-form.component';
+import { CalendarComponent } from './calendar/calendar.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ErrorComponent } from './error/error.component';
@@ -16,7 +17,8 @@ import { PaymentComponent } from './payment/payment.component';
 import { ProfessionalServicesComponent } from './professional-services/professional-services.component';
 import { RegisterFormComponent } from './register-form/register-form.component';
 import { RegisterComponent } from './register/register.component';
-import { CalendarComponent } from './calendar/calendar.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { PartnersComponent } from './partners/partners.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { CalendarComponent } from './calendar/calendar.component';
     AboutUsComponent,
     ProfessionalServicesComponent,
     BaseFormComponent,
-    CalendarComponent
+    CalendarComponent,
+    PrivacyComponent,
+    PartnersComponent
   ],
   imports: [
     BrowserModule,

@@ -3,14 +3,12 @@ import {
   OnInit
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { jsPDF } from 'jspdf';
 import * as _ from 'lodash';
+import { EmailService } from '../services/email.service';
 import { ExpeditionsService } from '../services/expeditions.service';
 import RegisterFormViewModel from './register-form.view-model';
 
-enum IExpeditionTypes {
-  coldWeather,
-  outdoors
-}
 interface IExpeditionCard {
   cost: number,
   name: string,
@@ -32,24 +30,8 @@ export class RegisterFormComponent implements OnInit {
   public checkbox_4: boolean = false;
   public checkbox_5: boolean = false;
   public checkbox_6: boolean = false;
-  public isInternationalPassport: boolean = false;
 
   public expedition: IExpeditionCard = {} as IExpeditionCard;
-  public errorFirstName: string = '';
-  public errorLastName: string = '';
-  public errorPhoneNumber: string = '';
-  public errorEmail: string = '';
-  public errorGender: string = '';
-  public errorAge: string = '';
-  public errorHeight: string = '';
-  public errorWeight: string = '';
-  public errorPassportCountry: string = '';
-  public errorPassportNumber: string = '';
-  public errorPassportExpirationDate: string = '';
-  public errorEmergencyContactName: string = '';
-  public errorEmergencyContactPhoneNumber: string = '';
-  public errorMedicalInfo: string = '';
-  public errorAllergies: string = '';
   public errorCheckbox_1: string = '';
   public errorCheckbox_2: string = '';
   public errorCheckbox_3: string = '';
@@ -65,7 +47,8 @@ export class RegisterFormComponent implements OnInit {
 
   constructor(
     private _activatedRoute: ActivatedRoute,
-    private _expeditionService: ExpeditionsService
+    private _expeditionService: ExpeditionsService,
+    private _emailService: EmailService
   ) { }
 
   ngOnInit(): void {
@@ -89,11 +72,25 @@ export class RegisterFormComponent implements OnInit {
   }
 
   public onSubmitClick(): void {
-    this.error = '<i class="fa-solid fa-triangle-exclamation"></i> There has been an error... try again in a few minutes';
+    let errors = false;
+    //this.error = '<i class="fa-solid fa-triangle-exclamation"></i> There has been an error... try again in a few minutes';
+
+    this.error = '';
+
+    for (const participant of this.participants) {
+      const isvalid: boolean = participant.areFieldsValid();
+      if (!isvalid) {
+        errors = true;
+      }
+    }
+
+    if (!errors) {
+      this.sendEmail();
+    }
   }
 
   public addParticipant(): void {
-    const last = _.last(this.participants);
+    const last: RegisterFormViewModel = _.last(this.participants);
     const id = last!.id + 1;
     const participant: RegisterFormViewModel = new RegisterFormViewModel(id, '', '', '', '', '', 20, 170, 54, '', '', '', '', '', '', '');
     this.participants.push(participant);
@@ -115,5 +112,19 @@ export class RegisterFormComponent implements OnInit {
 
   private async load(type: string, expeditionNumber: number): Promise<void> {
     this.expedition = await this._expeditionService.get(type, expeditionNumber);
+  }
+
+
+  private async sendEmail(): Promise<void> {
+    const doc = new jsPDF({
+      orientation: "landscape",
+      unit: "in",
+      format: [4, 2]
+    });
+
+    doc.text("Hello world!", 1, 1);
+    doc.save("two-by-four.pdf");
+    console.log("DONE");
+    //this._emailService.sendEmailFromRegisterForm(this.email, this.content);
   }
 }

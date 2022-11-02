@@ -1,0 +1,540 @@
+{
+  "expeditions": {
+    "coldWeather": {
+      "cards": [
+        {
+          "cost": 1000,
+          "description": "<ul> <li>Researchers</li> <li>Oil and Gas</li> <li>Mining</li> <li>Aviation</li> <li>Tourism Operators</li> <li>Movie and Film</li> </ul>",
+          "id": "govt",
+          "name": "Industry and Private Sector",
+          "registrationInformation": [
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "General information"
+            },
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "Logistics"
+            },
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "Cost"
+            },
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "Equipment"
+            }
+          ],
+          "time": 3,
+          "type": "coldWeather"
+        },
+        {
+          "cost": 1500,
+          "description": "<ul> <li>Sports and Recreation</li> <li>Hunting and Fishing</li> </ul>",
+          "id": "cooperations",
+          "name": "General Public",
+          "registrationInformation": [
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "General information"
+            },
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "Logistics"
+            },
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "Cost"
+            },
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "Equipment"
+            }
+          ],
+          "time": 4,
+          "type": "coldWeather"
+        },
+        {
+          "cost": 2000,
+          "description": "<ul>   <li>The Canadian Armed Forces</li>   <li>Law Enforcement</li>   <li>Parks Canada</li>   <li>CBSA</li> </ul>",
+          "id": "private",
+          "name": "Security and Enforcement",
+          "registrationInformation": [
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "General information"
+            },
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "Logistics"
+            },
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "Cost"
+            },
+            {
+              "description": "<p>More information to come.</p>",
+              "name": "Equipment"
+            }
+          ],
+          "time": 5,
+          "type": "coldWeather"
+        }
+      ],
+      "description": "<p>With growing demand for work in Canada’s Northern regions, there is an increasing need to ensure staff and personnel are trained and equipped to operate there. Stoneworks and our affiliates offer the training and exposure to the best-in-class equipment so you can take your mind off the cold to stay focused on the task at hand.</p> <p>The cold effects us all, regardless of our profession. Well trained individuals will be more effective when working in the cold and less prone to cold weather injuries. We can review your cold weather clothing and equipment to identify deficiencies.</p> <p>Reach out to us to determine how we can best support your needs.</p>",
+      "extra": {
+        "equipment": "<p>The training provided will be primarily directed at maximizing the performance of your day to day equipment and clothing. Options are available if you desire to supplement or enhance your current equipment or clothing systems.</p><p>Available now to order. Please contact us for more details.</p><p>DOSM Capability Package</p><ul><li>Complete ski system</li><li>Complete pulk system</li><li>Winter camo system</li><li>3 day equipment training package</li><li>Estimated cost per package</li></ul><p>A detailed list can be emailed upon request</p>",
+        "syllabus": "<p>The training provided will be tailored to your unique needs which may include, and not limited to, any of the following.</p><ul><li>Over snow capability training</li><li>Use clothing layers effectively</li><li>Food planning and considerations</li><li>Winter routines, priorities and SOP's</li><li>Cold weather mindset for training and operations</li><li>Cold weather injury mitigation</li><li>Enhanced use of equipment</li><li>Introduction to industry leading tech and equipment</li><li>Winter capability enhancement and development</li></ul>",
+        "title": "EQUIPMENT AND COURSE SYLLABUS"
+      },
+      "subtitle": "WHO IT'S FOR",
+      "title": "COLD WEATHER PREPAREDNESS TRAINING"
+    },
+    "outdoors": {
+      "cards": [
+        {
+          "availabilities": {
+            "2020": "",
+            "2021": "",
+            "2022": "",
+            "2023": "",
+            "2024": [
+              null,
+              null,
+              null,
+              "4,5,6,7,8,18,19,20,21,22",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "2025": "",
+            "2026": "",
+            "2027": "",
+            "2028": "",
+            "2029": "",
+            "2030": "",
+            "2031": "",
+            "2032": "",
+            "2033": "",
+            "2034": "",
+            "2035": "",
+            "2036": "",
+            "2037": "",
+            "2038": [
+              null,
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"
+            ]
+          },
+          "cost": 1500,
+          "description": "<p>An introduction to winter backcountry camping for those that have little to no experience and where time away from home is a factor. We spend 2 nights in the wilderness where we focus on the basics to be safe and to enjoy an extended period outside. A great starting point for more difficult challenges in the future.</p><p><b>What we cover : </b></p> \t<ul> \t\t<li>Use clothing layers effectively</li> \t\t<li>Cooking with winter stoves</li> \t\t<li>Food prep, planning and considerations</li> \t\t<li>Ski and/or snowshoe exposure and use of pulk sleds</li> \t\t<li>Seeping warm, hypothermia mitigation and care</li> \t\t<li>Winter routines and priorities</li> \t\t<li>Mental Preparedness</li> \t\t<li>Team building</li> \t</ul>",
+          "id": "three-days",
+          "name": "Introduction to Winter Skills",
+          "registrationInformation": [
+            {
+              "description": "<ul><li>Located in Northern Ontario in the Timmins region, we will spend one night indoors to prepare and teach you some basic skills before heading out in the wilderness for 3 days, 2 nights. No lights, no sound, a truly immersive and remote experience.</li><li>The Timmins region in the month of January to March can range in temperature from -10 deg Celsius and below -40 deg Celsius. The Intro to Winter Skills Program is typically run later in the season when the temperatures are a little warmer.</li><li>This Intro program is designed for individuals and groups that have never spent a night out in the cold and would like to do so under the watchful eye of skilled guides. Your love of winter overnight adventures starts here.</li><li>To truly learn the winter skills you need, we camp cold, no hot tents. We at Stoneworks are advocates of using Acapulka winter pulks, we pull our gear as opposed to carrying it. You are a lot more efficient this way.</li><li>Stoneworks will provide you the majority of the camping equipment you require and some will come from you. A detailed packing and food guide will be emailed to you in addition to the information provided here. The majority of people don’t have the proper gear for this type of adventure so Stoneworks will work with what you have and could supplement your existing gear for a small additional fee. In the days leading up to the program, Stoneworks will assist you via two virtual calls, to help you prepare.</li></ul>",
+              "name": "General information"
+            },
+            {
+              "description": "<b>Meeting Time and Place</b><ul><li>The team meeting point is at the Holiday Inn Express & Suites Timmins.<br><small>30 Algonquin Blvd W, Timmins, ON P4N 2R3</small></li><li>You are required to be checked in before 5pm on the first day. This will be arranged by Stoneworks.</li></ul><b>Program Location</b><ul><li>The wilderness base camp is located near Muskasenda Lake, approx. 1hr drive south of Timmins, ON</li><li>We will depart the hotel on the morning of the second day and will spend the entire duration in and around Muskasenda Lake</li></ul><b>Transportation</b><ul><li>You are responsible to make your way to and from the Holiday Inn in Timmins.</li><b>There are two ways to get there;</b><ul><li>Road – an 8 to 9hr drive from Ottawa, On</li><li>Air – flights are available daily from Air Canada and Porter. The Holiday in has an airport shuttle.</li></ul><li>During the program, all transportation is provided</li><li>For the return home, evening flights are available daily from Timmins</li></ul><b>Program Safety</b><ul><li>There will be a minimum of two guides regardless of the group size.</li><li>For groups over 6 people, a third guide will be present</li><li>All guides are certified Wilderness First Responders</li><li>There is no cell or internet service available once we are in the wilderness. Emergency communication is provided via Iridium Satellite Phone and Garmin InReach. These products are carried by the guides.</li><li>A designated responsible person will be monitoring the group at all times while we are in the wilderness.</li></ul><b>Program Preparation</b><ul><li>Preparation (good or bad) will make or break any winter excursion. Stoneworks is all about the preparation</li><li>We will provide you detailed food and equipment packing guides</li><li>We will plan and execute two virtual meetings with the team that will act as a preliminary introduction and will give you the opportunity to ask questions in a group forum so everyone benefits. During these meetings, Stoneworks will ensure you fully understand what is expected of you so you arrive prepared.</li><li>These virtual meetings will take place 6 weeks and 3 weeks in advance of Day 1.</li><li>One on one meetings are available upon request</li></ul>",
+              "name": "Logisitcs"
+            },
+            {
+              "description": "<b>Day 1</b><ul><li>You are expected to be checked in at the holiday in before 5pm on Day 1</li><li>The team will meet and great in the hotel conference room where we will dive right into the program and instructions.</li><li>Dinner will be catered in as we work as a team to prepare for the next days departure to the wilderness.</li></ul><b>Day 2</b><ul><li>Breakfast will be provided at the hotel</li><li>Final preparation before departing at 10am to the wilderness</li><li>The entire team will be bused to a drop-off point where we will prepare to ski or snowshoe a short distance to the base camp</li></ul><b>Day 3</b><ul><li>The entire day is spent in the beautiful surroundings of Lake Muskasenda</li></ul><b>Day 4</b><ul><li>Our focus will be to tear down the base camp and prepare to move back to the pick-up point to meet the bus at 11am</li><li>The bus will take you back to the Holiday Inn</li><li>A catered lunch will be provided to the team</li><li>There will be a 2-hr period at the hotel conference room to reorganize and return any equipment supplied by Stoneworks.</li><li>All guests will be free to stay and additional night on their own expense or catch an evening flight back to your destination.</li></ul>",
+              "name": "Itinerary"
+            },
+            {
+              "description": " <ul><li>All prices are in Canadian Dollars and prices are subject to change</li><li>The Cost for this program is $1200.00, plus HST of 13%.</li><li>A security deposit of 35% of the program price will be required before Stoneworks commences with the virtual preparation meetings.</li><li>The balance of the program cost will be required in full, 21 days ahead of Day 1.</li><li>A refundable damage deposit of $500 is required from all guests.</li><li>Supplemental gear can be available for a rental fee. This cost will depend on the type and quantity of items provided.</ul>  <b>Method of Payment</b> <ul><li>The Stoneworks website is not yet set up to accept payment.</li><li>Once you have registered, you will be contacted by Stoneworks via the email provided to confirm your registration</li><li>When your registration is confirmed, an invoice will be sent to you for the security deposit</li><li>Payment can be made by Direct Deposit from your financial institution or E Transfer</li></ul><b>Cancellation and Refund policy</b> <ul><li>In the event that Stoneworks cancels a program, your payment will immediately be refunded</li><li>If Stoneworks adjusts the program dates after you have committed funds, and you can no longer attend, your payment will be refunded</li><li>You have 48 hours from when you make your deposit to change or cancel with no charge to you (provided your booking does not depart within 21 days).</li><li>Cancellation within 28 days of day 1, will result in a loss of your deposit</li><li>Cancellation within 21 days of day 1, will result in a loss of the entire amount paid</li><li>Cancellations must be made in writing (letter or email info@stoneworkss.ca) Cancellations are only effective once your notification is received by Stoneworks</li><li>We will gladly accept a substitute guest should you not be able to attend provided they meet the prerequisites for the specific program. This must happen prior to the virtual meetings</li><li>We ask that you thoroughly understand and consider the booking and cancellation policy prior to booking as we make financial commitments to our guides (and food and accommodation providers) once you have booked and we have confirmed a trip.  We take your booking in good faith and begin incurring costs upon confirmation. </li></ul>",
+              "name": "Cost"
+            },
+            {
+              "description": "<ul><li>Hotel accommodations on Day 1</li><li>1 x Dinner, 1 x Lunch, 1 x Breakfast at the hotel</li><li>Transportation to and from the wilderness area</li><li>Use of group camping gear and pulks</li><li>Guide fees</li><li>A list of supplied food and equipment is available in their respective tabs</li></ul>",
+              "name": "Whats Included"
+            },
+            {
+              "description": "<ul> \t<li>Any multi day excursion into the winter wilderness requires the proper equipment and clothing and it is often \t\tmore then what most people have laying around their household. Good winter gear is expensive and the cost can \t\tadd up fast.</li> \t<li>Stoneworks recognizes you don’t have it all and it’s why we provide most of the essentials you need. Of course, \t\tit is expected you provide some equipment and where you have deficiencies, we can step in to help.</li> </ul> <b>Equipment Provided by Stoneworks</b> <div> \t<p> Winter tent and snow pegs<br> Tent brush<br> Snow collection bag<br> Folding stool<br> Foldable camp \t\tseat<br> Snow pulk and harness<br> Snow shovel<br></p> \t<p>Multi-fuel camp stoves, spare pump and fuel<br> Stove support boards<br> Cooking pots<br> 1L \t\tThermos<br> 500ml soup Thermos<br> Large kettle for melting snow<br> Foam floor pad for tent<br> \t\tLightweight saw<br></p> \t<p>Firestarter kit (program specific)<br> Regional maps<br> Compass (program specific)<br> Whistle<br> \t\tGroup toilet kit, paper bags and biodegradable toilet paper<br> Carried by guides;<br></p> \t<p>Group repair kit<br> Axe<br> Weather monitor<br> Winter hot tent<br> Group First Aid kit<br> Safety \t\tcommunication<br></p> </div> <b>Equipment you provide</b> <div> \t<p> Daypack 40L to 60L<br> Camping plate, cup, KFS<br> Clothing system with multiple sizes of stuff \t\tsacks<br> Footwear and handwear system<br> Sunglasses<br> Sleeping system<br> Ski system and/or \t\tsnowshoes<br> Personal toiletries and medication<br></p> \t<p>Garbage bags<br> Utility knife or multi-tool<br> Personal first aid kit<br> Sunscreen, hand \t\tmoisturizer and lip balm<br> Spare batteries for electronics<br> Headlamp<br> Lighters<br></p> </div>",
+              "name": "Equipment"
+            },
+            {
+              "description": " <ul><li>You won’t last long in the wilderness without food and water and it’s a lot worse in the winter. The regular  consumption of food and water is paramount. In winter, water is provided from melting snow and food must be high in  fats and low in moisture. If it’s frozen, you can’t chew it.</li><li>Stoneworks has worked with professionals to develop a food and water plan that works. The majority of food will be  provided by you but we will supplement your food items with some key ingredients.</li><li>Note – We recognize some individuals have dietary restrictions so we will work with you to build a food list that  works for you and provides the nutrition you need. </li><li>Dinner on the first night, breakfast on the second day and lunch on the last day is covered in the cost.</li><li>A detailed food guide will be emailed to you once your deposit has been accepted</li> </ul>  <b>What Stoneworks provides for the wilderness</b>  <ul><li>Coffee</li><li>Fresh bread and/or bagels warmed on the campfire</li><li>Prepared bacon</li><li>Olive Oil rations</li><li>Butter rations</li><li>Electrolytes mix</li><li>Food preparation bags</li><li>Dried Salami</li> </ul>  <b>What you provide</b>  <ul><li>Breakfast and dinner dry rations</li><li>Individual hot beverage items</li><li>Trail mix of fruit and nuts</li><li>Soup mix and noodles</li><li>Salt, pepper and other spices</li><li>Multi-vitamin</li> </ul>",
+              "name": "Food"
+            }
+          ],
+          "time": 3,
+          "type": "outdoors"
+        },
+        {
+          "availabilities": {
+            "2020": "",
+            "2021": "",
+            "2022": "",
+            "2023": "",
+            "2024": [
+              null,
+              "14,15,16,17,18,19",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "2025": "",
+            "2026": "",
+            "2027": "",
+            "2028": "",
+            "2029": "",
+            "2030": "",
+            "2031": "",
+            "2032": "",
+            "2033": "",
+            "2034": "",
+            "2035": "",
+            "2036": "",
+            "2037": "",
+            "2038": [
+              null,
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"
+            ]
+          },
+          "cost": 2100,
+          "description": "<p>Our intermediate program takes a closer look at the basic skills with the added bonus of learning about winter first aid and moving base camp. A longer experience that will challenge you to stay warm and dry through the entire program. Some winter camping experience is a bonus but not essential.</p><p><b>What we cover : </b></p> \t <ul> \t\t<li>Use clothing layers effectively</li> \t\t<li>Cooking with winter stoves</li> \t\t<li>Food prep, planning and considerations</li> \t\t<li>Ski and/or snowshoe exposure and use of pulk sleds</li> \t\t<li>Seeping warm, hypothermia mitigation and care</li>\t\t<li>Winter routines and priorities</li>  \t\t<li>Mental Preparedness</li> \t\t<li>Team building</li>\t\t<li>Cold Weather First Aid</li>  \t</ul>",
+          "id": "five-days",
+          "name": "Intro Plus",
+          "registrationInformation": [
+            {
+              "description": " <ul><li>Located in Northern Ontario in the Timmins region, we will spend one night indoors to prepare and teach you some basic skills before heading out in the wilderness for 4 nights. No lights, no sound, a truly immersive and remote experience.</li>   <li>The Timmins region in the month of January to March can range in temperature from -10 deg Celsius and below -40 deg Celsius.</li>   <li>The Intro Plus is an intermediate level program for individuals and groups that will hone and enhance the winter skills you already have or will provide you an exceptional challenge for the outdoor enthusiast that has never ventured out to camp in the cold. </li>   <li>To truly learn the winter skills you need, we camp cold, no hot tents. We at Stoneworks are advocates of using winter pulks, we pull our gear as opposed to carrying it. You are a lot more efficient this way.</li>   <li>Stoneworks will provide you the majority of the camping equipment you require and some will come from you. A detailed packing and food guide will be emailed to you in addition to the information provided here. The majority of people don’t have the proper gear for this type of adventure so Stoneworks will work with what you have and could supplement your existing gear for a small additional fee. In the days leading up to the program, Stoneworks will assist you via two virtual calls, to help you prepare.</li></ul> ",
+              "name": "General information"
+            },
+            {
+              "description": "<b>Meeting Time and Place</b><ul><li>The team meeting point is at the Holiday Inn Express & Suites Timmins.<br><small>30 Algonquin Blvd W, Timmins, ON P4N 2R3</small></li><li>You are required to be checked in before 5pm on the first day. This will be arranged by Stoneworks.</li></ul><b>Program Location</b><ul><li>The wilderness base camp is located near Muskasenda Lake, approx. 1hr drive south of Timmins, ON</li><li>We will depart the hotel on the morning of the second day and will spend the entire duration in and around Muskasenda Lake</li></ul><b>Transportation</b><ul><li>You are responsible to make your way to and from the Holiday Inn in Timmins.</li><b>There are two ways to get there;</b><ul><li>Road – an 8 to 9hr drive from Ottawa, On</li><li>Air – flights are available daily from Air Canada and Porter. The Holiday in has an airport shuttle.</li></ul><li>During the program, all transportation is provided</li><li>For the return home, evening flights are available daily from Timmins</li></ul><b>Program Safety</b><ul><li>There will be a minimum of two guides regardless of the group size.</li><li>For groups over 6 people, a third guide will be present</li><li>All guides are certified Wilderness First Responders</li><li>There is no cell or internet service available once we are in the wilderness. Emergency communication is provided via Iridium Satellite Phone and Garmin InReach. These products are carried by the guides.</li><li>A designated responsible person will be monitoring the group at all times while we are in the wilderness.</li></ul><b>Program Preparation</b><ul><li>Preparation (good or bad) will make or break any winter excursion. Stoneworks is all about the preparation</li><li>We will provide you detailed food and equipment packing guides</li><li>We will plan and execute two virtual meetings with the team that will act as a preliminary introduction and will give you the opportunity to ask questions in a group forum so everyone benefits. During these meetings, Stoneworks will ensure you fully understand what is expected of you so you arrive prepared.</li><li>These virtual meetings will take place 6 weeks and 3 weeks in advance of Day 1.</li><li>One on one meetings are available upon request</li></ul>",
+              "name": "Logisitcs"
+            },
+            {
+              "description": "<b>Day 1</b> <ul>   <li>You are expected to be checked in at the holiday in before 5pm on Day 1</li>   <li>The team will meet and great in the hotel conference room where we will dive right into the program and     instructions.</li>   <li>Depending on progress, dinner will be catered in as we work as a team to prepare for the next days departure to     the wilderness.</li> </ul> <b>Day 2</b> <ul>   <li>Breakfast will be provided at the hotel</li>   <li>Final preparation before departing at 10am to the wilderness</li>   <li>The entire team will be bused to a drop-off point where we will prepare to ski or snowshoe a short distance to the     base camp</li> </ul> <b>Day 3</b> <ul>   <li>The entire day is spent skiing or snowshoeing in the beautiful surroundings of Lake Muskasenda</li> </ul> <b>Day 4 and 5</b> <ul>   <li>On the morning of the 4th day, we will tear down and relocate our basecamp</li>   <li>More skiing and activities in the surrounding area</li> </ul> <b>Day 6</b> <ul>   <li>Our focus will be to tear down the base camp and prepare to move back to the pick-up point to meet the bus at 11am   </li>   <li>The bus will take you back to the Holiday Inn</li>   <li>Lunch will be provided to the team</li>   <li>There will be a 2-hr period at the hotel conference room to reorganize and return any equipment supplied by     Stoneworks.</li> </ul>",
+              "name": "Itinerary"
+            },
+            {
+              "description": "<ul>   <li>All prices are in Canadian Dollars and prices are subject to change</li>   <li>The Cost for this program is $2100.00, plus HST of 13%.</li>   <li>A security deposit of 35% of the program price will be required before Stoneworks commences with the virtual     preparation meetings.</li>   <li>The balance of the program cost will be required in full, 21 days ahead of Day 1.</li>   <li>A refundable damage deposit of $500 is required from all guests.</li>   <li>Supplemental gear can be available for a rental fee. This cost will depend on the type and quantity of items     provided. </ul> <b>Method of Payment</b> <ul>   <li>The Stoneworks website is not yet set up to accept payment.</li>   <li>Once you have registered, you will be contacted by Stoneworks via the email provided to confirm your registration   </li>   <li>When your registration is confirmed, an invoice will be sent to you for the security deposit</li>   <li>Payment can be made by Direct Deposit from your financial institution or E Transfer</li> </ul><b>Cancellation and Refund policy</b> <ul>   <li>In the event that Stoneworks cancels a program, your payment will immediately be refunded</li>   <li>If Stoneworks adjusts the program dates after you have committed funds, and you can no longer attend, your payment     will be refunded</li>   <li>You have 48 hours from when you make your deposit to change or cancel with no charge to you (provided your booking     does not depart within 21 days).</li>   <li>Cancellation within 28 days of day 1, will result in a loss of your deposit</li>   <li>Cancellation within 21 days of day 1, will result in a loss of the entire amount paid</li>   <li>Cancellations must be made in writing (letter or email info@stoneworkss.ca) Cancellations are only effective once     your notification is received by Stoneworks</li>   <li>We will gladly accept a substitute guest should you not be able to attend provided they meet the prerequisites for     the specific program. This must happen prior to the virtual meetings</li>   <li>We ask that you thoroughly understand and consider the booking and cancellation policy prior to booking as we make     financial commitments to our guides (and food and accommodation providers) once you have booked and we have     confirmed a trip. We take your booking in good faith and begin incurring costs upon confirmation. </li> </ul>",
+              "name": "Cost"
+            },
+            {
+              "description": "<ul><li>Hotel accommodations on Day 1</li><li>1 x Dinner, 1 x Lunch, 1 x Breakfast at the hotel</li><li>Transportation to and from the wilderness area</li><li>Use of group camping gear and pulks</li><li>Guide fees</li><li>A list of supplied food and equipment is available in their respective tabs</li></ul>",
+              "name": "Whats Included"
+            },
+            {
+              "description": " <ul><li>Any multi day excursion into the winter wilderness requires the proper equipment and clothing and it is often more  then what most people have laying around their household. Good winter gear is expensive and the cost can add up  fast.</li><li>Stoneworks recognizes you don’t have it all and it’s why we provide most of the essentials you need. Of course, it  is expected you provide some equipment and where you have deficiencies, we can step in to help.</li><li>Equipment Provided by Stoneworks</li> </ul>  <table><tbody>  <td> <tr><p>  Winter tent and snow pegs<br>  Tent brush<br>  Snow collection bag<br>  Folding stool<br>  Foldable camp seat<br>  Snow pulk and harness<br>  Snow shovel<br></p> </tr> <tr><p>Multi-fuel camp stoves, spare pump and fuel<br>  Stove support boards<br>  Cooking pots<br>  1L Thermos<br>  500ml soup Thermos<br>  Large kettle for melting snow<br>  Foam floor pad for tent<br>  Lightweight saw<br></p> </tr>  </td>  <td> <tr><p>Firestarter kit (program specific)<br>  Regional maps<br>  Compass (program specific)<br>  Whistle<br>  Group toilet kit, paper bags and biodegradable toilet paper<br>  Carried by guides;<br></p> </tr> <tr><p>Group repair kit<br>  Axe<br>  Weather monitor<br>  Winter hot tent<br>  Group First Aid kit<br>  Safety communication<br></p> </tr>  </td></tbody> </table>  <p></p> <b>Equipment you provide</b> <table><tbody>  <td> <tr><p>  Daypack 40L to 60L<br>  Camping plate, cup, KFS<br>  Clothing system with multiple sizes of stuff sacks<br>  Footwear and handwear system<br>  Sunglasses<br>  Sleeping system<br>  Ski system and/or snowshoes<br>  Personal toiletries and medication<br></p> </tr>  </td>  <td> <tr><p>Garbage bags<br>  Utility knife or multi-tool<br>  Personal first aid kit<br>  Sunscreen, hand moisturizer and lip balm<br>  Spare batteries for electronics<br>  Headlamp<br>  Lighters<br></p> </tr>  </td></tbody> </table>",
+              "name": "Equipment"
+            },
+            {
+              "description": " <ul><li>You won’t last long in the wilderness without food and water and it’s a lot worse in the winter. The regular  consumption of food and water is paramount. In winter, water is provided from melting snow and food must be high in  fats and low in moisture. If it’s frozen, you can’t chew it.</li><li>Stoneworks has worked with professionals to develop a food and water plan that works. The majority of food will be  provided by you but we will supplement your food items with some key ingredients.</li><li>Note – We recognize some individuals have dietary restrictions so we will work with you to build a food list that  works for you and provides the nutrition you need. </li><li>Dinner on the first night, breakfast on the second day and lunch on the last day is covered in the cost.</li><li>A detailed food guide will be emailed to you once your deposit has been accepted</li> </ul>  <b>What Stoneworks provides for the wilderness</b>  <ul><li>Coffee</li><li>Fresh bread and/or bagels warmed on the campfire</li><li>Prepared bacon</li><li>Olive Oil rations</li><li>Butter rations</li><li>Electrolytes mix</li><li>Food preparation bags</li><li>Dried Salami</li> </ul>  <b>What you provide</b>  <ul><li>Breakfast and dinner dry rations</li><li>Individual hot beverage items</li><li>Trail mix of fruit and nuts</li><li>Soup mix and noodles</li><li>Salt, pepper and other spices</li><li>Multi-vitamin</li> </ul>",
+              "name": "Food"
+            }
+          ],
+          "time": 5,
+          "type": "outdoors"
+        },
+        {
+          "availabilities":  {
+            "2020": "",
+            "2021": "",
+            "2022": "",
+            "2023": "",
+            "2024": [
+              null,
+              null,
+              "5,6,7,8,9,10,11,12,13",
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "2025": "",
+            "2026": "",
+            "2027": "",
+            "2028": "",
+            "2029": "",
+            "2030": "",
+            "2031": "",
+            "2032": "",
+            "2033": "",
+            "2034": "",
+            "2035": "",
+            "2036": "",
+            "2037": "",
+            "2038": [
+              null,
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"
+            ]
+          },
+          "cost": 2800,
+          "description": "<p>Our advanced program will challenge even the experienced winter adventurer. 6 nights out in the wilderness where we will master the skills you need for extended adventures in the cold. After completing this package, you will never be intimidated by the cold again. For people with a solid baseline of cold weather experience or you have conducted the Introduction or Intro Plus programs.</p><p><b>What we cover : </b></p> \t<ul> \t\t<li>Use clothing layers effectively</li> \t\t<li>Cooking with winter stoves</li> \t\t<li>Food prep, planning and considerations</li> \t\t<li>Ski and/or snowshoe exposure and use of pulk sleds</li> \t\t<li>Seeping warm, hypothermia mitigation and care</li> \t\t<li>Winter routines and priorities</li> \t\t<li>Mental Preparedness</li> \t\t<li>Team building</li> \t\t<li>Exposure to improvised shelters</li> \t\t<li>Flora/ Fauna (Ice fishing/snares, edible plants)</li> \t\t<li>Navigation exposure</li> \t\t<li>Cold Weather First Aid</li> \t</ul>",
+          "id": "seven-days",
+          "name": "Winter Immersion",
+          "registrationInformation": [
+            {
+              "description": "<ul> <li>Located in Northern Ontario in the Timmins region, we will spend one night indoors to prepare and teach you some basic skills before heading out in the wilderness for 5 days, 4 nights. No lights, no sound, a truly immersive and remote experience.</li> <li>The Timmins region in the month of January to March can range in temperature from -10 deg Celsius and below -40 deg Celcius.</li> <li>Winter Immersion is an advance program where winter camping skills is a must. For individuals and groups that have completed the Intro or Intro Plus or can demonstrate their winter wilderness expertise.</li> <li>This would be more than a solid foundation to take on further challenges in Canada’s high North. Challenge yourself to complete something few people ever do.</li> <li>6 nights in the winter wilderness is no joke and Stoneworks will be with you all the way. After this program, you will be able to take on whatever mother nature throws at you. A very rewarding experience.</li> <li>To truly learn the winter skills you need, we camp cold, no hot tents. We at Stoneworks are advocates of using winter pulks, we pull our gear as opposed to carrying it. You are a lot more efficient this way.</li> <li>Stoneworks will provide you the majority of the camping equipment you require and some will come from you. A detailed packing and food guide will be emailed to you in addition to the information provided here. The majority of people don’t have the proper gear for this type of adventure so Stoneworks will work with what you have and could supplement your existing gear for a small additional fee. In the days leading up to the program, Stoneworks will assist you via two virtual calls, to help you prepare.</li> </ul>",
+              "name": "General information"
+            },
+            {
+              "description": "<b>Meeting Time and Place</b><ul><li>The team meeting point is at the Holiday Inn Express & Suites Timmins.<br><small>30 Algonquin Blvd W, Timmins, ON P4N 2R3</small></li><li>You are required to be checked in before 5pm on the first day. This will be arranged by Stoneworks.</li></ul><b>Program Location</b><ul><li>The wilderness base camp is located near Muskasenda Lake, approx. 1hr drive south of Timmins, ON</li><li>We will depart the hotel on the morning of the second day and will spend the entire duration in and around Muskasenda Lake</li></ul><b>Transportation</b><ul><li>You are responsible to make your way to and from the Holiday Inn in Timmins.</li><b>There are two ways to get there;</b><ul><li>Road – an 8 to 9hr drive from Ottawa, On</li><li>Air – flights are available daily from Air Canada and Porter. The Holiday in has an airport shuttle.</li></ul><li>During the program, all transportation is provided</li><li>For the return home, evening flights are available daily from Timmins</li></ul><b>Program Safety</b><ul><li>There will be a minimum of two guides regardless of the group size.</li><li>For groups over 6 people, a third guide will be present</li><li>All guides are certified Wilderness First Responders</li><li>There is no cell or internet service available once we are in the wilderness. Emergency communication is provided via Iridium Satellite Phone and Garmin InReach. These products are carried by the guides.</li><li>A designated responsible person will be monitoring the group at all times while we are in the wilderness.</li></ul><b>Program Preparation</b><ul><li>Preparation (good or bad) will make or break any winter excursion. Stoneworks is all about the preparation</li><li>We will provide you detailed food and equipment packing guides</li><li>We will plan and execute two virtual meetings with the team that will act as a preliminary introduction and will give you the opportunity to ask questions in a group forum so everyone benefits. During these meetings, Stoneworks will ensure you fully understand what is expected of you so you arrive prepared.</li><li>These virtual meetings will take place 6 weeks and 3 weeks in advance of Day 1.</li><li>One on one meetings are available upon request</li></ul>",
+              "name": "Logisitcs"
+            },
+            {
+              "description": "<b>Day 1</b> <ul>   <li>You are expected to be checked in at the holiday in before 5pm on Day 1</li>   <li>The team will meet and great in the hotel conference room where we will dive right into the program and     instructions.</li>   <li>Depending on progress, dinner will be catered in as we work as a team to prepare for the next days departure to     the wilderness.</li> </ul> <b>Day 2</b> <ul>   <li>Breakfast will be provided at the hotel</li>   <li>Final preparation before departing at 10am to the wilderness</li>   <li>The entire team will be bused to a drop-off point where we will prepare to ski or snowshoe a short distance to the     base camp</li> </ul> <b>Day 3</b> <ul>   <li>The entire day is spent skiing or snowshoeing in the beautiful surroundings of Lake Muskasenda</li>   <li>We will learn about what plants are still available to provide nutrition and we will learn how to set snares for     snowshoe hares (small game season dependent) or cut a hole in the ice for lake trout (seasonal dependent).</li> </ul> <b>Day 4</b> <ul>   <li>On the morning of the 4th day, we will tear down and relocate our basecamp</li>   <li>More skiing and activities in the surrounding area</li> </ul> <b>Day 5</b> <ul>   <li>We will spend the day learning about improvised shelters and if you’re so inclined, you can sleep in it.</li> </ul> <b>Day 6</b> <ul>   <li>On this day we will relocate to our 3rd camp location</li> </ul> <b>Day 7</b> <ul>   <li>More skiing and activities in the surrounding area</li> </ul> <b>Day 8</b> <ul>   <li>Our focus will be to tear down the base camp and prepare to move back to the pick-up point to meet the bus at 11am   </li>   <li>The bus will take you back to the Holiday Inn</li>   <li>Lunch will be provided to the team</li>   <li>There will be a 2-hr period at the hotel conference room to reorganize and return any equipment supplied by     Stoneworks. </li> </ul>",
+              "name": "Itinerary"
+            },
+            {
+              "description": " <ul><li>All prices are in Canadian Dollars and prices are subject to change</li><li>The Cost for this program is $2800.00, plus HST of 13%.</li><li>A security deposit of 35% of the program price will be required before Stoneworks commences with the virtual preparation meetings.</li><li>The balance of the program cost will be required in full, 21 days ahead of Day 1.</li><li>A refundable damage deposit of $500 is required from all guests.</li><li>Supplemental gear can be available for a rental fee. This cost will depend on the type and quantity of items provided.</ul>  <b>Method of Payment</b> <ul><li>The Stoneworks website is not yet set up to accept payment.</li><li>Once you have registered, you will be contacted by Stoneworks via the email provided to confirm your registration</li><li>When your registration is confirmed, an invoice will be sent to you for the security deposit</li><li>Payment can be made by Direct Deposit from your financial institution or E Transfer</li></ul><b>Cancellation and Refund policy</b> <ul><li>In the event that Stoneworks cancels a program, your payment will immediately be refunded</li><li>If Stoneworks adjusts the program dates after you have committed funds, and you can no longer attend, your payment will be refunded</li><li>You have 48 hours from when you make your deposit to change or cancel with no charge to you (provided your booking does not depart within 21 days).</li><li>Cancellation within 28 days of day 1, will result in a loss of your deposit</li><li>Cancellation within 21 days of day 1, will result in a loss of the entire amount paid</li><li>Cancellations must be made in writing (letter or email info@stoneworkss.ca) Cancellations are only effective once your notification is received by Stoneworks</li><li>We will gladly accept a substitute guest should you not be able to attend provided they meet the prerequisites for the specific program. This must happen prior to the virtual meetings</li><li>We ask that you thoroughly understand and consider the booking and cancellation policy prior to booking as we make financial commitments to our guides (and food and accommodation providers) once you have booked and we have confirmed a trip.  We take your booking in good faith and begin incurring costs upon confirmation. </li></ul>",
+              "name": "Cost"
+            },
+            {
+              "description": "<ul><li>Hotel accommodations on Day 1</li><li>1 x Dinner, 1 x Lunch, 1 x Breakfast at the hotel</li><li>Transportation to and from the wilderness area</li><li>Use of group camping gear and pulks</li><li>Guide fees</li><li>A list of supplied food and equipment is available in their respective tabs</li></ul>",
+              "name": "Whats Included"
+            },
+            {
+              "description": " <ul><li>Any multi day excursion into the winter wilderness requires the proper equipment and clothing and it is often more  then what most people have laying around their household. Good winter gear is expensive and the cost can add up  fast.</li><li>Stoneworks recognizes you don’t have it all and it’s why we provide most of the essentials you need. Of course, it  is expected you provide some equipment and where you have deficiencies, we can step in to help.</li><li>Equipment Provided by Stoneworks</li> </ul>  <table><tbody>  <td> <tr><p>  Winter tent and snow pegs<br>  Tent brush<br>  Snow collection bag<br>  Folding stool<br>  Foldable camp seat<br>  Snow pulk and harness<br>  Snow shovel<br></p> </tr> <tr><p>Multi-fuel camp stoves, spare pump and fuel<br>  Stove support boards<br>  Cooking pots<br>  1L Thermos<br>  500ml soup Thermos<br>  Large kettle for melting snow<br>  Foam floor pad for tent<br>  Lightweight saw<br></p> </tr>  </td>  <td> <tr><p>Firestarter kit (program specific)<br>  Regional maps<br>  Compass (program specific)<br>  Whistle<br>  Group toilet kit, paper bags and biodegradable toilet paper<br>  Carried by guides;<br></p> </tr> <tr><p>Group repair kit<br>  Axe<br>  Weather monitor<br>  Winter hot tent<br>  Group First Aid kit<br>  Safety communication<br></p> </tr>  </td></tbody> </table>  <p></p> <b>Equipment you provide</b> <table><tbody>  <td> <tr><p>  Daypack 40L to 60L<br>  Camping plate, cup, KFS<br>  Clothing system with multiple sizes of stuff sacks<br>  Footwear and handwear system<br>  Sunglasses<br>  Sleeping system<br>  Ski system and/or snowshoes<br>  Personal toiletries and medication<br></p> </tr>  </td>  <td> <tr><p>Garbage bags<br>  Utility knife or multi-tool<br>  Personal first aid kit<br>  Sunscreen, hand moisturizer and lip balm<br>  Spare batteries for electronics<br>  Headlamp<br>  Lighters<br></p> </tr>  </td></tbody> </table>",
+              "name": "Equipment"
+            },
+            {
+              "description": " <ul><li>You won’t last long in the wilderness without food and water and it’s a lot worse in the winter. The regular  consumption of food and water is paramount. In winter, water is provided from melting snow and food must be high in  fats and low in moisture. If it’s frozen, you can’t chew it.</li><li>Stoneworks has worked with professionals to develop a food and water plan that works. The majority of food will be  provided by you but we will supplement your food items with some key ingredients.</li><li>Note – We recognize some individuals have dietary restrictions so we will work with you to build a food list that  works for you and provides the nutrition you need. </li><li>Dinner on the first night, breakfast on the second day and lunch on the last day is covered in the cost.</li><li>A detailed food guide will be emailed to you once your deposit has been accepted</li> </ul>  <b>What Stoneworks provides for the wilderness</b>  <ul><li>Coffee</li><li>Fresh bread and/or bagels warmed on the campfire</li><li>Prepared bacon</li><li>Olive Oil rations</li><li>Butter rations</li><li>Electrolytes mix</li><li>Food preparation bags</li><li>Dried Salami</li> </ul>  <b>What you provide</b>  <ul><li>Breakfast and dinner dry rations</li><li>Individual hot beverage items</li><li>Trail mix of fruit and nuts</li><li>Soup mix and noodles</li><li>Salt, pepper and other spices</li><li>Multi-vitamin</li> </ul>",
+              "name": "Food"
+            }
+          ],
+          "time": 6,
+          "type": "outdoors"
+        },
+        {
+          "availabilities": {
+            "2020": "",
+            "2021": "",
+            "2022": "",
+            "2023": "",
+            "2024": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              "16,17,18,19,20",
+              null,
+              null,
+              null
+            ],
+            "2025": "",
+            "2026": "",
+            "2027": "",
+            "2028": "",
+            "2029": "",
+            "2030": "",
+            "2031": "",
+            "2032": "",
+            "2033": "",
+            "2034": "",
+            "2035": "",
+            "2036": "",
+            "2037": "",
+            "2038": [
+              null,
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"
+            ]
+          },
+          "cost": 3000,
+          "description": "<p>This program is designed to turn you into a competent wilderness navigator. More than just a weekend exposure to map and compass skills, this is a 5-day program that starts with the basics and progresses in difficulty to advanced navigational skills. A mix of classroom activity and field exercises culminating to a long, multi-leg navigation route that is conducted over two days.</p><p><b>What we cover : </b></p> \t<ul> \t\t<li>Basic and advanced use of a map and compass</li> \t\t<li>Route planning and preparation</li> \t\t<li>Conduct of the route</li> \t\t<li>Reading the terrain</li> \t\t<li>Re-orientation in the event you become lost</li> \t\t<li>GPS use</li> \t\t<li>Introduction of digital aids and online tools<br>*competent skiing proficiency is required</li> \t</ul>",
+          "id": "nav",
+          "name": "The Skilled Navigator",
+          "registrationInformation": [
+            {
+              "description": "<ul><li>Located in Northern Ontario in the Timmins region, we will spend one night indoors to prepare and teach you some basic skills before heading out in the wilderness for 3 days, 2 nights. No lights, no sound, a truly immersive and remote experience.</li><li>The Timmins region in the month of January to March can range in temperature from -10 deg Celsius and below -40 deg Celsius. The Intro to Winter Skills Program is typically run later in the season when the temperatures are a little warmer.</li><li>This Intro program is designed for individuals and groups that have never spent a night out in the cold and would like to do so under the watchful eye of skilled guides. Your love of winter overnight adventures starts here.</li><li>To truly learn the winter skills you need, we camp cold, no hot tents. We at Stoneworks are advocates of using Acapulka winter pulks, we pull our gear as opposed to carrying it. You are a lot more efficient this way.</li><li>Stoneworks will provide you the majority of the camping equipment you require and some will come from you. A detailed packing and food guide will be emailed to you in addition to the information provided here. The majority of people don’t have the proper gear for this type of adventure so Stoneworks will work with what you have and could supplement your existing gear for a small additional fee. In the days leading up to the program, Stoneworks will assist you via two virtual calls, to help you prepare.</li></ul>",
+              "name": "General information"
+            },
+            {
+              "description": "<b>Meeting Time and Place</b><ul><li>The team meeting point is at the Holiday Inn Express & Suites Timmins.<br><small>30 Algonquin Blvd W, Timmins, ON P4N 2R3</small></li><li>You are required to be checked in before 5pm on the first day. This will be arranged by Stoneworks.</li></ul><b>Program Location</b><ul><li>The wilderness base camp is located near Muskasenda Lake, approx. 1hr drive south of Timmins, ON</li><li>We will depart the hotel on the morning of the second day and will spend the entire duration in and around Muskasenda Lake</li></ul><b>Transportation</b><ul><li>You are responsible to make your way to and from the Holiday Inn in Timmins.</li><b>There are two ways to get there;</b><ul><li>Road – an 8 to 9hr drive from Ottawa, On</li><li>Air – flights are available daily from Air Canada and Porter. The Holiday in has an airport shuttle.</li></ul><li>During the program, all transportation is provided</li><li>For the return home, evening flights are available daily from Timmins</li></ul><b>Program Safety</b><ul><li>There will be a minimum of two guides regardless of the group size.</li><li>For groups over 6 people, a third guide will be present</li><li>All guides are certified Wilderness First Responders</li><li>There is no cell or internet service available once we are in the wilderness. Emergency communication is provided via Iridium Satellite Phone and Garmin InReach. These products are carried by the guides.</li><li>A designated responsible person will be monitoring the group at all times while we are in the wilderness.</li></ul><b>Program Preparation</b><ul><li>Preparation (good or bad) will make or break any winter excursion. Stoneworks is all about the preparation</li><li>We will provide you detailed food and equipment packing guides</li><li>We will plan and execute two virtual meetings with the team that will act as a preliminary introduction and will give you the opportunity to ask questions in a group forum so everyone benefits. During these meetings, Stoneworks will ensure you fully understand what is expected of you so you arrive prepared.</li><li>These virtual meetings will take place 6 weeks and 3 weeks in advance of Day 1.</li><li>One on one meetings are available upon request</li></ul>",
+              "name": "Logisitcs"
+            },
+            {
+              "description": "<b>Day 1</b><ul><li>You are expected to be checked in at the holiday in before 5pm on Day 1</li><li>The team will meet and great in the hotel conference room where we will dive right into the program and instructions.</li><li>Dinner will be catered in as we work as a team to prepare for the next days departure to the wilderness.</li></ul><b>Day 2</b><ul><li>Breakfast will be provided at the hotel</li><li>Final preparation before departing at 10am to the wilderness</li><li>The entire team will be bused to a drop-off point where we will prepare to ski or snowshoe a short distance to the base camp</li></ul><b>Day 3</b><ul><li>The entire day is spent in the beautiful surroundings of Lake Muskasenda</li></ul><b>Day 4</b><ul><li>Our focus will be to tear down the base camp and prepare to move back to the pick-up point to meet the bus at 11am</li><li>The bus will take you back to the Holiday Inn</li><li>A catered lunch will be provided to the team</li><li>There will be a 2-hr period at the hotel conference room to reorganize and return any equipment supplied by Stoneworks.</li><li>All guests will be free to stay and additional night on their own expense or catch an evening flight back to your destination.</li></ul>",
+              "name": "Itinerary"
+            },
+            {
+              "description": " <ul><li>All prices are in Canadian Dollars and prices are subject to change</li><li>The Cost for this program is $1200.00, plus HST of 13%.</li><li>A security deposit of 35% of the program price will be required before Stoneworks commences with the virtual preparation meetings.</li><li>The balance of the program cost will be required in full, 21 days ahead of Day 1.</li><li>A refundable damage deposit of $500 is required from all guests.</li><li>Supplemental gear can be available for a rental fee. This cost will depend on the type and quantity of items provided.</ul>  <b>Method of Payment</b> <ul><li>The Stoneworks website is not yet set up to accept payment.</li><li>Once you have registered, you will be contacted by Stoneworks via the email provided to confirm your registration</li><li>When your registration is confirmed, an invoice will be sent to you for the security deposit</li><li>Payment can be made by Direct Deposit from your financial institution or E Transfer</li></ul><b>Cancellation and Refund policy</b> <ul><li>In the event that Stoneworks cancels a program, your payment will immediately be refunded</li><li>If Stoneworks adjusts the program dates after you have committed funds, and you can no longer attend, your payment will be refunded</li><li>You have 48 hours from when you make your deposit to change or cancel with no charge to you (provided your booking does not depart within 21 days).</li><li>Cancellation within 28 days of day 1, will result in a loss of your deposit</li><li>Cancellation within 21 days of day 1, will result in a loss of the entire amount paid</li><li>Cancellations must be made in writing (letter or email info@stoneworkss.ca) Cancellations are only effective once your notification is received by Stoneworks</li><li>We will gladly accept a substitute guest should you not be able to attend provided they meet the prerequisites for the specific program. This must happen prior to the virtual meetings</li><li>We ask that you thoroughly understand and consider the booking and cancellation policy prior to booking as we make financial commitments to our guides (and food and accommodation providers) once you have booked and we have confirmed a trip.  We take your booking in good faith and begin incurring costs upon confirmation. </li></ul>",
+              "name": "Cost"
+            },
+            {
+              "description": "<ul><li>Hotel accommodations on Day 1</li><li>1 x Dinner, 1 x Lunch, 1 x Breakfast at the hotel</li><li>Transportation to and from the wilderness area</li><li>Use of group camping gear and pulks</li><li>Guide fees</li><li>A list of supplied food and equipment is available in their respective tabs</li></ul>",
+              "name": "Whats Included"
+            },
+            {
+              "description": " <ul><li>Any multi day excursion into the winter wilderness requires the proper equipment and clothing and it is often more  then what most people have laying around their household. Good winter gear is expensive and the cost can add up  fast.</li><li>Stoneworks recognizes you don’t have it all and it’s why we provide most of the essentials you need. Of course, it  is expected you provide some equipment and where you have deficiencies, we can step in to help.</li><li>Equipment Provided by Stoneworks</li> </ul>  <table><tbody>  <td> <tr><p>  Winter tent and snow pegs<br>  Tent brush<br>  Snow collection bag<br>  Folding stool<br>  Foldable camp seat<br>  Snow pulk and harness<br>  Snow shovel<br></p> </tr> <tr><p>Multi-fuel camp stoves, spare pump and fuel<br>  Stove support boards<br>  Cooking pots<br>  1L Thermos<br>  500ml soup Thermos<br>  Large kettle for melting snow<br>  Foam floor pad for tent<br>  Lightweight saw<br></p> </tr>  </td>  <td> <tr><p>Firestarter kit (program specific)<br>  Regional maps<br>  Compass (program specific)<br>  Whistle<br>  Group toilet kit, paper bags and biodegradable toilet paper<br>  Carried by guides;<br></p> </tr> <tr><p>Group repair kit<br>  Axe<br>  Weather monitor<br>  Winter hot tent<br>  Group First Aid kit<br>  Safety communication<br></p> </tr>  </td></tbody> </table>  <p></p> <b>Equipment you provide</b> <table><tbody>  <td> <tr><p>  Daypack 40L to 60L<br>  Camping plate, cup, KFS<br>  Clothing system with multiple sizes of stuff sacks<br>  Footwear and handwear system<br>  Sunglasses<br>  Sleeping system<br>  Ski system and/or snowshoes<br>  Personal toiletries and medication<br></p> </tr>  </td>  <td> <tr><p>Garbage bags<br>  Utility knife or multi-tool<br>  Personal first aid kit<br>  Sunscreen, hand moisturizer and lip balm<br>  Spare batteries for electronics<br>  Headlamp<br>  Lighters<br></p> </tr>  </td></tbody> </table>",
+              "name": "Equipment"
+            },
+            {
+              "description": " <ul><li>You won’t last long in the wilderness without food and water and it’s a lot worse in the winter. The regular  consumption of food and water is paramount. In winter, water is provided from melting snow and food must be high in  fats and low in moisture. If it’s frozen, you can’t chew it.</li><li>Stoneworks has worked with professionals to develop a food and water plan that works. The majority of food will be  provided by you but we will supplement your food items with some key ingredients.</li><li>Note – We recognize some individuals have dietary restrictions so we will work with you to build a food list that  works for you and provides the nutrition you need. </li><li>Dinner on the first night, breakfast on the second day and lunch on the last day is covered in the cost.</li><li>A detailed food guide will be emailed to you once your deposit has been accepted</li> </ul>  <b>What Stoneworks provides for the wilderness</b>  <ul><li>Coffee</li><li>Fresh bread and/or bagels warmed on the campfire</li><li>Prepared bacon</li><li>Olive Oil rations</li><li>Butter rations</li><li>Electrolytes mix</li><li>Food preparation bags</li><li>Dried Salami</li> </ul>  <b>What you provide</b>  <ul><li>Breakfast and dinner dry rations</li><li>Individual hot beverage items</li><li>Trail mix of fruit and nuts</li><li>Soup mix and noodles</li><li>Salt, pepper and other spices</li><li>Multi-vitamin</li> </ul>",
+              "name": "Food"
+            }
+          ],
+          "time": 7,
+          "type": "outdoors"
+        },
+        {
+          "availabilities": {
+            "2020": "",
+            "2021": "",
+            "2022": "",
+            "2023": "",
+            "2024": [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "2025": "",
+            "2026": "",
+            "2027": "",
+            "2028": "",
+            "2029": "",
+            "2030": "",
+            "2031": "",
+            "2032": "",
+            "2033": "",
+            "2034": "",
+            "2035": "",
+            "2036": "",
+            "2037": "",
+            "2038": [
+              null,
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31",
+              "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31"
+            ]
+          },
+          "cost": 3600,
+          "description": "<p>An unforgettable adventure through untouched wilderness that is focused on mobility. Refine your classic, cross-country skiing skills and learn winter camp routine on this multi-day, Nordic ski trip.</p><p><b>What we cover : </b></p> \t<ul> \t\t<li>Use clothing layers effectively</li> \t\t<li>Cooking, food prep planning and considerations</li> \t\t<li>Essential skiing techniques and breaking trail.</li> \t\t<li>Exposure and use of pulk sleds</li> \t\t<li>Seeping warm, hypothermia mitigation and care</li> \t\t<li>Winter routines and priorities</li> \t\t<li>Route selection and Navigation exposure*</li> \t\t<li>Mental Preparedness</li> \t\t<li>Team building</li> \t</ul>",
+          "id": "nordic",
+          "name": "Nordic Ski Experience",
+          "registrationInformation": [
+            {
+              "description": "<ul>   <li>Located in Northern Ontario in the Timmins region, we will spend one night indoors to prepare and teach you some basic skills before heading out in the wilderness for a multi-day Nordic Ski excursion.  No lights, no sound, a truly immersive and remote experience.</li>     <li>The Timmins region in the month of January to March can range in temperature from -10 deg Celsius and below -40 deg Celsius. During this program, we can encounter these large swings in temperature.</li>     <li>The Nordic Ski Experience is very challenging and physically demanding. We will move camp each day and depending on the snow conditions, could be travelling between 4 and 6 hrs per day. Most of the route is through fresh snow and can be slow going.</li>     <li>Groups will be formed based on their experience. This could be a program for beginners or experienced winter adventurers. The experience level of the group will determine the speed and distance of travel. For beginners, completing the Introduction to Winter Skills program is highly encouraged.</li>     <li>All of our equipment is pulled using Acapulka Pulks and we camp cold. </li>     <li>7- and 10-day programs are available.</li>     <li>Stoneworks will provide you the majority of the camping equipment you require and some will come from you. A detailed packing and food guide will be emailed to you in addition to the information provided here. The majority of people don’t have the proper gear for this type of adventure so Stoneworks will work with what you have and could supplement your existing gear for a small additional fee. In the days leading up to the program, Stoneworks will assist you via two virtual calls, to help you prepare.</li> </ul>",
+              "name": "General information"
+            },
+            {
+              "description": "<b>Meeting Time and Place</b><ul><li>The team meeting point is at the Holiday Inn Express & Suites Timmins.<br><small>30 Algonquin Blvd W, Timmins, ON P4N 2R3</small></li><li>You are required to be checked in before 5pm on the first day. This will be arranged by Stoneworks.</li></ul><b>Program Location</b><ul><li>The wilderness base camp is located near Muskasenda Lake, approx. 1hr drive south of Timmins, ON</li><li>We will depart the hotel on the morning of the second day and will spend the entire duration in and around Muskasenda Lake</li></ul><b>Transportation</b><ul><li>You are responsible to make your way to and from the Holiday Inn in Timmins.</li><b>There are two ways to get there;</b><ul><li>Road – an 8 to 9hr drive from Ottawa, On</li><li>Air – flights are available daily from Air Canada and Porter. The Holiday in has an airport shuttle.</li></ul><li>During the program, all transportation is provided</li><li>For the return home, evening flights are available daily from Timmins</li></ul><b>Program Safety</b><ul><li>There will be a minimum of two guides regardless of the group size.</li><li>For groups over 6 people, a third guide will be present</li><li>All guides are certified Wilderness First Responders</li><li>There is no cell or internet service available once we are in the wilderness. Emergency communication is provided via Iridium Satellite Phone and Garmin InReach. These products are carried by the guides.</li><li>A designated responsible person will be monitoring the group at all times while we are in the wilderness.</li></ul><b>Program Preparation</b><ul><li>Preparation (good or bad) will make or break any winter excursion. Stoneworks is all about the preparation</li><li>We will provide you detailed food and equipment packing guides</li><li>We will plan and execute two virtual meetings with the team that will act as a preliminary introduction and will give you the opportunity to ask questions in a group forum so everyone benefits. During these meetings, Stoneworks will ensure you fully understand what is expected of you so you arrive prepared.</li><li>These virtual meetings will take place 6 weeks and 3 weeks in advance of Day 1.</li><li>One on one meetings are available upon request</li></ul>",
+              "name": "Logisitcs"
+            },
+            {
+              "description": "<b>Day 1</b> <ul> <li>You are expected to be checked in at the holiday in before 5pm on Day 1</li> <li>The team will meet and great in the hotel conference room where we will dive right into the program and instructions.</li> <li>Depending on progress, dinner will be catered in as we work as a team to prepare for the next days departure to the wilderness.</li> </ul> <b>Day 2</b> <ul> <li>Breakfast will be provided at the hotel</li> <li>Final preparation before departing at 10am to the wilderness</li> <li>The entire team will be bused to a drop-off point where we will prepare to embark on our multi-day trip. </li> </ul> <b>Day 3</b><ul> <li>We will start the day with breakfast in the tent and hot campfire cowboy coffee</li> <li>This is the only day we will not move basecamp. Instead, we will focus on refreshing your basic ski skills, navigation skills, and camp routines.</li> </ul> <b>Day 4 to 7 (10)</b><ul> <li>Each day after will start with breakfast in the tent and hot campfire cowboy coffee</li> <li>Camp will be torn down each day and re-established in a new location</li> <li>The speed will be determined by the pace of the group. </li> <li>This routine will continue along the planned route and the last night will be in the same location as Day 2.</li> </ul> <b>Day 8 (11)</b><ul> <li>Our focus will be to tear down the base camp and prepare to move back to the pick-up point to meet the bus at 11am</li> <li>The bus will take you back to the Holiday Inn</li> <li>Lunch will be provided to the team</li> <li>There will be a 2-hr period at the hotel conference room to reorganize and return any equipment supplied by Stoneworks. </li> </ul>",
+              "name": "Itinerary"
+            },
+            {
+              "description": " <ul><li>All prices are in Canadian Dollars and prices are subject to change</li><li>The Cost for this program is $3000 for the 7 day and $3600 for the 10 day, plus HST of 13%.</li><li>A security deposit of 35% of the program price will be required before Stoneworks commences with the virtual preparation meetings.</li><li>The balance of the program cost will be required in full, 21 days ahead of Day 1.</li><li>A refundable damage deposit of $500 is required from all guests.</li><li>Supplemental gear can be available for a rental fee. This cost will depend on the type and quantity of items provided.</ul>  <b>Method of Payment</b> <ul><li>The Stoneworks website is not yet set up to accept payment.</li><li>Once you have registered, you will be contacted by Stoneworks via the email provided to confirm your registration</li><li>When your registration is confirmed, an invoice will be sent to you for the security deposit</li><li>Payment can be made by Direct Deposit from your financial institution or E Transfer</li></ul><b>Cancellation and Refund policy</b> <ul><li>In the event that Stoneworks cancels a program, your payment will immediately be refunded</li><li>If Stoneworks adjusts the program dates after you have committed funds, and you can no longer attend, your payment will be refunded</li><li>You have 48 hours from when you make your deposit to change or cancel with no charge to you (provided your booking does not depart within 21 days).</li><li>Cancellation within 28 days of day 1, will result in a loss of your deposit</li><li>Cancellation within 21 days of day 1, will result in a loss of the entire amount paid</li><li>Cancellations must be made in writing (letter or email info@stoneworkss.ca) Cancellations are only effective once your notification is received by Stoneworks</li><li>We will gladly accept a substitute guest should you not be able to attend provided they meet the prerequisites for the specific program. This must happen prior to the virtual meetings</li><li>We ask that you thoroughly understand and consider the booking and cancellation policy prior to booking as we make financial commitments to our guides (and food and accommodation providers) once you have booked and we have confirmed a trip.  We take your booking in good faith and begin incurring costs upon confirmation. </li></ul>",
+              "name": "Cost"
+            },
+            {
+              "description": "<ul><li>Hotel accommodations on Day 1</li><li>1 x Dinner, 1 x Lunch, 1 x Breakfast at the hotel</li><li>Transportation to and from the wilderness area</li><li>Use of group camping gear and pulks</li><li>Guide fees</li><li>A list of supplied food and equipment is available in their respective tabs</li></ul>",
+              "name": "Whats Included"
+            },
+            {
+              "description": " <ul><li>Any multi day excursion into the winter wilderness requires the proper equipment and clothing and it is often more  then what most people have laying around their household. Good winter gear is expensive and the cost can add up  fast.</li><li>Stoneworks recognizes you don’t have it all and it’s why we provide most of the essentials you need. Of course, it  is expected you provide some equipment and where you have deficiencies, we can step in to help.</li><li>Equipment Provided by Stoneworks</li> </ul>  <table><tbody>  <td> <tr><p>  Winter tent and snow pegs<br>  Tent brush<br>  Snow collection bag<br>  Folding stool<br>  Foldable camp seat<br>  Snow pulk and harness<br>  Snow shovel<br></p> </tr> <tr><p>Multi-fuel camp stoves, spare pump and fuel<br>  Stove support boards<br>  Cooking pots<br>  1L Thermos<br>  500ml soup Thermos<br>  Large kettle for melting snow<br>  Foam floor pad for tent<br>  Lightweight saw<br></p> </tr>  </td>  <td> <tr><p>Firestarter kit (program specific)<br>  Regional maps<br>  Compass (program specific)<br>  Whistle<br>  Group toilet kit, paper bags and biodegradable toilet paper<br>  Carried by guides;<br></p> </tr> <tr><p>Group repair kit<br>  Axe<br>  Weather monitor<br>  Winter hot tent<br>  Group First Aid kit<br>  Safety communication<br></p> </tr>  </td></tbody> </table>  <p></p> <b>Equipment you provide</b> <table><tbody>  <td> <tr><p>  Daypack 40L to 60L<br>  Camping plate, cup, KFS<br>  Clothing system with multiple sizes of stuff sacks<br>  Footwear and handwear system<br>  Sunglasses<br>  Sleeping system<br>  Ski system and/or snowshoes<br>  Personal toiletries and medication<br></p> </tr>  </td>  <td> <tr><p>Garbage bags<br>  Utility knife or multi-tool<br>  Personal first aid kit<br>  Sunscreen, hand moisturizer and lip balm<br>  Spare batteries for electronics<br>  Headlamp<br>  Lighters<br></p> </tr>  </td></tbody> </table>",
+              "name": "Equipment"
+            },
+            {
+              "description": " <ul><li>You won’t last long in the wilderness without food and water and it’s a lot worse in the winter. The regular  consumption of food and water is paramount. In winter, water is provided from melting snow and food must be high in  fats and low in moisture. If it’s frozen, you can’t chew it.</li><li>Stoneworks has worked with professionals to develop a food and water plan that works. The majority of food will be  provided by you but we will supplement your food items with some key ingredients.</li><li>Note – We recognize some individuals have dietary restrictions so we will work with you to build a food list that  works for you and provides the nutrition you need. </li><li>Dinner on the first night, breakfast on the second day and lunch on the last day is covered in the cost.</li><li>A detailed food guide will be emailed to you once your deposit has been accepted</li> </ul>  <b>What Stoneworks provides for the wilderness</b>  <ul><li>Coffee</li><li>Fresh bread and/or bagels warmed on the campfire</li><li>Prepared bacon</li><li>Olive Oil rations</li><li>Butter rations</li><li>Electrolytes mix</li><li>Food preparation bags</li><li>Dried Salami</li> </ul>  <b>What you provide</b>  <ul><li>Breakfast and dinner dry rations</li><li>Individual hot beverage items</li><li>Trail mix of fruit and nuts</li><li>Soup mix and noodles</li><li>Salt, pepper and other spices</li><li>Multi-vitamin</li> </ul>",
+              "name": "Food"
+            }
+          ],
+          "time": 10,
+          "type": "outdoors"
+        }
+      ],
+      "description": "<p>Challenging and fun winter experiences like nothing you’ve encountered. Guided experiences on Nordic backcountry skis for the enthusiast and professional with a focus on education and exposure to challenge the client. We will teach you skills to be proactive so that your time outside never turns into a survival situation. Multi-day programs are available in varying degrees of difficulty that can have a specific focus or simply provide an opportunity to get outside to learn, build your confidence and have fun in the cold</p>",
+      "extra": {
+        "testimonials": "<p>“The best service I've ever tried.”</p><small>12 07 1993 - Samantha Scott</small><p>“Died and came back as a cowboy, I call that reintarnation.”</p><small>04 12 2021 - Random cowboy</small><p>“When someone points at your black clothes and asks whose funeral it is, having a look around the room and saying 'Haven’t decided yet' is typically a good response.”</p><small>09 12 2022 - markiplier</small><p>“Some of you may die, but that’s a sacrifice I’m willing to make.”</p><small>23 02 1998 - Bob Ross</small>",
+        "title": "TESTIMONIALS"
+      },
+      "subtitle": "EXPERIENCES",
+      "title": "OUTDOOR EXPERIENCE PROGRAMS"
+    }
+  }
+}

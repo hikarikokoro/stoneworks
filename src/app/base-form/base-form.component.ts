@@ -1,18 +1,13 @@
 
-import { HttpClient } from '@angular/common/http';
-import {
-  Component,
-  OnInit
-} from '@angular/core';
-//import * as sendEmail from 'src/assets/email'; 
-declare function sendEmail(name: any): any;
+import { Component } from '@angular/core';
+import { EmailService } from '../services/email.service';
 
 @Component({
   selector: 'app-base-form',
   templateUrl: './base-form.component.html',
   styleUrls: ['./base-form.component.scss']
 })
-export class BaseFormComponent implements OnInit {
+export class BaseFormComponent {
 
   public email: string = '';
   public content: string = '';
@@ -23,11 +18,7 @@ export class BaseFormComponent implements OnInit {
 
   public allGood: boolean = false;
 
-  constructor(private _httpClient: HttpClient) { }
-
-  ngOnInit(): void {
-  }
-
+  constructor(private _emailService: EmailService) { }
 
   public onSubmitClick(): void {
     this.error = '';
@@ -59,6 +50,14 @@ export class BaseFormComponent implements OnInit {
   }
 
   private async sendEmail(): Promise<void> {
-    await sendEmail(this.email);
+    try {
+      this._emailService.sendEmailFromContactPage(this.email, this.content);
+    } catch (err) {
+      console.error(err);
+      return;
+    }
+
+    this.email = '';
+    this.content = '';
   }
 }

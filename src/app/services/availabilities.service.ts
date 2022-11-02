@@ -9,6 +9,7 @@ import {
   set,
   update
 } from 'firebase/database';
+import * as moment from 'moment';
 import { IExpeditionTypes } from '../expeditions/expedition-interfaces';
 const firebaseConfig = {
   apiKey: "AIzaSyD4wDjbM5bbLcUyCIMTXl6f9ga5imuDGHw",
@@ -26,6 +27,12 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 const dbRef = ref(getDatabase(app));
 
+interface IYearDate {
+  [year: string]: IMonthDate
+}
+interface IMonthDate {
+  [month: string]: string
+}
 
 @Injectable({
   providedIn: 'root'
@@ -51,8 +58,28 @@ export class AvailabilitiesService {
     if (snapshot.exists()) {
       return snapshot.val();
     } else {
-      console.error('AN ERROR HAS OCCURED');
       return '';
+    }
+  }
+  public async getAvailabilities(type: string, expeditionNumber: number): Promise<IYearDate | undefined> {
+    const expeditionType = this.getType(type);
+    const snapshot = await get(child(dbRef, `expeditions/${expeditionType}/cards/${expeditionNumber}/availabilities`));
+
+    if (snapshot.exists()) {
+      const availabilities: IYearDate = {};
+      for (const [key, availability] of Object.entries(snapshot.val())) {
+        if (availability != "") {
+          const now = moment();
+          if (now.year() <= Number(key)) {
+            const year: string = key as string;
+            availabilities[year] = availability as IMonthDate;
+          }
+        }
+      }
+      return availabilities;
+    } else {
+      console.error('AN ERROR HAS OCCURED');
+      return undefined;
     }
   }
 

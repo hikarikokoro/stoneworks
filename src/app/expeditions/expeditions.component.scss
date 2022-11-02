@@ -59,6 +59,10 @@ section {
             margin: 30px;
             position: relative;
 
+            &#nav {
+                display: none;
+            }
+
             h2 {
                 background-image: url('../../assets/CourseHeaderImage.png');
                 color: white;
@@ -84,11 +88,11 @@ section {
             grid-template-columns: 100%;
         }
 
-        &>*:nth-child(2n-1):nth-last-of-type(1) {
+        &.coldWeather>*:nth-child(2n-1):nth-last-of-type(1) {
             grid-column: span 2;
         }
 
-        &>*:nth-child(2n-2):nth-last-of-type(1) {
+        &.coldWeather>*:nth-child(2n-2):nth-last-of-type(1) {
             grid-column: span 2;
         }
 
@@ -114,7 +118,7 @@ section {
             }
 
             &.outdoors {
-                margin-left: -150px;
+                margin-left: -175px;
             }
         }
     }

@@ -6,13 +6,14 @@
 		<h2>{{expedition.subtitle}}</h2>
 	</article>
 </section>
-<section id="cards" *ngIf="expedition && expedition.cards">
+<section id="cards" *ngIf="expedition && expedition.cards" class="{{expedition.cards[0].type}}">
 	<article id="{{card.id}}" *ngFor="let card of expedition.cards; index as i">
 		<h2>{{card.name | uppercase}}</h2>
 		<div [innerHTML]="card.description" class="cardDescription encapsulatedContent"></div>
 		<a class="button coldWeather" routerLink="/register/{{card.type}}/{{i}}"
 			*ngIf="card.type === 'coldWeather'">MORE INFORMATION</a>
-		<a class="button outdoors" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'outdoors'">PROGRAM DETAILS</a>
+		<a class="button outdoors" routerLink="/register/{{card.type}}/{{i}}" *ngIf="card.type === 'outdoors'">PROGRAM
+			DETAILS</a>
 	</article>
 </section>
 
@@ -35,7 +36,7 @@
 </section> -->
 
 
-<section id="extra" *ngIf="expedition && expedition.cards[0].type === 'outdoors'">
+<!-- <section id="extra" *ngIf="expedition && expedition.cards[0].type === 'outdoors'">
 	<article>
 		<h2 [innerHTML]="expedition.extra.title"></h2>
 
@@ -45,4 +46,4 @@
 			</div>
 		</div>
 	</article>
-</section>
+</section> -->

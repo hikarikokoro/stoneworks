@@ -1,3 +1,5 @@
+import * as moment from 'moment';
+
 export default class RegisterFormViewModel {
   //#region Private members
 
@@ -10,13 +12,32 @@ export default class RegisterFormViewModel {
   private _age: number = 20;
   private _height: number = 0;
   private _weight: number = 0;
+  private _isInternationalPassport: boolean = false;
   private _passportCountry: string = '';
   private _passportNumber: string = '';
   private _passportExpirationDate: string = '';
+  private _momentPassportExpirationDate: moment.Moment = moment();
   private _emergencyContactName: string = '';
   private _emergencyContactPhoneNumber: string = '';
   private _medicalInfo: string = '';
   private _allergies: string = '';
+
+  private _errors: boolean = false;
+  public errorFirstName: string = '';
+  public errorLastName: string = '';
+  public errorPhoneNumber: string = '';
+  public errorEmail: string = '';
+  public errorGender: string = '';
+  public errorAge: string = '';
+  public errorHeight: string = '';
+  public errorWeight: string = '';
+  public errorPassportCountry: string = '';
+  public errorPassportNumber: string = '';
+  public errorPassportExpirationDate: string = '';
+  public errorEmergencyContactName: string = '';
+  public errorEmergencyContactPhoneNumber: string = '';
+  public errorMedicalInfo: string = '';
+  public errorAllergies: string = '';
 
   //#endregion
 
@@ -130,6 +151,12 @@ export default class RegisterFormViewModel {
   public set weight(v: number) {
     this._weight = v;
   }
+  public get isInternationalPassport(): boolean {
+    return this._isInternationalPassport;
+  }
+  public set isInternationalPassport(v: boolean) {
+    this._isInternationalPassport = v;
+  }
   public get passportCountry(): string {
     return this._passportCountry;
   }
@@ -172,15 +199,101 @@ export default class RegisterFormViewModel {
   public set allergies(v: string) {
     this._allergies = v;
   }
+  public get errors(): boolean {
+    return this._errors;
+  }
+  public set errors(v: boolean) {
+    this._errors = v;
+  }
 
   //#endregion
 
   //#region Public members
 
-  public validateFields(): boolean {
-    return false;
+  public areFieldsValid(): boolean {
+    this.resetErrorMessages();
+
+    if (this._firstName === '' || this._firstName.length < 3) {
+      this.errorFirstName = 'Please enter a valid first name.';
+      this.errors = true;
+    }
+
+    if (this._lastName === '' || this._lastName.length < 3) {
+      this.errorLastName = 'Please enter a valid last name.';
+      this.errors = true;
+    }
+
+    if (!this.isEmailValid(this._email)) {
+      this.errorEmail = 'Please enter a valid email.';
+      this.errors = true;
+    }
+
+    if (!this.isPhoneValid(this._phoneNumber)) {
+      this.errorPhoneNumber = 'Please enter a valid phone number.';
+      this.errors = true;
+    }
+
+    if (Number(this._age) <= 5) {
+      this.errorAge = 'Please enter a valid age.';
+      this.errors = true;
+    }
+
+    console.log('passport', this.errors);
+    if (this._isInternationalPassport) {
+      if (this._passportCountry === '') {
+        this.errorPassportCountry = 'Please enter a valid passport country.';
+        this.errors = true;
+      }
+
+      if (this._passportNumber === '') {
+        this.errorPassportNumber = 'Please enter a valid passport number.';
+        this.errors = true;
+      }
+
+      this._momentPassportExpirationDate = moment(this._passportExpirationDate, "YYYY-MM-DDTHH:mm");
+
+      if (this._passportExpirationDate === '' || !this._momentPassportExpirationDate.isValid()) {
+        this.errorPassportExpirationDate = 'Please enter a valid passport expiration date.';
+        this.errors = true;
+      }
+
+    }
+
+    return !this.errors;
   }
 
   //#endregion
 
+  //#region Private members
+
+  private isEmailValid(email: string): boolean {
+    const pattern: RegExp = new RegExp("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$");
+    return pattern.test(email);
+  }
+
+  private isPhoneValid(email: string): boolean {
+    const pattern: RegExp = new RegExp("(([+][(]?[0-9]{1,3}[)]?)|([(]?[0-9]{4}[)]?))\s*[)]?[-\s\.]?[(]?[0-9]{1,3}[)]?([-\s\.]?[0-9]{3})([-\s\.]?[0-9]{3,4})");
+    return pattern.test(email);
+  }
+
+  private resetErrorMessages(): void {
+    this._errors = false;
+    this.errorFirstName = '';
+    this.errorLastName = '';
+    this.errorPhoneNumber = '';
+    this.errorEmail = '';
+    this.errorGender = '';
+    this.errorAge = '';
+    this.errorHeight = '';
+    this.errorWeight = '';
+    this.errorPassportCountry = '';
+    this.errorPassportNumber = '';
+    this.errorPassportExpirationDate = '';
+    this.errorEmergencyContactName = '';
+    this.errorEmergencyContactPhoneNumber = '';
+    this.errorMedicalInfo = '';
+    this.errorAllergies = '';
+  }
+
+  //#endregion
 }

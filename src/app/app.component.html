@@ -8,28 +8,29 @@
   <section [hidden]="!opened">
     <article>
       <ul>
-        <li><a routerLink="/">Home</a></li>
-        <li><a routerLink="/expeditions/outdoor-experience-programs">Outdoor Experience Programs</a></li>
-        <li><a routerLink="/expeditions/cold-weather-preparedness-training">Cold Weather Preparedness Training</a></li>
+        <li><a (click)="navigateTo('/')">Home</a></li>
+        <li><a (click)="navigateTo('/expeditions/outdoor-experience-programs')">Outdoor Experience Programs</a></li>
+        <li><a (click)="navigateTo('/expeditions/cold-weather-preparedness-training')">Cold Weather Preparedness
+            Training</a></li>
       </ul>
     </article>
     <article>
       <ul>
-        <li><a routerLink="/professional-services">Professional Services</a></li>
-        <li><a routerLink="/about-us">About Us</a></li>
-        <li><a routerLink="/">Our Partners</a></li>
+        <li><a (click)="navigateTo('/professional-services')">Professional Services</a></li>
+        <li><a (click)="navigateTo('/about-us')">About Us</a></li>
+        <li><a (click)="navigateTo('/partners')">Our Affiliates</a></li>
       </ul>
     </article>
     <article>
       <ul>
         <li>&nbsp;</li>
         <li>&nbsp;</li>
-        <li><a routerLink="/">Privacy</a></li>
+        <li><a (click)="navigateTo('/privacy')">Privacy</a></li>
       </ul>
     </article>
     <article>
       <ul>
-        <li><a routerLink="/contact-us">Contact us</a></li>
+        <li><a (click)="navigateTo('/contact-us')">Contact us</a></li>
         <li class="contactLink"><a href="tel:16138668030">1 (613) 866 – 8030</a></li>
         <li class="contactLink"><a href="mailto:info@stoneworkss.ca">info@stoneworkss.ca</a></li>
       </ul>
@@ -62,8 +63,8 @@
       </ul>
 
       <div>
-        <p><b>Copyrights 2022 - stoneworks solutions </b>&nbsp;<a routerLink="/">legal statement</a>&nbsp;<a
-            routerLink="/">Privacy</a></p>
+        <p><b>Copyrights 2022 - stoneworks solutions </b>&nbsp;<a (click)="navigateTo('/')">legal statement</a>&nbsp;<a
+            (click)="navigateTo('/')">Privacy</a></p>
       </div>
     </article>
   </section>
