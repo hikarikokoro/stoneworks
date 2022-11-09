@@ -238,7 +238,6 @@ export default class RegisterFormViewModel {
       this.errors = true;
     }
 
-    console.log('passport', this.errors);
     if (this._isInternationalPassport) {
       if (this._passportCountry === '') {
         this.errorPassportCountry = 'Please enter a valid passport country.';
@@ -272,7 +271,7 @@ export default class RegisterFormViewModel {
   }
 
   private isPhoneValid(email: string): boolean {
-    const pattern: RegExp = new RegExp("(([+][(]?[0-9]{1,3}[)]?)|([(]?[0-9]{4}[)]?))\s*[)]?[-\s\.]?[(]?[0-9]{1,3}[)]?([-\s\.]?[0-9]{3})([-\s\.]?[0-9]{3,4})");
+    const pattern: RegExp = new RegExp('[- +()0-9]+');
     return pattern.test(email);
   }
 

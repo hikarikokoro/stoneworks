@@ -32,6 +32,7 @@ export class RegisterFormComponent implements OnInit {
   public checkbox_6: boolean = false;
 
   public expedition: IExpeditionCard = {} as IExpeditionCard;
+  public errorCalendar: string = '';
   public errorCheckbox_1: string = '';
   public errorCheckbox_2: string = '';
   public errorCheckbox_3: string = '';
@@ -72,10 +73,8 @@ export class RegisterFormComponent implements OnInit {
   }
 
   public onSubmitClick(): void {
+    this.resetErrorMessages();
     let errors = false;
-    //this.error = '<i class="fa-solid fa-triangle-exclamation"></i> There has been an error... try again in a few minutes';
-
-    this.error = '';
 
     for (const participant of this.participants) {
       const isvalid: boolean = participant.areFieldsValid();
@@ -83,6 +82,37 @@ export class RegisterFormComponent implements OnInit {
         errors = true;
       }
     }
+
+    if (this._selectedDates === undefined || this._selectedDates.length === 0) {
+      this.errorCalendar = 'Please select a start date.';
+      errors = true;
+    }
+
+    if (!this.checkbox_1) {
+      this.errorCheckbox_1 = 'Must be checked.';
+      errors = true;
+    }
+
+    if (!this.checkbox_2) {
+      this.errorCheckbox_2 = 'Must be checked.';
+      errors = true;
+    }
+
+    if (!this.checkbox_3) {
+      this.errorCheckbox_3 = 'Must be checked.';
+      errors = true;
+    }
+
+    if (!this.checkbox_4) {
+      this.errorCheckbox_4 = 'Must be checked.';
+      errors = true;
+    }
+
+    if (!this.checkbox_5) {
+      this.errorCheckbox_5 = 'Must be checked.';
+      errors = true;
+    }
+
 
     if (!errors) {
       this.sendEmail();
@@ -110,21 +140,69 @@ export class RegisterFormComponent implements OnInit {
     }
   }
 
+  private resetErrorMessages(): void {
+    this.error = '';
+    this.errorCalendar = '';
+    this.errorCheckbox_1 = '';
+    this.errorCheckbox_2 = '';
+    this.errorCheckbox_3 = '';
+    this.errorCheckbox_4 = '';
+    this.errorCheckbox_5 = '';
+    this.errorCheckbox_6 = '';
+  }
+
   private async load(type: string, expeditionNumber: number): Promise<void> {
     this.expedition = await this._expeditionService.get(type, expeditionNumber);
   }
 
-
   private async sendEmail(): Promise<void> {
-    const doc = new jsPDF({
-      orientation: "landscape",
-      unit: "in",
-      format: [4, 2]
-    });
+    const doc: jsPDF = new jsPDF();
+    let position: number = 10;
 
-    doc.text("Hello world!", 1, 1);
-    doc.save("two-by-four.pdf");
-    console.log("DONE");
-    //this._emailService.sendEmailFromRegisterForm(this.email, this.content);
+    const addText = (text: string, doc: jsPDF, position: number, size?: number): number => {
+      if (size !== undefined) {
+        doc.setFontSize(size);
+      }
+      doc.text(text, 5, position);
+      return position + 7;
+    }
+
+    position = addText("Confirmation of submition.", doc, position + 5, 35);
+    position = addText("Selected dates", doc, position + 7, 20);
+
+    for (const selectedDate of this._selectedDates) {
+      position = addText(selectedDate, doc, position, 16);
+    }
+
+    position = position + 15;
+
+    for (const participant of this.participants) {
+      doc.addPage();
+      position = 10;
+      position = addText(participant.firstName + " " + participant.lastName, doc, position + 5, 35);
+      position = addText("Base information", doc, position + 10, 20);
+      position = addText("Phone number: " + participant.phoneNumber, doc, position, 16);
+      position = addText("Email: " + participant.email, doc, position, 16);
+      position = addText("Gender: " + participant.gender, doc, position, 16);
+      position = addText("Age: " + participant.age, doc, position, 16);
+      position = addText("Height: " + participant.height, doc, position, 16);
+      position = addText("Weight: " + participant.weight, doc, position, 16);
+      position = addText("Is international passport ? " + (participant.isInternationalPassport ? "Yes" : "No"), doc, position + 10, 16);
+      if (participant.isInternationalPassport) {
+        position = addText("Country of issue: " + participant.passportCountry, doc, position, 16);
+        position = addText("Passport number: " + participant.passportNumber, doc, position, 16);
+        position = addText("Passport expiration date: " + participant.passportExpirationDate, doc, position, 16);
+      }
+    }
+
+    doc.save("confirmation.pdf");
+
+    // Send email to Geoff and a confirmation to each participant
+    //this._emailService.sendEmailFromRegisterForm('geoff@swsolutions.co', doc.output());
+    this._emailService.sendEmailFromRegisterForm('stephaniedufour1@hotmail.com', '', doc.output('bloburl').toString());
+
+    /* for (const participant of this.participants) {
+      this._emailService.sendEmailFromRegisterForm(participant.email, doc.output());
+    } */
   }
 }

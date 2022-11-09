@@ -12,6 +12,7 @@
 		<app-calendar [expeditionType]="expeditionType" [expeditionNumber]="expeditionNumber"
 			[numberOfDays]="expedition.time" (changeSelectedDates)="changeSelectedDates($event)">
 		</app-calendar>
+		<span class="error" *ngIf="errorCalendar != ''" [innerText]="errorCalendar"></span>
 	</article>
 	<article class="participants">
 		<button *ngFor="let participant of participants; let i = index"
@@ -108,8 +109,7 @@
 
 					<br>
 					<label for="passNumber"><i>*</i> Passport Number</label>
-					<input type="text" id="passNumber" name="passNumber"
-						[(ngModel)]="activeParticipant.passportNumber">
+					<input type="text" id="passNumber" name="passNumber" [(ngModel)]="activeParticipant.passportNumber">
 					<span class="error" *ngIf="activeParticipant.errorPassportNumber != ''"
 						[innerText]="activeParticipant.errorPassportNumber"></span>
 
@@ -190,7 +190,7 @@
 				<br>
 
 				<input type="checkbox" id="thirdCheckbox" name="thirdCheckbox" [(ngModel)]="checkbox_3">
-				<label for="additionnalInfoSupp">You have read and understood the program <a
+				<label for="thirdCheckbox">You have read and understood the program <a
 						routerLink="/register/outdoors/0/cost">Cancellation and Refund Policy</a></label>
 				<span class="error" *ngIf="errorCheckbox_3 != ''" [innerText]="errorCheckbox_3"></span>
 

@@ -29,8 +29,8 @@ export class EmailService {
       })
   }
 
-  sendEmailFromRegisterForm(body: any) {
-    return this.http.post<any>(`${this.baseUrl}/register-form`, body)
+  sendEmailFromRegisterForm(email: string, content: string, attachment: string) {
+    return this.http.post<any>(`${this.baseUrl}/register-form`, { email, content, attachment })
       .subscribe(error => {
         if (error !== undefined && error !== null) {
           throw new error('SOMETHING WENT WRONG WHEN WRITTING THE EMAIL.');
